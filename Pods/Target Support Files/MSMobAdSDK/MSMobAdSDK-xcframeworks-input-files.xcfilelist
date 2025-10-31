@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/MSMobAdSDK/MSMobAdSDK-xcframeworks.sh
+${PODS_ROOT}/MSMobAdSDK/MSAdMotion/MSAdMotion.xcframework
+${PODS_ROOT}/MSMobAdSDK/MSMobAdSDK/MSAdSDK.xcframework

@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/BeiZiSDK-iOS/BeiZiSDK-iOS-xcframeworks.sh
+${PODS_ROOT}/BeiZiSDK-iOS/BeiZiSDK.xcframework
+${PODS_ROOT}/BeiZiSDK-iOS/BeiZiFoundation.xcframework

@@ -1,0 +1,37 @@
+PODS:
+  - BeiZiSDK-iOS (4.90.7.0):
+    - BeiZiSDK-iOS/BeiZiSDK-iOS (= 4.90.7.0)
+  - BeiZiSDK-iOS/BeiZiSDK-iOS (4.90.7.0)
+  - CryptoSwift (1.8.4)
+  - MSMobAdSDK/MotionLess (2.7.7.3)
+  - MSMobAdSDK/MS (2.7.7.3):
+    - MSMobAdSDK/MotionLess
+  - ObjectMapper (4.2.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - BeiZiSDK-iOS (= 4.90.7.0)
+  - CryptoSwift
+  - MSMobAdSDK/MS (= 2.7.7.3)
+  - ObjectMapper
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - BeiZiSDK-iOS
+    - CryptoSwift
+    - MSMobAdSDK
+    - SnapKit
+  trunk:
+    - ObjectMapper
+
+SPEC CHECKSUMS:
+  BeiZiSDK-iOS: 2390c31d6e68f3d065fb21179530985f29d7b436
+  CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
+  MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 0140b40b9c0f0e2ebbfce335fbb444eeea040fc7
+
+COCOAPODS: 1.16.2

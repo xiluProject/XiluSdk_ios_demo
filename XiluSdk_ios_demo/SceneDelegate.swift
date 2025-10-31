@@ -1,52 +1,60 @@
 //
 //  SceneDelegate.swift
-//  XiluSdk_ios_demo
+//  SwiftDemo
 //
-//  Created by publicjoker on 31/10/2025.
+//  Created by PublicJoker on 2025/10/16.
 //
 
 import UIKit
+import ADXiluSDK
+import AppTrackingTransparency
+import AdSupport
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
-    var window: UIWindow?
-
-
+    var window: UIWindow? // 窗口实例
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+        window?.backgroundColor = .white
+        let rootNavi = UINavigationController(rootViewController: MainViewController())
+        rootNavi.navigationBar.tintColor = .mainColor
+        window?.rootViewController = rootNavi
+        window?.makeKeyAndVisible()
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
-    }
-
+    
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        requestIDFA()
     }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
-    }
-
-
 }
 
+@available(iOS 13.0, *)
+extension SceneDelegate {
+    // 请求idfa，此方法在iOS15上需要放到applicationDidBecomeActive内执行
+    // 可能会被其他询问覆盖
+    func requestIDFA() {
+        if #available(iOS 14, *) {
+            // 授权完成回调，block可能不在主线程，如果在此请求广告请先调用回到主线程
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                case .authorized:
+                    sdkDebug("idfa", UIDevice.idfa)
+                    break
+                case .denied:
+                    break
+                case .notDetermined:
+                    break
+                case .restricted:
+                    break
+                @unknown default:
+                    break
+                }
+            }
+        } else {
+            // iOS 14 以下无需授权，直接获取
+            let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+            print("IDFA: \(idfa)")
+        }
+    }
+}

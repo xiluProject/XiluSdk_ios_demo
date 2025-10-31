@@ -1,0 +1,6 @@
+framework module BeiZiFoundation {
+  umbrella header "BeiZiFoundation.h"
+
+  export *
+  module * { export * }
+}

@@ -6,8 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		67A6E778D1D307F821433D6A /* Pods_XiluSdk_ios_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4070F4BD4C0DF82699937446 /* Pods_XiluSdk_ios_demo.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		4070F4BD4C0DF82699937446 /* Pods_XiluSdk_ios_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiluSdk_ios_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		740A6CAE2EB4578000E8FCF2 /* XiluSdk_ios_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiluSdk_ios_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		740A6D112EB45E6500E8FCF2 /* ADXiluSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADXiluSdk.framework; path = "../../../Library/Developer/Xcode/DerivedData/ADXiluSdk-buzseezrcoqjbdczryqhwbftiaip/Build/Products/Release-iphonesimulator/ADXiluSdk.framework"; sourceTree = "<group>"; };
+		A9AECC37B9792445ED415502 /* Pods-XiluSdk_ios_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiluSdk_ios_demo.release.xcconfig"; path = "Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo.release.xcconfig"; sourceTree = "<group>"; };
+		D2FF62E25E08E4A381856CA3 /* Pods-XiluSdk_ios_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiluSdk_ios_demo.debug.xcconfig"; path = "Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A6E778D1D307F821433D6A /* Pods_XiluSdk_ios_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +55,9 @@
 			isa = PBXGroup;
 			children = (
 				740A6CB02EB4578000E8FCF2 /* XiluSdk_ios_demo */,
+				740A6D102EB45E6500E8FCF2 /* Frameworks */,
 				740A6CAF2EB4578000E8FCF2 /* Products */,
+				DD62276AAF5D2D046AB6FB76 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +69,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		740A6D102EB45E6500E8FCF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				740A6D112EB45E6500E8FCF2 /* ADXiluSdk.framework */,
+				4070F4BD4C0DF82699937446 /* Pods_XiluSdk_ios_demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD62276AAF5D2D046AB6FB76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2FF62E25E08E4A381856CA3 /* Pods-XiluSdk_ios_demo.debug.xcconfig */,
+				A9AECC37B9792445ED415502 /* Pods-XiluSdk_ios_demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +94,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 740A6CC12EB4578100E8FCF2 /* Build configuration list for PBXNativeTarget "XiluSdk_ios_demo" */;
 			buildPhases = (
+				21B1C660EABAC08FEECB4C2C /* [CP] Check Pods Manifest.lock */,
 				740A6CAA2EB4578000E8FCF2 /* Sources */,
 				740A6CAB2EB4578000E8FCF2 /* Frameworks */,
 				740A6CAC2EB4578000E8FCF2 /* Resources */,
+				6EB1C79BB32ACEB1CB51341F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -77,8 +108,6 @@
 				740A6CB02EB4578000E8FCF2 /* XiluSdk_ios_demo */,
 			);
 			name = XiluSdk_ios_demo;
-			packageProductDependencies = (
-			);
 			productName = XiluSdk_ios_demo;
 			productReference = 740A6CAE2EB4578000E8FCF2 /* XiluSdk_ios_demo.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +156,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21B1C660EABAC08FEECB4C2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XiluSdk_ios_demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EB1C79BB32ACEB1CB51341F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		740A6CAA2EB4578000E8FCF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,25 +211,128 @@
 /* Begin XCBuildConfiguration section */
 		740A6CC22EB4578100E8FCF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FF62E25E08E4A381856CA3 /* Pods-XiluSdk_ios_demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 79NSA4S7XW;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XiluSdk_ios_demo",
+					"$(PROJECT_DIR)/XiluSdk_ios_demo/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XiluSdk_ios_demo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "我们需要通过您的地理位置信息获取您的周边数据";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "我们需要通过您的地理位置信息获取您的周边数据";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "我们需要通过您的地理位置信息获取您的周边数据";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "获取标记权限向您提供更优质、安全的个性化服务及内容，未经同意我们不会用于其他目的；开启后，您也可以前往系统“设置-隐私 ”中随时关闭";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xilu.XiluSdk-ios-demo";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"bz2\"",
+					"-l\"c\"",
+					"-l\"c++\"",
+					"-l\"c++abi\"",
+					"-l\"iconv\"",
+					"-l\"resolv.9\"",
+					"-l\"sqlite3\"",
+					"-l\"xml2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"ADXiluSDK\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AVKit\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AdSupport\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"BeiZiFoundation\"",
+					"-framework",
+					"\"BeiZiSDK\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"MSAdMotion\"",
+					"-framework",
+					"\"MSAdSDK\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"QuickLook\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-weak_framework",
+					"\"AppTrackingTransparency\"",
+					"-ld64",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xilu.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Cambojob_dev_demo;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -171,25 +345,42 @@
 		};
 		740A6CC32EB4578100E8FCF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9AECC37B9792445ED415502 /* Pods-XiluSdk_ios_demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 79NSA4S7XW;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XiluSdk_ios_demo",
+					"$(PROJECT_DIR)/XiluSdk_ios_demo/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XiluSdk_ios_demo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "我们需要通过您的地理位置信息获取您的周边数据";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "我们需要通过您的地理位置信息获取您的周边数据";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "我们需要通过您的地理位置信息获取您的周边数据";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "获取标记权限向您提供更优质、安全的个性化服务及内容，未经同意我们不会用于其他目的；开启后，您也可以前往系统“设置-隐私 ”中随时关闭";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xilu.XiluSdk-ios-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xilu.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = CamboJob_demo_adhoc;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -252,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "iOS 12.2";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -309,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "iOS 12.2";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

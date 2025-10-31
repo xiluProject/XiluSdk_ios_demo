@@ -2,6 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>lianjiabeike</string>
+		<string>missfresh</string>
+		<string>pinduoduo</string>
+		<string>diditaxi</string>
+		<string>snssdk1128</string>
+		<string>tenvideo</string>
+		<string>dianping</string>
+		<string>imeituan</string>
+		<string>kwai</string>
+		<string>youku</string>
+		<string>sinaweibo</string>
+		<string>tmall</string>
+		<string>ctrip</string>
+		<string>vipshop</string>
+		<string>taobao</string>
+		<string>openApp.jdMobile</string>
+		<string>vipshop</string>
+		<string>suning</string>
+		<string>openapp.jdmobile</string>
+		<string>eleme</string>
+		<string>tbopen</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -15,8 +44,6 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
