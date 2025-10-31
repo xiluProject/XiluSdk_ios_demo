@@ -18,7 +18,7 @@ class NativeTemplateAdViewController: UIViewController {
         let table = UITableView(frame: CGRect.zero, style: .plain)
         table.dataSource = self
         table.rowHeight = UITableView.automaticDimension
-        table.register(AppNativeAdContainerCell.self, forCellReuseIdentifier: "AppNativeAdContainerCell")
+        table.register(NativeAdContainerCell.self, forCellReuseIdentifier: "AppNativeAdContainerCell")
         return table
     }()
     
@@ -88,11 +88,11 @@ extension NativeTemplateAdViewController: UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
             cell?.textLabel?.text = rowData as! String + "\(indexPath.row + 1)"
         } else if rowData is UIView {
-            cell = tableView.dequeueReusableCell(withIdentifier: "AppNativeAdContainerCell", for: indexPath) as? AppNativeAdContainerCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "AppNativeAdContainerCell", for: indexPath) as? NativeAdContainerCell
             if nil == cell {
-                cell = AppNativeAdContainerCell.init(style: .default, reuseIdentifier: "AppNativeAdContainerCell")
+                cell = NativeAdContainerCell.init(style: .default, reuseIdentifier: "AppNativeAdContainerCell")
             }
-            (cell as! AppNativeAdContainerCell).configAd(rowData as? UIView)
+            (cell as! NativeAdContainerCell).configAd(rowData as? UIView)
         }
         return cell!
     }

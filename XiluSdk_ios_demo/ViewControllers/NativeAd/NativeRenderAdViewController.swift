@@ -19,7 +19,7 @@ class NativeRenderAdViewController: UIViewController {
         let table = UITableView(frame: CGRect.zero, style: .plain)
         table.dataSource = self
         table.rowHeight = UITableView.automaticDimension
-        table.register(AppNativeAdContainerCell.self, forCellReuseIdentifier: "AppNativeAdContainerCell")
+        table.register(NativeAdContainerCell.self, forCellReuseIdentifier: "AppNativeAdContainerCell")
         return table
     }()
     
@@ -89,28 +89,28 @@ extension NativeRenderAdViewController: UITableViewDataSource {
         if rowData is String {
             cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
             cell?.textLabel?.text = rowData as! String + "\(indexPath.row + 1)"
-        } else if let adView = rowData as? MSNativeSimpleCustomAdView {
-            cell = tableView.dequeueReusableCell(withIdentifier: "AppNativeAdContainerCell", for: indexPath) as? AppNativeAdContainerCell
+        } else if let adView = rowData as? NativeSimpleCustomAdView {
+            cell = tableView.dequeueReusableCell(withIdentifier: "AppNativeAdContainerCell", for: indexPath) as? NativeAdContainerCell
             if nil == cell {
-                cell = AppNativeAdContainerCell.init(style: .default, reuseIdentifier: "AppNativeAdContainerCell")
+                cell = NativeAdContainerCell.init(style: .default, reuseIdentifier: "AppNativeAdContainerCell")
             }
-            (cell as! AppNativeAdContainerCell).configAd(adView)
+            (cell as! NativeAdContainerCell).configAd(adView)
             adView.showNativeAd(withClick: adView.customImageAdViewClickViews(), presentVC: self)
             adView.openInteraction()
-        } else if let adView = rowData as? MSNativeSimpleCustomVideoAdView {
-            cell = tableView.dequeueReusableCell(withIdentifier: "AppNativeAdContainerCell", for: indexPath) as? AppNativeAdContainerCell
+        } else if let adView = rowData as? NativeSimpleCustomVideoAdView {
+            cell = tableView.dequeueReusableCell(withIdentifier: "AppNativeAdContainerCell", for: indexPath) as? NativeAdContainerCell
             if nil == cell {
-                cell = AppNativeAdContainerCell.init(style: .default, reuseIdentifier: "AppNativeAdContainerCell")
+                cell = NativeAdContainerCell.init(style: .default, reuseIdentifier: "AppNativeAdContainerCell")
             }
-            (cell as! AppNativeAdContainerCell).configAd(adView)
+            (cell as! NativeAdContainerCell).configAd(adView)
             adView.showNativeAd(withClick: adView.customVideoAdViewClickViews(), presentVC: self)
             adView.openInteraction()
         } else if let adView = rowData as? UIView {
-            cell = tableView.dequeueReusableCell(withIdentifier: "AppNativeAdContainerCell", for: indexPath) as? AppNativeAdContainerCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "AppNativeAdContainerCell", for: indexPath) as? NativeAdContainerCell
             if nil == cell {
-                cell = AppNativeAdContainerCell.init(style: .default, reuseIdentifier: "AppNativeAdContainerCell")
+                cell = NativeAdContainerCell.init(style: .default, reuseIdentifier: "AppNativeAdContainerCell")
             }
-            (cell as! AppNativeAdContainerCell).configAd(adView)
+            (cell as! NativeAdContainerCell).configAd(adView)
         }
         return cell!
     }
@@ -131,14 +131,14 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
             if let model = adInfo.extraData["nativeAdData"] as? MSNativeFeedAdModel {
                 //非视频类型自渲染广告
                 if model.adMaterialMeta?.metaCreativeType() != MSCreativeType.video {
-                    let adView:MSNativeSimpleCustomAdView = MSNativeSimpleCustomAdView()
+                    let adView:NativeSimpleCustomAdView = NativeSimpleCustomAdView()
                     adView.delegate = self
                     adView.presentVc = self
                     adView.loadFeedAdMeta(feedAdMeta: model.adMaterialMeta!)
                     adView.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: adView.calculateAdHeightWithFeedAdMeta(feedAd: model.adMaterialMeta!))
                     nativeAds.append(adView)
                 } else {
-                    let adView: MSNativeSimpleCustomVideoAdView = MSNativeSimpleCustomVideoAdView()
+                    let adView: NativeSimpleCustomVideoAdView = NativeSimpleCustomVideoAdView()
                     adView.delegate = self
                     adView.presentVc = self
                     adView.loadFeedAdMeta(feedAdMeta: model.adMaterialMeta!)
@@ -158,14 +158,14 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
         if let model = adInfo.extraData["nativeAdData"] as? MSNativeFeedAdModel {
             //非视频类型自渲染广告
             if model.adMaterialMeta?.metaCreativeType() != MSCreativeType.video {
-                let adView:MSNativeSimpleCustomAdView = MSNativeSimpleCustomAdView()
+                let adView:NativeSimpleCustomAdView = NativeSimpleCustomAdView()
                 adView.delegate = self
                 adView.presentVc = self
                 adView.loadFeedAdMeta(feedAdMeta: model.adMaterialMeta!)
                 adView.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: adView.calculateAdHeightWithFeedAdMeta(feedAd: model.adMaterialMeta!))
                 nativeAds.append(adView)
             } else {
-                let adView: MSNativeSimpleCustomVideoAdView = MSNativeSimpleCustomVideoAdView()
+                let adView: NativeSimpleCustomVideoAdView = NativeSimpleCustomVideoAdView()
                 adView.delegate = self
                 adView.presentVc = self
                 adView.loadFeedAdMeta(feedAdMeta: model.adMaterialMeta!)
@@ -211,7 +211,7 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
     }
 }
 
-extension NativeRenderAdViewController: MSNativeSimpleCustomAdViewDelegate {
+extension NativeRenderAdViewController: NativeSimpleCustomAdViewDelegate {
     
     func nativeSimpleImageAdViewClosed(adView: MSNativeCustomAdView) {
         
@@ -222,7 +222,7 @@ extension NativeRenderAdViewController: MSNativeSimpleCustomAdViewDelegate {
     }
 }
 
-extension NativeRenderAdViewController: MSNativeSimpleCustomVideoAdViewDelegate {
+extension NativeRenderAdViewController: NativeSimpleCustomVideoAdViewDelegate {
     
 }
 

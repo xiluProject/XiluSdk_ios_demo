@@ -20,16 +20,6 @@ class MainViewController: UIViewController {
         ("激励视频广告", { RewardVodAdViewController() }),
         ("信息流模板广告", { NativeTemplateAdViewController() }),
         ("信息流自渲染模板广告", { NativeRenderAdViewController() }),
-//        ("信息流模板广告", {
-//            let vc = NativeExpressAdViewController()
-//            vc.pid = "1077016"
-//            return vc
-//        }),
-//        ("信息流自渲染广告", {
-//            let vc = NativeExpressAd2ViewController()
-//            vc.pid = "73646b1099911991"
-//            return vc
-//        }),
         ("Banner广告", { BannerAdViewController() }),
 //        ("全屏视频广告", { FullScreenVodAdViewController() }),
 //        ("Draw视频信息流", { DrawVodAdViewController() }),

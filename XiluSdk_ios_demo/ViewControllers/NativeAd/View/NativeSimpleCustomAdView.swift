@@ -9,14 +9,14 @@
 import UIKit
 import MSAdSDK
 import SnapKit
-public protocol MSNativeSimpleCustomAdViewDelegate:NSObjectProtocol {
+public protocol NativeSimpleCustomAdViewDelegate:NSObjectProtocol {
     func nativeSimpleImageAdViewClosed(adView:MSNativeCustomAdView)
 }
-class MSNativeSimpleCustomAdView: MSNativeCustomAdView {
+class NativeSimpleCustomAdView: MSNativeCustomAdView {
 //    private var shakeTwist:MSNativeAdShakeTwist?
     private var clickViews:Array<UIView> = Array.init()
     weak var presentVc:UIViewController?
-    weak var delegate:MSNativeSimpleCustomAdViewDelegate?
+    weak var delegate:NativeSimpleCustomAdViewDelegate?
     func loadFeedAdMeta(feedAdMeta:MSFeedAdMeta){
         var imgArr:Array<UIImageView> = Array.init()
         //第一步 设置广告容器frame

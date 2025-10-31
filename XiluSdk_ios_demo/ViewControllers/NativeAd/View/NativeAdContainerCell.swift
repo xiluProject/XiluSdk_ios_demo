@@ -9,7 +9,7 @@ import UIKit
 import ADXiluSDK
 import SnapKit
 
-class AppNativeAdContainerCell: UITableViewCell {
+class NativeAdContainerCell: UITableViewCell {
     public func configAd(_ adView: UIView?) {
         if let adView = adView {
             adContainerView.addSubview(adView)
