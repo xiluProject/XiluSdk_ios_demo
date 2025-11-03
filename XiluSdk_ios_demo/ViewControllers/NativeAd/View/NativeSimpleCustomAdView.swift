@@ -1,9 +1,5 @@
 //
-//  MSNativeSimpleCustomAdView.swift
-//  MSAdSDK-Example-Swift
-//
-//  Created by MSAdSDK on 2023/7/20.
-//  Copyright © 2023 MSAdSDK. All rights reserved.
+//  NativeSimpleCustomAdView.swift
 //
 
 import UIKit
