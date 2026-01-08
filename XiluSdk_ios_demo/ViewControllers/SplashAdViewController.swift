@@ -104,7 +104,7 @@ class SplashAdViewController: UIViewController {
         
         // 创建开屏广告
         let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width, height: 300)
-        splashAd = ADXiluSplashAd(adPosId: "573s52gs", style: .halfScreen, adSize: adSize)
+        splashAd = ADXiluSplashAd(adPosId: AppConst.adPosId, style: .halfScreen, adSize: adSize)
         splashAd?.bottomView = bottomView
         splashAd?.delegate = self
         splashAd?.countdownDuration = 5.0
