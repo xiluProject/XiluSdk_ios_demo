@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios12.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ADXiluSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 @_exported import ADXiluSDK
 import AdSupport
 import AppTrackingTransparency
@@ -11,9 +11,9 @@ import CoreLocation
 import CoreTelephony
 import CryptoSwift
 import Foundation
+import GDTMobSDK
 import MSAdSDK
 import Network
-import ObjectMapper
 import Swift
 import SystemConfiguration
 import UIKit
@@ -435,62 +435,6 @@ extension ADXiluSDK.ADXiluBaseAd : ADXiluSDK.ADXiluBaseAdDelegate {
   @objc dynamic public func xilu_AdDidSkip(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc dynamic public func xilu_AdTick(_ xiluAd: ADXiluSDK.ADXiluBaseAd, remainingTime: Foundation.TimeInterval)
 }
-@objc public protocol ADXiluDrawVodAdDelegate {
-  @objc optional func drawVodAdDidReceive(_ drawVodAd: ADXiluSDK.ADXiluDrawVodAd, adInfoList: [ADXiluSDK.ADXiluDrawVodAdInfo])
-  @objc optional func drawVodAdDidExpose(_ drawVodAd: ADXiluSDK.ADXiluDrawVodAd, adInfo: ADXiluSDK.ADXiluDrawVodAdInfo)
-  @objc optional func drawVodAdDidClick(_ drawVodAd: ADXiluSDK.ADXiluDrawVodAd, adInfo: ADXiluSDK.ADXiluDrawVodAdInfo)
-  @objc optional func drawVodAdDidClose(_ drawVodAd: ADXiluSDK.ADXiluDrawVodAd, adInfo: ADXiluSDK.ADXiluDrawVodAdInfo)
-  @objc optional func drawVodAdRenderFailed(_ drawVodAd: ADXiluSDK.ADXiluDrawVodAd, adInfo: ADXiluSDK.ADXiluDrawVodAdInfo, error: ADXiluSDK.ADXiluError)
-  @objc optional func drawVodAdDidFail(_ drawVodAd: ADXiluSDK.ADXiluDrawVodAd, error: ADXiluSDK.ADXiluError)
-}
-@objc public class ADXiluDrawVodAdInfo : ADXiluSDK.ADXiluAdInfo {
-  @objc final public let title: Swift.String
-  @objc final public let desc: Swift.String
-  @objc final public let imageUrl: Swift.String?
-  @objc final public let videoUrl: Swift.String?
-  @objc final public let adSize: ADXiluSDK.ADXiluAdSize
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public init(adId: Swift.String, platform: ADXiluSDK.ADXiluAdPlatform, title: Swift.String, desc: Swift.String, imageUrl: Swift.String? = nil, videoUrl: Swift.String? = nil, adSize: ADXiluSDK.ADXiluAdSize)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  required public init?(map: ObjectMapper.Map)
-  #endif
-  @objc public func getAdView() -> UIKit.UIView
-  @objc deinit
-}
-@objc public class ADXiluDrawVodAd : ObjectiveC.NSObject {
-  @objc final public let adPosId: Swift.String
-  @objc final public let adSize: ADXiluSDK.ADXiluAdSize
-  @objc final public let count: Swift.Int
-  @objc public var onlySupportPlatform: ADXiluSDK.ADXiluAdPlatform
-  @objc weak public var delegate: (any ADXiluSDK.ADXiluDrawVodAdDelegate)?
-  @objc public init(adPosId: Swift.String, adSize: ADXiluSDK.ADXiluAdSize, count: Swift.Int = 2)
-  @objc public func loadAd()
-  @objc public func getCurrentAdInfoList() -> [ADXiluSDK.ADXiluDrawVodAdInfo]
-  @objc public func p_release()
-  @objc deinit
-}
-@objc public protocol ADXiluFullScreenVodAdDelegate {
-  @objc optional func fullScreenVodAdDidReceive(_ fullScreenVodAd: ADXiluSDK.ADXiluFullScreenVodAd, adInfo: ADXiluSDK.ADXiluAdInfo)
-  @objc optional func fullScreenVodAdVideoDidCache(_ fullScreenVodAd: ADXiluSDK.ADXiluFullScreenVodAd, adInfo: ADXiluSDK.ADXiluAdInfo)
-  @objc optional func fullScreenVodAdVideoDidComplete(_ fullScreenVodAd: ADXiluSDK.ADXiluFullScreenVodAd, adInfo: ADXiluSDK.ADXiluAdInfo)
-  @objc optional func fullScreenVodAdVideoDidError(_ fullScreenVodAd: ADXiluSDK.ADXiluFullScreenVodAd, adInfo: ADXiluSDK.ADXiluAdInfo, error: ADXiluSDK.ADXiluError)
-  @objc optional func fullScreenVodAdDidExpose(_ fullScreenVodAd: ADXiluSDK.ADXiluFullScreenVodAd, adInfo: ADXiluSDK.ADXiluAdInfo)
-  @objc optional func fullScreenVodAdDidClick(_ fullScreenVodAd: ADXiluSDK.ADXiluFullScreenVodAd, adInfo: ADXiluSDK.ADXiluAdInfo)
-  @objc optional func fullScreenVodAdDidClose(_ fullScreenVodAd: ADXiluSDK.ADXiluFullScreenVodAd, adInfo: ADXiluSDK.ADXiluAdInfo)
-  @objc optional func fullScreenVodAdDidFail(_ fullScreenVodAd: ADXiluSDK.ADXiluFullScreenVodAd, error: ADXiluSDK.ADXiluError)
-}
-@objc public class ADXiluFullScreenVodAd : ADXiluSDK.ADXiluBaseAd {
-  @objc public var isMuted: Swift.Bool
-  @objc public var sceneId: Swift.String?
-  @objc weak public var extraDelegate: (any ADXiluSDK.ADXiluFullScreenVodAdDelegate)?
-  @objc public init(adPosId: Swift.String)
-  @objc override public func loadAd()
-  @objc public func showAd(from viewController: UIKit.UIViewController)
-  @objc public func closeAd()
-  @objc public func p_release()
-  @objc deinit
-}
 @objc public class ADXiluInterstitialAd : ADXiluSDK.ADXiluBaseAd {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(adPosId: Swift.String, adSize: ADXiluSDK.ADXiluAdSize, rootVC: UIKit.UIViewController?)
@@ -506,7 +450,7 @@ extension BeiZiSDK.BeiZiInterstitial : ADXiluSDK.ADXiluLoadProtocol {
   public func xilu_showAd(view: Any?)
   #endif
 }
-extension MSAdSDK.MSInterstitialAd : ADXiluSDK.ADXiluLoadProtocol, Swift.CustomStringConvertible {
+extension MSAdSDK.MSInterstitialAd : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any?)
   #endif
@@ -590,9 +534,8 @@ extension ADXiluSDK.ADXiluInterstitialAd : BeiZiSDK.BeiZiInterstitialDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(adId: Swift.String, platform: ADXiluSDK.ADXiluAdPlatform, title: Swift.String, desc: Swift.String, actionText: Swift.String, iconUrl: Swift.String? = nil, imageUrl: Swift.String? = nil, videoUrl: Swift.String? = nil, adType: ADXiluSDK.ADXiluNativeAdType = .express, isMuted: Swift.Bool = true)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  required public init?(map: ObjectMapper.Map)
-  #endif
+  required public init(from decoder: any Swift.Decoder) throws
+  override public func encode(to encoder: any Swift.Encoder) throws
   @objc public var isExpress: Swift.Bool {
     @objc get
   }
@@ -643,7 +586,7 @@ extension ADXiluSDK.ADXiluNativeAd : BeiZiSDK.BeiZiUnifiedCustomDelegate {
   @objc dynamic public func beiZi_unifiedDidCloseDetailView(_ unifiedCustom: BeiZiSDK.BeiZiUnifiedCustom)
   @objc dynamic public func beiZi_unified(_ unifiedCustom: BeiZiSDK.BeiZiUnifiedCustom, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
 }
-extension MSAdSDK.MSNativeFeedAd : ADXiluSDK.ADXiluLoadProtocol, Swift.CustomStringConvertible {
+extension MSAdSDK.MSNativeFeedAd : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any?)
   #endif
@@ -671,9 +614,8 @@ extension BeiZiSDK.BeiZiUnifiedCustom : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(adId: Swift.String, platform: ADXiluSDK.ADXiluAdPlatform, rewardName: Swift.String, rewardAmount: Swift.Int, customData: Swift.String? = nil, isMuted: Swift.Bool = false)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  required public init?(map: ObjectMapper.Map)
-  #endif
+  required public init(from decoder: any Swift.Decoder) throws
+  override public func encode(to encoder: any Swift.Encoder) throws
   @objc public func checkExpired() -> Swift.Bool
   @objc public func markAsExpired()
   @objc deinit
@@ -753,7 +695,7 @@ extension BeiZiSDK.BeiZiRewardedVideo : ADXiluSDK.ADXiluLoadProtocol {
   public func xilu_showAd(view: Any?)
   #endif
 }
-extension MSAdSDK.MSRewardVideoAd : ADXiluSDK.ADXiluLoadProtocol, Swift.CustomStringConvertible {
+extension MSAdSDK.MSRewardVideoAd : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any?)
   #endif
@@ -761,8 +703,8 @@ extension MSAdSDK.MSRewardVideoAd : ADXiluSDK.ADXiluLoadProtocol, Swift.CustomSt
     @objc get
   }
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ADXiluSDK : ObjectiveC.NSObject {
-  @objc public static let shared: ADXiluSDK.ADXiluSDK
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ADXiluSDKManager : ObjectiveC.NSObject {
+  @objc public static let shared: ADXiluSDK.ADXiluSDKManager
   @objc public var isInitialized: Swift.Bool {
     get
   }
@@ -790,9 +732,10 @@ extension MSAdSDK.MSRewardVideoAd : ADXiluSDK.ADXiluLoadProtocol, Swift.CustomSt
   @objc deinit
 }
 @objc public enum ADXiluAdPlatform : Swift.Int {
+  case all = 0
   case beizi = 1
   case ms = 2
-  case all
+  case gdt = 3
   public var name: Swift.String {
     get
   }
@@ -825,11 +768,9 @@ extension MSAdSDK.MSRewardVideoAd : ADXiluSDK.ADXiluLoadProtocol, Swift.CustomSt
   }
   @objc deinit
 }
-@objc public class ADXiluAdInfo : ObjectiveC.NSObject, ObjectMapper.Mappable {
-  #if compiler(>=5.3) && $NonescapableTypes
-  required public init?(map: ObjectMapper.Map)
-  #endif
-  public func mapping(map: ObjectMapper.Map)
+@objc public class ADXiluAdInfo : ObjectiveC.NSObject, Swift.Codable {
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc public var adId: Swift.String
   @objc public var eCmp: Swift.Int
   @objc public var rewardAmount: Swift.Int
@@ -938,12 +879,47 @@ extension ADXiluSDK.ADXiluSplashAd : BeiZiSDK.BeiZiSplashDelegate {
   @objc dynamic public func beiZi_splashZoomOutDidClose(_ beiziSplash: BeiZiSDK.BeiZiSplash)
   @objc dynamic public func beiZi_splash(_ beiziSplash: BeiZiSDK.BeiZiSplash, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
 }
+extension ADXiluSDK.ADXiluSplashAd : GDTMobSDK.GDTSplashAdDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdSuccessPresentScreen(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdDidLoad(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdFail(toPresent splashAd: GDTMobSDK.GDTSplashAd!, withError error: (any Swift.Error)!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdExposured(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdClicked(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdApplicationWillEnterBackground(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdWillClosed(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdClosed(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdDidPresentFullScreenModal(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdWillDismissFullScreenModal(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func splashAdDidDismissFullScreenModal(_ splashAd: GDTMobSDK.GDTSplashAd!)
+  #endif
+}
 extension BeiZiSDK.BeiZiSplash : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any? = nil)
   #endif
 }
-extension MSAdSDK.MSSplashAd : ADXiluSDK.ADXiluLoadProtocol, Swift.CustomStringConvertible {
+extension MSAdSDK.MSSplashAd : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any? = nil)
   #endif
@@ -951,17 +927,16 @@ extension MSAdSDK.MSSplashAd : ADXiluSDK.ADXiluLoadProtocol, Swift.CustomStringC
     @objc get
   }
 }
-open class CodableTransform<T> where T : Swift.Decodable, T : Swift.Encodable {
-  public typealias Object = T
-  public typealias JSON = Any
-  public init()
+extension GDTMobSDK.GDTSplashAd : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
-  open func transformFromJSON(_ value: Any?) -> ADXiluSDK.CodableTransform<T>.Object?
+  public func xilu_showAd(view: Any? = nil)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  open func transformToJSON(_ value: T?) -> Any?
-  #endif
-  @objc deinit
+  @objc override dynamic open var description: Swift.String {
+    @objc get
+  }
+}
+extension Foundation.NSError {
+  public func fullInfo() -> Swift.String
 }
 extension Foundation.NSDictionary {
   @objc dynamic public func jsonString() -> Swift.String
@@ -973,18 +948,6 @@ public func printJSON(_ object: Any)
 @objc @_inheritsConvenienceInitializers public class PHCommonKeyChain : ObjectiveC.NSObject {
   public static func ph_setPassword3(_ password: Swift.String, _ serviceName: Swift.String, _ account: Swift.String) -> Swift.Bool
   @objc override dynamic public init()
-  @objc deinit
-}
-public class ADPlatformTransfromSafe : ObjectMapper.TransformType {
-  public typealias Object = ADXiluSDK.ADXiluAdPlatform
-  public typealias JSON = Any
-  public init()
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func transformFromJSON(_ value: Any?) -> ADXiluSDK.ADPlatformTransfromSafe.Object?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func transformToJSON(_ value: ADXiluSDK.ADXiluAdPlatform?) -> Any?
-  #endif
   @objc deinit
 }
 #if compiler(>=5.3) && $NonescapableTypes

@@ -56,10 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func initializeADXiluSDK() {
         // 初始化SDK，使用测试AppID
-        ADXiluSDK.shared.initialize(appId: "4cvmpqr2", debug: true) { success, error in
+        ADXiluSDKManager.shared.initialize(appId: "4cvmpqr2", debug: true) { success, error in
             DispatchQueue.main.async {
                 if success {
-                    print("ADXiluSDK初始化成功，版本: \(ADXiluSDK.shared.getVersion())")
+                    print("ADXiluSDK初始化成功，版本: \(ADXiluSDKManager.shared.getVersion())")
                     
                 } else {
                     print("ADXiluSDK初始化失败: \(error ?? "未知错误")")

@@ -25,10 +25,10 @@ class MainViewController: UIViewController {
 //        ("Draw视频信息流", { DrawVodAdViewController() }),
         ("重新初始化(仅在初始化失败时重试使用)", {
             // 初始化SDK，使用测试AppID
-            ADXiluSDK.shared.initialize(appId: "4cvmpqr2", debug: true) { success, error in
+            ADXiluSDKManager.shared.initialize(appId: "4cvmpqr2", debug: true) { success, error in
                 DispatchQueue.main.async {
                     if success {
-                        print("ADXiluSDK初始化成功，版本: \(ADXiluSDK.shared.getVersion())")
+                        print("ADXiluSDK初始化成功，版本: \(ADXiluSDKManager.shared.getVersion())")
                         XLToastView.show("初始化成功")
                     } else {
                         print("ADXiluSDK初始化失败: \(error ?? "未知错误")")

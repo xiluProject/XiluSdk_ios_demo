@@ -17,7 +17,7 @@ target 'XiluSdk_ios_demo' do
   # Pods for XiluSdk_ios_demo
   # 集成ADXiluSDK
 #  pod 'ADXiluSDK', '~> 1.0.0'
-  
+  pod 'GDTMobSDK'
   pod 'SnapKit', '~> 5.6.0'
   pod 'ObjectMapper'
   pod 'CryptoSwift'

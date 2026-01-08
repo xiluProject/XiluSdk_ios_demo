@@ -221,6 +221,10 @@ Permission is granted to anyone to use this software for any purpose,including c
 - Redistributions of any form whatsoever must retain the following acknowledgment: 'This product includes software developed by the "Marcin Krzyzanowski" (http://krzyzanowskim.com/).'
 
 
+## GDTMobSDK
+
+Copyright 2017 Tencent Inc. All Rights Reserved.
+
 ## MSMobAdSDK
 
 MIT License

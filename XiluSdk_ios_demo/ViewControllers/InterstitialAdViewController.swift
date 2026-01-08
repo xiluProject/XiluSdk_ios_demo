@@ -76,7 +76,7 @@ class InterstitialAdViewController: UIViewController {
     }
     
     @objc private func loadAd() {
-        guard ADXiluSDK.shared.isInitialized else {
+        guard ADXiluSDKManager.shared.isInitialized else {
             showAlert(title: "错误", message: "SDK未初始化")
             return
         }
