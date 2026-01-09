@@ -152,9 +152,7 @@ extension SplashAdViewController: ADXiluBaseAdDelegate {
     
     func xilu_AdDidClick(_ xiluAd: ADXiluBaseAd, adInfo: ADXiluAdInfo) {
         appLog("广告点击: \(adInfo)")
-        DispatchQueue.main.async {
-            self.showAlert(title: "广告点击", message: "开屏广告被点击 - \(String(describing: adInfo.platform.name))")
-        }
+        appLog("广告点击: \(adInfo)")
     }
     
     func xilu_AdDidClose(_ xiluAd: ADXiluBaseAd, adInfo: ADXiluAdInfo) {
