@@ -10,5 +10,5 @@ import Foundation
 
 @objc class AppConst: NSObject {
     static var AppId = "xtpducr2" //4cvmpqr2 //w7bepwfx
-    static var adPosId = "xtpducr2"
+    static var adPosId = "6m35dgjn"
 }
