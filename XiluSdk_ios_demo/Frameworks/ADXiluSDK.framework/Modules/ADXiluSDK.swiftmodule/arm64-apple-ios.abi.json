@@ -32090,56 +32090,56 @@
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 11809,
+      "offset": 11838,
       "length": 5,
       "value": "\" - \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 11879,
+      "offset": 11908,
       "length": 15,
       "value": "\"原生模版:\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 12339,
+      "offset": 12368,
       "length": 14,
       "value": "\"nativeAdView\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 12395,
+      "offset": 12424,
       "length": 17,
       "value": "\"ms广告视图:\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 12480,
+      "offset": 12509,
       "length": 17,
       "value": "\"ms广告物料:\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 12563,
+      "offset": 12592,
       "length": 14,
       "value": "\"nativeAdData\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 18548,
+      "offset": 18708,
       "length": 33,
       "value": "\"MSNativeFeedAd { pid: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 18577,
+      "offset": 18737,
       "length": 1,
       "value": "\") }\""
     },
@@ -32160,63 +32160,63 @@
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 7875,
+      "offset": 7946,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "StringLiteral",
-      "offset": 8282,
+      "offset": 8353,
       "length": 15,
       "value": "\"rewardedVideo\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "StringLiteral",
-      "offset": 8337,
+      "offset": 8408,
       "length": 15,
       "value": "\"rewardedVideo\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "StringLiteral",
-      "offset": 8371,
+      "offset": 8442,
       "length": 4,
       "value": "\"bz\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "StringLiteral",
-      "offset": 8509,
+      "offset": 8580,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 8523,
+      "offset": 8594,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "StringLiteral",
-      "offset": 12951,
+      "offset": 13022,
       "length": 50,
       "value": "\"MSRewardVideoAd { pid: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "StringLiteral",
-      "offset": 12981,
+      "offset": 13052,
       "length": 1,
       "value": "\", ecpm: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "StringLiteral",
-      "offset": 12998,
+      "offset": 13069,
       "length": 1,
       "value": "\" }\""
     },
@@ -32517,56 +32517,56 @@
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 31290,
+      "offset": 31499,
       "length": 52,
       "value": "\"BeiZiSplash { spaceID: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 31324,
+      "offset": 31533,
       "length": 1,
       "value": "\", ecpm: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 31339,
+      "offset": 31548,
       "length": 1,
       "value": "\" }\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 31750,
+      "offset": 31959,
       "length": 45,
       "value": "\"MSSplashAd { pid: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 31775,
+      "offset": 31984,
       "length": 1,
       "value": "\", ecpm: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 31792,
+      "offset": 32001,
       "length": 1,
       "value": "\" }\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 32236,
+      "offset": 32445,
       "length": 32,
       "value": "\"GDTSplashAd {ecpm: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 32265,
+      "offset": 32474,
       "length": 1,
       "value": "\" }\""
     },
