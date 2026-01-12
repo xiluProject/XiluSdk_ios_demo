@@ -100,7 +100,7 @@ class RewardVodAdViewController: UIViewController {
         rewardVodAd?.p_release()
         
         // 创建激励视频广告
-        rewardVodAd = ADXiluRewardVodAd(adPosId: "kumgm37j")
+        rewardVodAd = ADXiluRewardVodAd(adPosId: AppConst.adPosId)
         rewardVodAd?.delegate = self
         rewardVodAd?.videoDelegate = self
         rewardVodAd?.isMuted = false
