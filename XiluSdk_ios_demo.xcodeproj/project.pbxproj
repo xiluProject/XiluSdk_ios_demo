@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67A6E778D1D307F821433D6A /* Pods_XiluSdk_ios_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4070F4BD4C0DF82699937446 /* Pods_XiluSdk_ios_demo.framework */; };
+		E7E05543D5A3770501E7C676 /* Pods_XiluSdk_ios_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF67901123B19A2408D0AD6A /* Pods_XiluSdk_ios_demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4070F4BD4C0DF82699937446 /* Pods_XiluSdk_ios_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiluSdk_ios_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		008C0BBE6A6B2BCB8553A708 /* Pods-XiluSdk_ios_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiluSdk_ios_demo.release.xcconfig"; path = "Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo.release.xcconfig"; sourceTree = "<group>"; };
+		30179F632F14B2460085C4C0 /* XiluSdk_ios_demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XiluSdk_ios_demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		740A6CAE2EB4578000E8FCF2 /* XiluSdk_ios_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiluSdk_ios_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		740A6D112EB45E6500E8FCF2 /* ADXiluSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADXiluSdk.framework; path = "../../../Library/Developer/Xcode/DerivedData/ADXiluSdk-buzseezrcoqjbdczryqhwbftiaip/Build/Products/Release-iphonesimulator/ADXiluSdk.framework"; sourceTree = "<group>"; };
-		A9AECC37B9792445ED415502 /* Pods-XiluSdk_ios_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiluSdk_ios_demo.release.xcconfig"; path = "Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo.release.xcconfig"; sourceTree = "<group>"; };
-		D2FF62E25E08E4A381856CA3 /* Pods-XiluSdk_ios_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiluSdk_ios_demo.debug.xcconfig"; path = "Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo.debug.xcconfig"; sourceTree = "<group>"; };
+		CF67901123B19A2408D0AD6A /* Pods_XiluSdk_ios_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiluSdk_ios_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F23F9DA7AA484BFD7A59F74A /* Pods-XiluSdk_ios_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiluSdk_ios_demo.debug.xcconfig"; path = "Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -44,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67A6E778D1D307F821433D6A /* Pods_XiluSdk_ios_demo.framework in Frameworks */,
+				E7E05543D5A3770501E7C676 /* Pods_XiluSdk_ios_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +55,7 @@
 		740A6CA52EB4578000E8FCF2 = {
 			isa = PBXGroup;
 			children = (
+				30179F632F14B2460085C4C0 /* XiluSdk_ios_demo-Bridging-Header.h */,
 				740A6CB02EB4578000E8FCF2 /* XiluSdk_ios_demo */,
 				740A6D102EB45E6500E8FCF2 /* Frameworks */,
 				740A6CAF2EB4578000E8FCF2 /* Products */,
@@ -73,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				740A6D112EB45E6500E8FCF2 /* ADXiluSdk.framework */,
-				4070F4BD4C0DF82699937446 /* Pods_XiluSdk_ios_demo.framework */,
+				CF67901123B19A2408D0AD6A /* Pods_XiluSdk_ios_demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,8 +83,8 @@
 		DD62276AAF5D2D046AB6FB76 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D2FF62E25E08E4A381856CA3 /* Pods-XiluSdk_ios_demo.debug.xcconfig */,
-				A9AECC37B9792445ED415502 /* Pods-XiluSdk_ios_demo.release.xcconfig */,
+				F23F9DA7AA484BFD7A59F74A /* Pods-XiluSdk_ios_demo.debug.xcconfig */,
+				008C0BBE6A6B2BCB8553A708 /* Pods-XiluSdk_ios_demo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -94,12 +96,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 740A6CC12EB4578100E8FCF2 /* Build configuration list for PBXNativeTarget "XiluSdk_ios_demo" */;
 			buildPhases = (
-				21B1C660EABAC08FEECB4C2C /* [CP] Check Pods Manifest.lock */,
+				A54F418D917418237179ED55 /* [CP] Check Pods Manifest.lock */,
 				740A6CAA2EB4578000E8FCF2 /* Sources */,
 				740A6CAB2EB4578000E8FCF2 /* Frameworks */,
 				740A6CAC2EB4578000E8FCF2 /* Resources */,
-				6EB1C79BB32ACEB1CB51341F /* [CP] Copy Pods Resources */,
-				3585C5DF7DEE9F5D9F8FD17C /* [CP] Embed Pods Frameworks */,
+				F012F9FAA892C031EDA289BE /* [CP] Embed Pods Frameworks */,
+				0CC231DCC06DA860554EA5ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,7 +160,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21B1C660EABAC08FEECB4C2C /* [CP] Check Pods Manifest.lock */ = {
+		0CC231DCC06DA860554EA5ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A54F418D917418237179ED55 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -180,7 +199,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3585C5DF7DEE9F5D9F8FD17C /* [CP] Embed Pods Frameworks */ = {
+		F012F9FAA892C031EDA289BE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,6 +216,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+<<<<<<< HEAD
 		6EB1C79BB32ACEB1CB51341F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,7 +249,7 @@
 /* Begin XCBuildConfiguration section */
 		740A6CC22EB4578100E8FCF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2FF62E25E08E4A381856CA3 /* Pods-XiluSdk_ios_demo.debug.xcconfig */;
+			baseConfigurationReference = F23F9DA7AA484BFD7A59F74A /* Pods-XiluSdk_ios_demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -353,6 +373,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT_DIR/XiluSdk_ios_demo-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,7 +382,7 @@
 		};
 		740A6CC32EB4578100E8FCF2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9AECC37B9792445ED415502 /* Pods-XiluSdk_ios_demo.release.xcconfig */;
+			baseConfigurationReference = 008C0BBE6A6B2BCB8553A708 /* Pods-XiluSdk_ios_demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -401,6 +422,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT_DIR/XiluSdk_ios_demo-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
