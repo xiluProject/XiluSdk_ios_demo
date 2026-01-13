@@ -94,7 +94,7 @@ class BannerAdViewController: UIViewController {
         // 释放之前的广告
         // 创建Banner广告
         let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width, height: 60)
-        bannerAd = ADXiluBannerAd(adPosId: "ajebtp3k", adSize: adSize)
+        bannerAd = ADXiluBannerAd(adPosId: AppConst.adPosId, adSize: adSize)
         bannerAd?.showCloseBtn = true
         bannerAd?.containerView = containerView
         bannerAd?.nativeViewController = self
