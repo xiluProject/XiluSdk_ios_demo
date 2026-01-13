@@ -115,7 +115,7 @@ NSLog(@"[DemoApp] %@", logString);
     
     // 创建开屏广告
     ADXiluAdSize *adSize = [[ADXiluAdSize alloc] initWithWidth:[UIScreen mainScreen].bounds.size.width height:300];
-    self.splashAd = [[ADXiluSplashAd alloc] initWithAdPosId:@"ejfggd92" style:ADXiluSplashAdStyleHalfScreen adSize:adSize];
+    self.splashAd = [[ADXiluSplashAd alloc] initWithAdPosId:@"6m35dgjn" style:ADXiluSplashAdStyleHalfScreen adSize:adSize];
     self.splashAd.bottomView = self.bottomView;
     self.splashAd.delegate = self;
     self.splashAd.countdownDuration = 5.0;
@@ -156,8 +156,9 @@ NSLog(@"[DemoApp] %@", logString);
 - (void)xilu_AdDidClick:(ADXiluBaseAd *)xiluAd adInfo:(ADXiluAdInfo *)adInfo {
     appLog(@"广告点击: %@", adInfo);
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self showAlertWithTitle:@"广告点击"
-                         message:[NSString stringWithFormat:@"开屏广告被点击 - %ld", adInfo.platform]];
+        NSLog(@"广告点击");
+//        [self showAlertWithTitle:@"广告点击"
+//                         message:[NSString stringWithFormat:@"开屏广告被点击 - %ld", adInfo.platform]];
     });
 }
 

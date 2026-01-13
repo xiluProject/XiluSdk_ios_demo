@@ -151,8 +151,9 @@
 
 - (void)xilu_AdDidClick:(ADXiluBaseAd *)xiluAd adInfo:(ADXiluAdInfo *)adInfo {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self showAlertWithTitle:@"广告点击"
-                        message:[NSString stringWithFormat:@"Banner广告被点击 - %ld", adInfo.platform]];
+        NSLog(@"广告点击");
+//        [self showAlertWithTitle:@"广告点击"
+//                        message:[NSString stringWithFormat:@"Banner广告被点击 - %ld", adInfo.platform]];
     });
 }
 

@@ -148,8 +148,9 @@ NSLog(@"[DemoApp] %@", logString);
 
 - (void)xilu_AdDidClick:(ADXiluBaseAd *)xiluAd adInfo:(ADXiluAdInfo *)adInfo {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self showAlertWithTitle:@"广告点击"
-                         message:[NSString stringWithFormat:@"激励视频广告被点击 - %ld", adInfo.platform]];
+        NSLog(@"广告点击");
+//        [self showAlertWithTitle:@"广告点击"
+//                         message:[NSString stringWithFormat:@"激励视频广告被点击 - %ld", adInfo.platform]];
     });
 }
 
@@ -269,8 +270,9 @@ NSLog(@"[DemoApp] %@", logString);
 
 - (void)rewardVodAdDidClick:(ADXiluRewardVodAd *)rewardVodAd adInfo:(ADXiluRewardVodAdInfo *)adInfo {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self showAlertWithTitle:@"广告点击"
-                         message:[NSString stringWithFormat:@"激励视频广告被点击 - %ld", adInfo.platform]];
+        NSLog(@"广告点击");
+//        [self showAlertWithTitle:@"广告点击"
+//                         message:[NSString stringWithFormat:@"激励视频广告被点击 - %ld", adInfo.platform]];
     });
 }
 

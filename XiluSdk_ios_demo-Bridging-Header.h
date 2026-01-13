@@ -8,3 +8,5 @@
 #import "OCNativeRenderAdViewController.h"
 #import "OCRewardVodAdViewController.h"
 #import "OCSplashAdViewController.h"
+#import "OCBannerAdViewController.h"
+

@@ -216,7 +216,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-<<<<<<< HEAD
 		6EB1C79BB32ACEB1CB51341F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

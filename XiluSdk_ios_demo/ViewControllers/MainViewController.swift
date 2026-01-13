@@ -13,16 +13,13 @@ class MainViewController: UIViewController {
     private var locationManager: CLLocationManager!
     
     private var tableView: UITableView!
-    
     private let menuItems: [(String, () -> UIViewController)] = [
-        ("开屏广告", { OCSplashAdViewController() }),
-        ("插屏广告", { InterstitialAdViewController() }),
-        ("激励视频广告", { RewardVodAdViewController() }),
-        ("信息流模板广告", { NativeTemplateAdViewController() }),
-        ("信息流自渲染模板广告", { NativeRenderAdViewController() }),
-        ("Banner广告", { BannerAdViewController() }),
-//        ("全屏视频广告", { FullScreenVodAdViewController() }),
-//        ("Draw视频信息流", { DrawVodAdViewController() }),
+        ("开屏广告", { SplashAdViewController() }),//对应oc的开屏广告：OCSplashAdViewController
+        ("插屏广告", { InterstitialAdViewController() }),//对应oc的插屏广告：OCInterstitialAdViewController
+        ("激励视频广告", { RewardVodAdViewController() }),//对应oc的激励视频广告：OCRewardVodAdViewController
+        ("信息流模板广告", { NativeTemplateAdViewController() }),//对应oc的信息流模板广告：OCNativeTemplateAdViewController
+        ("信息流自渲染广告", { NativeRenderAdViewController() }),//对应oc的信息流自渲染广告：OCNativeRenderAdViewController
+        ("Banner广告", { BannerAdViewController() }),//对应object-c的Banner广告：OCBannerAdViewController
         ("重新初始化(仅在初始化失败时重试使用)", {
             // 初始化SDK，使用测试AppID
             ADXiluSDKManager.shared.initialize(appId: "g2t6aws3", debug: true) { success, error in
