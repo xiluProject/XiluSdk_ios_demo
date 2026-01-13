@@ -19,9 +19,8 @@ target 'XiluSdk_ios_demo' do
 #  pod 'ADXiluSDK', '~> 1.0.0'
   pod 'GDTMobSDK'
   pod 'SnapKit', '~> 5.6.0'
-  pod 'ObjectMapper'
   pod 'CryptoSwift'
-  
+  pod 'Masonry' 
   pod 'MSMobAdSDK/MS', '2.7.7.3'
   pod 'BeiZiSDK-iOS', '4.90.7.0'
 end
