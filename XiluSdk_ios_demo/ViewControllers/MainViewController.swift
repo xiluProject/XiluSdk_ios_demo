@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     private var tableView: UITableView!
     
     private let menuItems: [(String, () -> UIViewController)] = [
-        ("开屏广告", { SplashAdViewController() }),
+        ("开屏广告", { OCSplashAdViewController() }),
         ("插屏广告", { InterstitialAdViewController() }),
         ("激励视频广告", { RewardVodAdViewController() }),
         ("信息流模板广告", { NativeTemplateAdViewController() }),
