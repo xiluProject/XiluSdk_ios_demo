@@ -20,7 +20,8 @@ target 'XiluSdk_ios_demo' do
   pod 'GDTMobSDK'
   pod 'SnapKit', '~> 5.6.0'
   pod 'CryptoSwift'
-  pod 'Masonry' 
+  pod 'Masonry'
+  pod 'SDWebImage'
   pod 'MSMobAdSDK/MS', '2.7.7.3'
   pod 'BeiZiSDK-iOS', '4.90.7.0'
 end

@@ -8,7 +8,7 @@
 
 #import "OCNativeTemplateAdViewController.h"
 #import "ADXiluSdk/ADXiluSDK-Swift.h"
-//#import <Masonry/Masonry.h>
+#import <Masonry/Masonry.h>
 
 @interface OCNativeTemplateAdViewController () <UITableViewDelegate, UITableViewDataSource, ADXiluBaseAdDelegate>
 // 标记广告插入位置（每5条内容插1条广告）

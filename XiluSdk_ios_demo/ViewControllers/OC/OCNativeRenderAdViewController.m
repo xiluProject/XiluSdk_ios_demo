@@ -8,8 +8,8 @@
 
 #import "OCNativeRenderAdViewController.h"
 #import "ADXiluSdk/ADXiluSDK-Swift.h"
-//#import <Masonry/Masonry.h>
-//#import <SDWebImage/SDWebImage.h>
+#import <Masonry/Masonry.h>
+#import <SDWebImage/SDWebImage.h>
 #import <MSAdSDK/MSNativeFeedAdModel.h>
 #import <MSAdSDK/MSFeedAdMeta.h>
 @interface OCNativeRenderAdViewController ()<ADXiluBaseAdDelegate>
@@ -26,10 +26,10 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.adContainerView];
-//    [self.adContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.left.right.equalTo(self.view);
-////        make.height.mas_equalTo(150);
-//    }];
+    [self.adContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(self.view);
+        make.height.mas_equalTo(150);
+    }];
     [self loadNativeAd];
 }
 
@@ -106,22 +106,22 @@
     titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
     titleLabel.text = adModel.adMaterialMeta.metaTitle;
     [adView addSubview:titleLabel];
-//    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.top.mas_equalTo(10);
-//        make.right.mas_equalTo(-10);
-//    }];
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.mas_equalTo(10);
+        make.right.mas_equalTo(-10);
+    }];
     
     //这里以单图广告为例，多图需自行处理展示规则
     UIImageView *mainImg = [UIImageView new];
-//    [mainImg sd_setImageWithURL:[NSURL URLWithString:adModel.adMaterialMeta.metaImageUrls[0]]];
+    [mainImg sd_setImageWithURL:[NSURL URLWithString:adModel.adMaterialMeta.metaImageUrls[0]]];
     [adView addSubview:mainImg];
-//    [mainImg mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(titleLabel);
-//        make.top.mas_equalTo(titleLabel.mas_bottom).offset(6);
-//        make.width.mas_equalTo(150);
-//        make.height.mas_equalTo(100);
-//        make.bottom.mas_equalTo(-10);
-//    }];
+    [mainImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(titleLabel);
+        make.top.mas_equalTo(titleLabel.mas_bottom).offset(6);
+        make.width.mas_equalTo(150);
+        make.height.mas_equalTo(100);
+        make.bottom.mas_equalTo(-10);
+    }];
     
     //内容标签
     UILabel *contentLabel = [UILabel new];
@@ -130,11 +130,11 @@
     contentLabel.lineBreakMode = NSLineBreakByCharWrapping;
     contentLabel.text = adModel.adMaterialMeta.metaContent;
     [adView addSubview:contentLabel];
-//    [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.mas_equalTo(mainImg);
-//        make.left.mas_equalTo(mainImg.mas_right).offset(6);
-//        make.right.mas_equalTo(-10);
-//    }];
+    [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(mainImg);
+        make.left.mas_equalTo(mainImg.mas_right).offset(6);
+        make.right.mas_equalTo(-10);
+    }];
     
     //背景色（便于调试）
     adView.backgroundColor = [UIColor cyanColor];

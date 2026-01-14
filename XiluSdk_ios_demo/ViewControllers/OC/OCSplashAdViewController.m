@@ -7,7 +7,7 @@
 
 #import "OCSplashAdViewController.h"
 #import "ADXiluSdk/ADXiluSDK-Swift.h"
-//#import <Masonry/Masonry.h>
+#import <Masonry/Masonry.h>
 @interface OCSplashAdViewController () <ADXiluBaseAdDelegate>
 void appLog(NSString *format, ...) {
 va_list args;
@@ -43,10 +43,10 @@ NSLog(@"[DemoApp] %@", logString);
         logo.layer.borderColor = [UIColor whiteColor].CGColor;
         logo.layer.masksToBounds = YES;
         
-//        [logo mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.center.equalTo(_bottomView);
-//            make.width.height.equalTo(@80);
-//        }];
+        [logo mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(_bottomView);
+            make.width.height.equalTo(@80);
+        }];
     }
     return _bottomView;
 }
