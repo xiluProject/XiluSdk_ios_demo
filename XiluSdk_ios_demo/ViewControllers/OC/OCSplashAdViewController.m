@@ -6,7 +6,7 @@
 //
 
 #import "OCSplashAdViewController.h"
-#import "ADXiluSdk/ADXiluSDK-Swift.h"
+#import "ADXiluSDK/ADXiluSDK-Swift.h"
 #import <Masonry/Masonry.h>
 @interface OCSplashAdViewController () <ADXiluBaseAdDelegate>
 void appLog(NSString *format, ...) {

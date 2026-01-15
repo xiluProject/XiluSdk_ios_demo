@@ -7,8 +7,8 @@
 //
 
 #import "OCInterstitialAdViewController.h"
-#import "ADXiluSdk/ADXiluSDK-Swift.h"
-#import "ADXiluSdk/ADXiluSDK-Swift.h"
+#import "ADXiluSDK/ADXiluSDK-Swift.h"
+#import "ADXiluSDK/ADXiluSDK-Swift.h"
 #import <BeiZiSDK/BeiZiInterstitial.h>
 @interface OCInterstitialAdViewController ()<ADXiluBaseAdDelegate, BeiZiInterstitialDelegate>
 @property (nonatomic, strong) ADXiluInterstitialAd *interstitialAd;

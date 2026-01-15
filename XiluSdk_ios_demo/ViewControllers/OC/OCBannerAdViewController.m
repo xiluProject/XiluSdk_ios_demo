@@ -6,7 +6,7 @@
 //
 
 #import "OCBannerAdViewController.h"
-#import "ADXiluSdk/ADXiluSDK-Swift.h"
+#import "ADXiluSDK/ADXiluSDK-Swift.h"
 @interface OCBannerAdViewController ()<ADXiluBaseAdDelegate>
 
 @property (nonatomic, strong) UIView *containerView;

@@ -6,7 +6,7 @@
 //
 
 #import "OCRewardVodAdViewController.h"
-#import "ADXiluSdk/ADXiluSDK-Swift.h"
+#import "ADXiluSDK/ADXiluSDK-Swift.h"
 void appLog(NSString *format, ...) {
 va_list args;
 va_start(args, format);
