@@ -115,7 +115,7 @@ NSLog(@"[DemoApp] %@", logString);
     
     // 创建开屏广告
     ADXiluAdSize *adSize = [[ADXiluAdSize alloc] initWithWidth:[UIScreen mainScreen].bounds.size.width height:300];
-    self.splashAd = [[ADXiluSplashAd alloc] initWithAdPosId:@"6m35dgjn" style:ADXiluSplashAdStyleHalfScreen adSize:adSize];
+    self.splashAd = [[ADXiluSplashAd alloc] initWithAdPosId:@"ejfggd92" style:ADXiluSplashAdStyleHalfScreen adSize:adSize];
     self.splashAd.bottomView = self.bottomView;
     self.splashAd.delegate = self;
     self.splashAd.countdownDuration = 5.0;

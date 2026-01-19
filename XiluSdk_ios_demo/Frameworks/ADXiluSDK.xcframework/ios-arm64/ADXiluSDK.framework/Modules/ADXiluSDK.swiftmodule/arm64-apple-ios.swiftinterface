@@ -370,37 +370,6 @@ extension ADXiluSDK.ADAdsConfig {
   @objc public func dismissAd()
   @objc deinit
 }
-extension ADXiluSDK.ADXiluBannerAd : MSAdSDK.MSBannerViewDelegate {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerAdReadySuccess(_ msBannerAd: MSAdSDK.MSBannerView!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerAdRenderSuccess(_ msBannerAd: MSAdSDK.MSBannerView!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerError(_ msBannerAd: MSAdSDK.MSBannerView!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerAdRenderFail(_ msBannerAd: MSAdSDK.MSBannerView!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerShow(_ msBannerAd: MSAdSDK.MSBannerView!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerClicked(_ msBannerAd: MSAdSDK.MSBannerView!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerDetailShow(_ msBannerAd: MSAdSDK.MSBannerView!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerDetailClosed(_ msBannerAd: MSAdSDK.MSBannerView!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msBannerClosed(_ msBannerAd: MSAdSDK.MSBannerView!)
-  #endif
-}
-extension ADXiluSDK.ADXiluBannerAd : BeiZiSDK.BeiZiBannerViewDelegate {
-}
 @objc public protocol ADXiluBaseAdDelegate {
   @objc optional func xilu_AdDidReceive(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc optional func xilu_AdDidReceiveMuti(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfos: [ADXiluSDK.ADXiluAdInfo])
@@ -448,60 +417,6 @@ extension ADXiluSDK.ADXiluBaseAd : ADXiluSDK.ADXiluBaseAdDelegate {
 extension BeiZiSDK.BeiZiInterstitial : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any?)
-  #endif
-}
-extension MSAdSDK.MSInterstitialAd : ADXiluSDK.ADXiluLoadProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func xilu_showAd(view: Any?)
-  #endif
-  @objc override dynamic open var description: Swift.String {
-    @objc get
-  }
-}
-extension ADXiluSDK.ADXiluInterstitialAd : MSAdSDK.MSInterstitialExtensionFunctionDelegate {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialLoaded(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialShow(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialError(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialAdShowFail(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialAdReadySuccess(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialPlatformError(_ platform: MSAdSDK.MSPlatform, ad msInterstitialAd: MSAdSDK.MSInterstitialAd!, error: (any Swift.Error)!)
-  #endif
-}
-extension ADXiluSDK.ADXiluInterstitialAd : MSAdSDK.MSInterstitialDelegate {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialClosed(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialClicked(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msInterstitialExposure(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msInterstitialDetailClosed(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msInterstitialLoadedSuccess(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msInterstitialLoadedFail(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msInterstitialAdRenderSuccess(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!, extInfo info: [Swift.AnyHashable : Any]!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msInterstitialAdFail(_ msInterstitialAd: MSAdSDK.MSInterstitialAd!, extInfo info: [Swift.AnyHashable : Any]!, error: (any Swift.Error)!)
   #endif
 }
 extension ADXiluSDK.ADXiluInterstitialAd : BeiZiSDK.BeiZiInterstitialDelegate {
@@ -555,22 +470,6 @@ extension ADXiluSDK.ADXiluInterstitialAd : BeiZiSDK.BeiZiInterstitialDelegate {
   @objc public func p_release()
   @objc deinit
 }
-extension ADXiluSDK.ADXiluNativeAd : MSAdSDK.MSNativeFeedAdExtensionFunctionDelegate {
-  @objc dynamic public func msNativeFeedAdPlatformError(_ platform: MSAdSDK.MSPlatform, nativeFeedAd: MSAdSDK.MSNativeFeedAd, error: any Swift.Error)
-}
-extension ADXiluSDK.ADXiluNativeAd : MSAdSDK.MSNativeFeedAdDelegate {
-  @objc dynamic public func msNativeFeedAdShow(_ feedAd: MSAdSDK.MSNativeFeedAdModel)
-  @objc dynamic public func msNativeFeedAdClick(_ feedAd: MSAdSDK.MSNativeFeedAdModel)
-  @objc dynamic public func msNativeFeedAdClosed(_ feedAd: MSAdSDK.MSNativeFeedAdModel)
-  @objc dynamic public func msNativeFeedAdDetailShow()
-  @objc dynamic public func msNativeFeedAdDetailClosed()
-  @objc dynamic public func msNativeFeedAdLoaded(_ nativeFeedAd: MSAdSDK.MSNativeFeedAd, feedAds: [MSAdSDK.MSNativeFeedAdModel])
-  @objc dynamic public func msNativeFeedAdError(_ nativeFeedAd: MSAdSDK.MSNativeFeedAd, withError error: any Swift.Error)
-  @objc dynamic public func msNativeFeedAdShowFailed(_ feedAd: MSAdSDK.MSNativeFeedAdModel, error: any Swift.Error)
-  @objc dynamic public func msNativeFeedAdVideoStateDidChanged(_ playerState: MSAdSDK.MSPlayerPlayState, feedAd: MSAdSDK.MSNativeFeedAdModel)
-  @objc dynamic public func msNativeFeedAdMaterialMetaReadySuccess(_ nativeFeedAd: MSAdSDK.MSNativeFeedAd, feedAd: MSAdSDK.MSNativeFeedAdModel)
-  @objc dynamic public func msNativeFeedAdMaterialMetaReadyError(_ nativeFeedAd: MSAdSDK.MSNativeFeedAd, feedAd: MSAdSDK.MSNativeFeedAdModel, error: any Swift.Error)
-}
 extension ADXiluSDK.ADXiluNativeAd : BeiZiSDK.BeiZiNativeExpressDelegate {
   @objc dynamic public func beiZi_nativeExpressDidLoad(_ beiziNativeExpress: BeiZiSDK.BeiZiNativeExpress)
   @objc dynamic public func beiZi_nativeExpressDidShow(_ beiziNativeExpress: BeiZiSDK.BeiZiNativeExpress)
@@ -585,19 +484,6 @@ extension ADXiluSDK.ADXiluNativeAd : BeiZiSDK.BeiZiUnifiedCustomDelegate {
   @objc dynamic public func beiZi_unifiedDidPresentScreen(_ unifiedCustom: BeiZiSDK.BeiZiUnifiedCustom)
   @objc dynamic public func beiZi_unifiedDidCloseDetailView(_ unifiedCustom: BeiZiSDK.BeiZiUnifiedCustom)
   @objc dynamic public func beiZi_unified(_ unifiedCustom: BeiZiSDK.BeiZiUnifiedCustom, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
-}
-extension MSAdSDK.MSNativeFeedAd : ADXiluSDK.ADXiluLoadProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func xilu_showAd(view: Any?)
-  #endif
-  @objc override dynamic open var description: Swift.String {
-    @objc get
-  }
-}
-extension BeiZiSDK.BeiZiUnifiedCustom : ADXiluSDK.ADXiluLoadProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func xilu_showAd(view: Any?)
-  #endif
 }
 @objc public protocol ADXiluRewardVodAdDelegate : ADXiluSDK.ADXiluBaseAdDelegate {
   @objc func xilu_AdVideoDidCache(_ rewardVodAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
@@ -629,56 +515,6 @@ extension ADXiluSDK.ADXiluRewardVodAd : BeiZiSDK.BeiZiRewardedVideoDelegate {
   @objc dynamic public func beiZi_rewardedVideoDidStartPlay(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
   @objc dynamic public func beiZi_rewardedVideo(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo, didRewardUserWithReward reward: ObjectiveC.NSObject)
 }
-extension ADXiluSDK.ADXiluRewardVodAd : MSAdSDK.MSRewardVideoAdDelegate {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoLoaded(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoError(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoRenderFail(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoClickSkip(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!, currentTime: Foundation.TimeInterval)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoReward(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!, extInfo adInfo: [Swift.AnyHashable : Any]!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoResumePlaying(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoRenderSuccess(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoStartPlaying(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoStopPlaying(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoWillShow(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoClicked(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoClosed(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoFinish(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoCached(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoShow(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msRewardVideoPlayingError(_ msRewardVideoAd: MSAdSDK.MSRewardVideoAd!, error: (any Swift.Error)!)
-  #endif
-}
 @objc public class ADXiluRewardVodAd : ADXiluSDK.ADXiluBaseAd {
   @objc public var isMuted: Swift.Bool
   @objc public var sceneId: Swift.String?
@@ -694,14 +530,6 @@ extension BeiZiSDK.BeiZiRewardedVideo : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any?)
   #endif
-}
-extension MSAdSDK.MSRewardVideoAd : ADXiluSDK.ADXiluLoadProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func xilu_showAd(view: Any?)
-  #endif
-  @objc override dynamic open var description: Swift.String {
-    @objc get
-  }
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ADXiluSDKManager : ObjectiveC.NSObject {
   @objc public static let shared: ADXiluSDK.ADXiluSDKManager
@@ -832,53 +660,6 @@ extension ADXiluSDK.ADXiluSplashAd : BeiZiSDK.BeiZiSplashDelegate {
   @objc dynamic public func beiZi_splashZoomOutDidClose(_ beiziSplash: BeiZiSDK.BeiZiSplash)
   @objc dynamic public func beiZi_splash(_ beiziSplash: BeiZiSDK.BeiZiSplash, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
 }
-extension ADXiluSDK.ADXiluSplashAd : MSAdSDK.MSSplashAdDelegate {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msSplashAdFail(_ splashAd: MSAdSDK.MSSplashAd!, extInfo info: [Swift.AnyHashable : Any]!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msSplashLoadedFail(_ splashAd: MSAdSDK.MSSplashAd!, withError error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashPresent(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashSkip(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashClosed(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashClicked(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msSplashExposure(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashShow(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashDetailClosed(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashAdReadySuccess(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashError(_ splashAd: MSAdSDK.MSSplashAd!, withError error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashAdShowFail(_ splashAd: MSAdSDK.MSSplashAd!, error: (any Swift.Error)!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashAdLifeTime(_ time: Swift.Int, splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func msSplashWillClosed(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func msSplashLoadedSuccess(_ splashAd: MSAdSDK.MSSplashAd!)
-  #endif
-}
 extension ADXiluSDK.ADXiluSplashAd : GDTMobSDK.GDTSplashAdDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func splashAdSuccessPresentScreen(_ splashAd: GDTMobSDK.GDTSplashAd!)
@@ -915,14 +696,6 @@ extension ADXiluSDK.ADXiluSplashAd : GDTMobSDK.GDTSplashAdDelegate {
   #endif
 }
 extension BeiZiSDK.BeiZiSplash : ADXiluSDK.ADXiluLoadProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func xilu_showAd(view: Any? = nil)
-  #endif
-  @objc override dynamic open var description: Swift.String {
-    @objc get
-  }
-}
-extension MSAdSDK.MSSplashAd : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any? = nil)
   #endif
