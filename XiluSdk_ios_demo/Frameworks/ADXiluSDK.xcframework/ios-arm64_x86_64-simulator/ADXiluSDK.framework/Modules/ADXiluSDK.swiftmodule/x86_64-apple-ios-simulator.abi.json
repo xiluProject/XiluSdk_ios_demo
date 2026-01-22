@@ -10761,8 +10761,8 @@
       },
       {
         "kind": "Import",
-        "name": "BeiZiSDK",
-        "printedName": "BeiZiSDK",
+        "name": "GDTMobSDK",
+        "printedName": "GDTMobSDK",
         "declKind": "Import",
         "moduleName": "ADXiluSDK"
       },
@@ -11267,6 +11267,272 @@
               "AccessControl",
               "ObjC"
             ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showAd",
+            "printedName": "showAd(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ADXiluSDK@objc(cs)ADXiluBannerAd(im)showAdIn:",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC04showD02inyypSg_tF",
+            "moduleName": "ADXiluSDK",
+            "overriding": true,
+            "objc_name": "showAdIn:",
+            "declAttributes": [
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "p_release",
+            "printedName": "p_release()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ADXiluSDK@objc(cs)ADXiluBannerAd(im)p_release",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC9p_releaseyyF",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unifiedBannerViewDidLoad",
+            "printedName": "unifiedBannerViewDidLoad(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedBannerView",
+                "printedName": "GDTMobSDK.GDTUnifiedBannerView",
+                "usr": "c:objc(cs)GDTUnifiedBannerView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluBannerAd(im)unifiedBannerViewDidLoad:",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC07unifiedC11ViewDidLoadyySo010GDTUnifiedcF0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedBannerViewDidLoad:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unifiedBannerViewFailed",
+            "printedName": "unifiedBannerViewFailed(toLoad:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedBannerView",
+                "printedName": "GDTMobSDK.GDTUnifiedBannerView",
+                "usr": "c:objc(cs)GDTUnifiedBannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluBannerAd(im)unifiedBannerViewFailedToLoad:error:",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC07unifiedC10ViewFailed6toLoad5errorySo010GDTUnifiedcF0C_s5Error_ptF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedBannerViewFailedToLoad:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewWillLeaveApplication",
+            "printedName": "bannerViewWillLeaveApplication(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTUnifiedBannerView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTUnifiedBannerView",
+                    "printedName": "GDTMobSDK.GDTUnifiedBannerView",
+                    "usr": "c:objc(cs)GDTUnifiedBannerView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ADXiluSDK0A8BannerAdC30bannerViewWillLeaveApplicationyySo010GDTUnifiedcF0CSgF",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC30bannerViewWillLeaveApplicationyySo010GDTUnifiedcF0CSgF",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewWillClose",
+            "printedName": "bannerViewWillClose(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTUnifiedBannerView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTUnifiedBannerView",
+                    "printedName": "GDTMobSDK.GDTUnifiedBannerView",
+                    "usr": "c:objc(cs)GDTUnifiedBannerView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ADXiluSDK0A8BannerAdC19bannerViewWillCloseyySo010GDTUnifiedcF0CSgF",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC19bannerViewWillCloseyySo010GDTUnifiedcF0CSgF",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewWillExposure",
+            "printedName": "bannerViewWillExposure(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTUnifiedBannerView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTUnifiedBannerView",
+                    "printedName": "GDTMobSDK.GDTUnifiedBannerView",
+                    "usr": "c:objc(cs)GDTUnifiedBannerView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ADXiluSDK0A8BannerAdC22bannerViewWillExposureyySo010GDTUnifiedcF0CSgF",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC22bannerViewWillExposureyySo010GDTUnifiedcF0CSgF",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewClicked",
+            "printedName": "bannerViewClicked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTUnifiedBannerView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTUnifiedBannerView",
+                    "printedName": "GDTMobSDK.GDTUnifiedBannerView",
+                    "usr": "c:objc(cs)GDTUnifiedBannerView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ADXiluSDK0A8BannerAdC17bannerViewClickedyySo010GDTUnifiedcF0CSgF",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC17bannerViewClickedyySo010GDTUnifiedcF0CSgF",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -11812,6 +12078,88 @@
                 "declKind": "Accessor",
                 "usr": "s:9ADXiluSDK0A6BaseAdC5countSivM",
                 "mangledName": "$s9ADXiluSDK0A6BaseAdC5countSivM",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "totalAdsCount",
+            "printedName": "totalAdsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK0A6BaseAdC13totalAdsCountSivp",
+            "mangledName": "$s9ADXiluSDK0A6BaseAdC13totalAdsCountSivp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK0A6BaseAdC13totalAdsCountSivg",
+                "mangledName": "$s9ADXiluSDK0A6BaseAdC13totalAdsCountSivg",
+                "moduleName": "ADXiluSDK",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK0A6BaseAdC13totalAdsCountSivs",
+                "mangledName": "$s9ADXiluSDK0A6BaseAdC13totalAdsCountSivs",
+                "moduleName": "ADXiluSDK",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK0A6BaseAdC13totalAdsCountSivM",
+                "mangledName": "$s9ADXiluSDK0A6BaseAdC13totalAdsCountSivM",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -12963,6 +13311,13 @@
         "moduleName": "ADXiluSDK"
       },
       {
+        "kind": "Import",
+        "name": "GDTMobSDK",
+        "printedName": "GDTMobSDK",
+        "declKind": "Import",
+        "moduleName": "ADXiluSDK"
+      },
+      {
         "kind": "TypeDecl",
         "name": "ADXiluInterstitialAd",
         "printedName": "ADXiluInterstitialAd",
@@ -13306,6 +13661,132 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unifiedInterstitialSuccess",
+            "printedName": "unifiedInterstitialSuccess(toLoad:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedInterstitialAd",
+                "printedName": "GDTMobSDK.GDTUnifiedInterstitialAd",
+                "usr": "c:objc(cs)GDTUnifiedInterstitialAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluInterstitialAd(im)unifiedInterstitialSuccessToLoadAd:",
+            "mangledName": "$s9ADXiluSDK0A14InterstitialAdC07unifiedC7Success6toLoadySo010GDTUnifiedcD0C_tF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedInterstitialSuccessToLoadAd:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unifiedInterstitialFail",
+            "printedName": "unifiedInterstitialFail(toLoad:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedInterstitialAd",
+                "printedName": "GDTMobSDK.GDTUnifiedInterstitialAd",
+                "usr": "c:objc(cs)GDTUnifiedInterstitialAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluInterstitialAd(im)unifiedInterstitialFailToLoadAd:error:",
+            "mangledName": "$s9ADXiluSDK0A14InterstitialAdC07unifiedC4Fail6toLoad5errorySo010GDTUnifiedcD0C_s5Error_ptF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedInterstitialFailToLoadAd:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unifiedInterstitialDidDismissScreen",
+            "printedName": "unifiedInterstitialDidDismissScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedInterstitialAd",
+                "printedName": "GDTMobSDK.GDTUnifiedInterstitialAd",
+                "usr": "c:objc(cs)GDTUnifiedInterstitialAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluInterstitialAd(im)unifiedInterstitialDidDismissScreen:",
+            "mangledName": "$s9ADXiluSDK0A14InterstitialAdC07unifiedC16DidDismissScreenyySo010GDTUnifiedcD0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedInterstitialDidDismissScreen:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unifiedInterstitialClicked",
+            "printedName": "unifiedInterstitialClicked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedInterstitialAd",
+                "printedName": "GDTMobSDK.GDTUnifiedInterstitialAd",
+                "usr": "c:objc(cs)GDTUnifiedInterstitialAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluInterstitialAd(im)unifiedInterstitialClicked:",
+            "mangledName": "$s9ADXiluSDK0A14InterstitialAdC07unifiedC7ClickedyySo010GDTUnifiedcD0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedInterstitialClicked:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -13423,6 +13904,13 @@
         "kind": "Import",
         "name": "BeiZiSDK",
         "printedName": "BeiZiSDK",
+        "declKind": "Import",
+        "moduleName": "ADXiluSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "GDTMobSDK",
+        "printedName": "GDTMobSDK",
         "declKind": "Import",
         "moduleName": "ADXiluSDK"
       },
@@ -15175,8 +15663,8 @@
           },
           {
             "kind": "Function",
-            "name": "beiZi_nativeExpressDislikeDidClick",
-            "printedName": "beiZi_nativeExpressDislikeDidClick(_:)",
+            "name": "beiZi_nativeExpressDidClose",
+            "printedName": "beiZi_nativeExpressDidClose(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15191,13 +15679,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)BeiZi_nativeExpressDislikeDidClick:",
-            "mangledName": "$s9ADXiluSDK0A8NativeAdC34beiZi_nativeExpressDislikeDidClickyySo03BeifcH0CF",
+            "usr": "s:9ADXiluSDK0A8NativeAdC27beiZi_nativeExpressDidCloseyySo03BeifcH0CF",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC27beiZi_nativeExpressDidCloseyySo03BeifcH0CF",
             "moduleName": "ADXiluSDK",
-            "objc_name": "BeiZi_nativeExpressDislikeDidClick:",
             "declAttributes": [
-              "Dynamic",
-              "ObjC",
               "AccessControl"
             ],
             "isFromExtension": true,
@@ -15424,6 +15909,520 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeExpressAdSuccess",
+            "printedName": "nativeExpressAdSuccess(toLoad:views:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTNativeExpressAd?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTNativeExpressAd",
+                    "printedName": "GDTMobSDK.GDTNativeExpressAd",
+                    "usr": "c:objc(cs)GDTNativeExpressAd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "[GDTMobSDK.GDTNativeExpressAdView]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[GDTMobSDK.GDTNativeExpressAdView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GDTNativeExpressAdView",
+                        "printedName": "GDTMobSDK.GDTNativeExpressAdView",
+                        "usr": "c:objc(cs)GDTNativeExpressAdView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)nativeExpressAdSuccessToLoad:views:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC013nativeExpressD7Success6toLoad5viewsySo09GDTNativefD0CSg_SaySo0kfD4ViewCGSgtF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "nativeExpressAdSuccessToLoad:views:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeExpressAdFail",
+            "printedName": "nativeExpressAdFail(toLoad:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTNativeExpressAd?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTNativeExpressAd",
+                    "printedName": "GDTMobSDK.GDTNativeExpressAd",
+                    "usr": "c:objc(cs)GDTNativeExpressAd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)nativeExpressAdFailToLoad:error:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC013nativeExpressD4Fail6toLoad5errorySo09GDTNativefD0CSg_s5Error_pSgtF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "nativeExpressAdFailToLoad:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeExpressAdViewClicked",
+            "printedName": "nativeExpressAdViewClicked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTNativeExpressAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTNativeExpressAdView",
+                    "printedName": "GDTMobSDK.GDTNativeExpressAdView",
+                    "usr": "c:objc(cs)GDTNativeExpressAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)nativeExpressAdViewClicked:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC013nativeExpressD11ViewClickedyySo09GDTNativefdG0CSgF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "nativeExpressAdViewClicked:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeExpressAdViewClosed",
+            "printedName": "nativeExpressAdViewClosed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTNativeExpressAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTNativeExpressAdView",
+                    "printedName": "GDTMobSDK.GDTNativeExpressAdView",
+                    "usr": "c:objc(cs)GDTNativeExpressAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)nativeExpressAdViewClosed:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC013nativeExpressD10ViewClosedyySo09GDTNativefdG0CSgF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "nativeExpressAdViewClosed:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeExpressAdViewRenderSuccess",
+            "printedName": "nativeExpressAdViewRenderSuccess(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTNativeExpressAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTNativeExpressAdView",
+                    "printedName": "GDTMobSDK.GDTNativeExpressAdView",
+                    "usr": "c:objc(cs)GDTNativeExpressAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)nativeExpressAdViewRenderSuccess:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC013nativeExpressD17ViewRenderSuccessyySo09GDTNativefdG0CSgF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "nativeExpressAdViewRenderSuccess:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeExpressAdViewRenderFail",
+            "printedName": "nativeExpressAdViewRenderFail(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTNativeExpressAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTNativeExpressAdView",
+                    "printedName": "GDTMobSDK.GDTNativeExpressAdView",
+                    "usr": "c:objc(cs)GDTNativeExpressAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)nativeExpressAdViewRenderFail:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC013nativeExpressD14ViewRenderFailyySo09GDTNativefdG0CSgF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "nativeExpressAdViewRenderFail:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeExpressAdViewExposure",
+            "printedName": "nativeExpressAdViewExposure(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GDTMobSDK.GDTNativeExpressAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GDTNativeExpressAdView",
+                    "printedName": "GDTMobSDK.GDTNativeExpressAdView",
+                    "usr": "c:objc(cs)GDTNativeExpressAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)nativeExpressAdViewExposure:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC013nativeExpressD12ViewExposureyySo09GDTNativefdG0CSgF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "nativeExpressAdViewExposure:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_unifiedNativeAdViewWillExpose",
+            "printedName": "gdt_unifiedNativeAdViewWillExpose(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedNativeAdView",
+                "printedName": "GDTMobSDK.GDTUnifiedNativeAdView",
+                "usr": "c:objc(cs)GDTUnifiedNativeAdView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)gdt_unifiedNativeAdViewWillExpose:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC011gdt_unifiedcD14ViewWillExposeyySo010GDTUnifiedcdG0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_unifiedNativeAdViewWillExpose:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_unifiedNativeAdViewDidClick",
+            "printedName": "gdt_unifiedNativeAdViewDidClick(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedNativeAdView",
+                "printedName": "GDTMobSDK.GDTUnifiedNativeAdView",
+                "usr": "c:objc(cs)GDTUnifiedNativeAdView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)gdt_unifiedNativeAdViewDidClick:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC011gdt_unifiedcD12ViewDidClickyySo010GDTUnifiedcdG0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_unifiedNativeAdViewDidClick:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_unifiedNativeAdDetailViewClosed",
+            "printedName": "gdt_unifiedNativeAdDetailViewClosed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedNativeAdView",
+                "printedName": "GDTMobSDK.GDTUnifiedNativeAdView",
+                "usr": "c:objc(cs)GDTUnifiedNativeAdView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)gdt_unifiedNativeAdDetailViewClosed:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC011gdt_unifiedcD16DetailViewClosedyySo010GDTUnifiedcdH0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_unifiedNativeAdDetailViewClosed:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_unifiedNativeAdViewApplicationWillEnterBackground",
+            "printedName": "gdt_unifiedNativeAdViewApplicationWillEnterBackground(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedNativeAdView",
+                "printedName": "GDTMobSDK.GDTUnifiedNativeAdView",
+                "usr": "c:objc(cs)GDTUnifiedNativeAdView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)gdt_unifiedNativeAdViewApplicationWillEnterBackground:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC011gdt_unifiedcD34ViewApplicationWillEnterBackgroundyySo010GDTUnifiedcdG0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_unifiedNativeAdViewApplicationWillEnterBackground:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_unifiedNativeAdDetailViewWillPresentScreen",
+            "printedName": "gdt_unifiedNativeAdDetailViewWillPresentScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedNativeAdView",
+                "printedName": "GDTMobSDK.GDTUnifiedNativeAdView",
+                "usr": "c:objc(cs)GDTUnifiedNativeAdView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)gdt_unifiedNativeAdDetailViewWillPresentScreen:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC011gdt_unifiedcD27DetailViewWillPresentScreenyySo010GDTUnifiedcdH0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_unifiedNativeAdDetailViewWillPresentScreen:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_unifiedNativeAdLoaded",
+            "printedName": "gdt_unifiedNativeAdLoaded(_:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[GDTMobSDK.GDTUnifiedNativeAdDataObject]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[GDTMobSDK.GDTUnifiedNativeAdDataObject]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GDTUnifiedNativeAdDataObject",
+                        "printedName": "GDTMobSDK.GDTUnifiedNativeAdDataObject",
+                        "usr": "c:objc(cs)GDTUnifiedNativeAdDataObject"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluNativeAd(im)gdt_unifiedNativeAdLoaded:error:",
+            "mangledName": "$s9ADXiluSDK0A8NativeAdC011gdt_unifiedcD6Loaded_5errorySaySo010GDTUnifiedcD10DataObjectCGSg_s5Error_pSgtF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_unifiedNativeAdLoaded:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -15541,6 +16540,13 @@
         "kind": "Import",
         "name": "BeiZiSDK",
         "printedName": "BeiZiSDK",
+        "declKind": "Import",
+        "moduleName": "ADXiluSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "GDTMobSDK",
+        "printedName": "GDTMobSDK",
         "declKind": "Import",
         "moduleName": "ADXiluSDK"
       },
@@ -16930,6 +17936,252 @@
             "mangledName": "$s9ADXiluSDK0A11RewardVodAdC19beiZi_rewardedVideo_03didc8UserWithC0ySo03Beig8RewardedI0C_So8NSObjectCtF",
             "moduleName": "ADXiluSDK",
             "objc_name": "BeiZi_rewardedVideo:didRewardUserWithReward:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_rewardVideoAdDidLoad",
+            "printedName": "gdt_rewardVideoAdDidLoad(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTRewardVideoAd",
+                "printedName": "GDTMobSDK.GDTRewardVideoAd",
+                "usr": "c:objc(cs)GDTRewardVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluRewardVodAd(im)gdt_rewardVideoAdDidLoad:",
+            "mangledName": "$s9ADXiluSDK0A11RewardVodAdC015gdt_rewardVideoE7DidLoadyySo09GDTRewardhE0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_rewardVideoAdDidLoad:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_rewardVideoAdVideoDidLoad",
+            "printedName": "gdt_rewardVideoAdVideoDidLoad(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTRewardVideoAd",
+                "printedName": "GDTMobSDK.GDTRewardVideoAd",
+                "usr": "c:objc(cs)GDTRewardVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluRewardVodAd(im)gdt_rewardVideoAdVideoDidLoad:",
+            "mangledName": "$s9ADXiluSDK0A11RewardVodAdC015gdt_rewardVideoeH7DidLoadyySo09GDTRewardhE0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_rewardVideoAdVideoDidLoad:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_rewardVideoAd",
+            "printedName": "gdt_rewardVideoAd(_:didFailWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTRewardVideoAd",
+                "printedName": "GDTMobSDK.GDTRewardVideoAd",
+                "usr": "c:objc(cs)GDTRewardVideoAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluRewardVodAd(im)gdt_rewardVideoAd:didFailWithError:",
+            "mangledName": "$s9ADXiluSDK0A11RewardVodAdC015gdt_rewardVideoE0_16didFailWithErrorySo09GDTRewardhE0C_s0L0_ptF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_rewardVideoAd:didFailWithError:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_rewardVideoAdDidRewardEffective",
+            "printedName": "gdt_rewardVideoAdDidRewardEffective(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTRewardVideoAd",
+                "printedName": "GDTMobSDK.GDTRewardVideoAd",
+                "usr": "c:objc(cs)GDTRewardVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluRewardVodAd(im)gdt_rewardVideoAdDidRewardEffective:",
+            "mangledName": "$s9ADXiluSDK0A11RewardVodAdC015gdt_rewardVideoe3DidC9EffectiveyySo09GDTRewardhE0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_rewardVideoAdDidRewardEffective:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_rewardVideoAdDidPlayFinish",
+            "printedName": "gdt_rewardVideoAdDidPlayFinish(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTRewardVideoAd",
+                "printedName": "GDTMobSDK.GDTRewardVideoAd",
+                "usr": "c:objc(cs)GDTRewardVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluRewardVodAd(im)gdt_rewardVideoAdDidPlayFinish:",
+            "mangledName": "$s9ADXiluSDK0A11RewardVodAdC015gdt_rewardVideoE13DidPlayFinishyySo09GDTRewardhE0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_rewardVideoAdDidPlayFinish:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_rewardVideoAdDidClose",
+            "printedName": "gdt_rewardVideoAdDidClose(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTRewardVideoAd",
+                "printedName": "GDTMobSDK.GDTRewardVideoAd",
+                "usr": "c:objc(cs)GDTRewardVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluRewardVodAd(im)gdt_rewardVideoAdDidClose:",
+            "mangledName": "$s9ADXiluSDK0A11RewardVodAdC015gdt_rewardVideoE8DidCloseyySo09GDTRewardhE0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_rewardVideoAdDidClose:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_rewardVideoAdDidClicked",
+            "printedName": "gdt_rewardVideoAdDidClicked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTRewardVideoAd",
+                "printedName": "GDTMobSDK.GDTRewardVideoAd",
+                "usr": "c:objc(cs)GDTRewardVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluRewardVodAd(im)gdt_rewardVideoAdDidClicked:",
+            "mangledName": "$s9ADXiluSDK0A11RewardVodAdC015gdt_rewardVideoE10DidClickedyySo09GDTRewardhE0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_rewardVideoAdDidClicked:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gdt_rewardVideoAdWillVisible",
+            "printedName": "gdt_rewardVideoAdWillVisible(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTRewardVideoAd",
+                "printedName": "GDTMobSDK.GDTRewardVideoAd",
+                "usr": "c:objc(cs)GDTRewardVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluRewardVodAd(im)gdt_rewardVideoAdWillVisible:",
+            "mangledName": "$s9ADXiluSDK0A11RewardVodAdC015gdt_rewardVideoE11WillVisibleyySo09GDTRewardhE0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "gdt_rewardVideoAdWillVisible:",
             "declAttributes": [
               "Dynamic",
               "ObjC",
@@ -28218,353 +29470,584 @@
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
-      "kind": "StringLiteral",
-      "offset": 3021,
-      "length": 10,
-      "value": "\"delegate\""
+      "kind": "Dictionary",
+      "offset": 413,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
+      "kind": "Dictionary",
+      "offset": 483,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 3250,
+      "offset": 689,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 3350,
+      "offset": 789,
       "length": 1,
       "value": "5"
     },
     {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
+      "kind": "StringLiteral",
+      "offset": 1064,
+      "length": 25,
+      "value": "\"com.xilu.ad.banner.load\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
+      "kind": "StringLiteral",
+      "offset": 1269,
+      "length": 29,
+      "value": "\"com.xilu.ad.banner.callback\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
+      "kind": "Dictionary",
+      "offset": 1502,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1673,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1719,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
+      "kind": "StringLiteral",
+      "offset": 1883,
+      "length": 22,
+      "value": "\"com.xilu.atomic.bool\""
+    },
+    {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 1865,
+      "offset": 1870,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 1896,
+      "offset": 2045,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2461,
+      "length": 13,
+      "value": "\"ADSDKDomain\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2800,
+      "length": 63,
+      "value": "\"------广告加载数量:\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2845,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2862,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2896,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 2230,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2580,
+      "offset": 3246,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 2988,
+      "offset": 3654,
       "length": 9,
       "value": "\"bidding\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "Array",
-      "offset": 3408,
+      "offset": 3958,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3440,
-      "length": 1,
-      "value": "0"
+      "kind": "StringLiteral",
+      "offset": 3990,
+      "length": 56,
+      "value": "\"------初始 result:\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 3900,
+      "offset": 4026,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 4045,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 4155,
+      "length": 42,
+      "value": "\"loadedAds 为空，直接回调空数组\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 4914,
       "length": 9,
       "value": "\"bidding\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 5236,
+      "length": 43,
+      "value": "\"------最终 result.count:\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 5278,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 1930,
+      "offset": 2510,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "Array",
-      "offset": 4503,
+      "offset": 5597,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "FloatLiteral",
-      "offset": 5040,
+      "offset": 6134,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 6861,
+      "offset": 8099,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 10011,
+      "offset": 11249,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 10036,
+      "offset": 11274,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 10863,
+      "offset": 12101,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 10888,
+      "offset": 12126,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 13564,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
+      "kind": "StringLiteral",
+      "offset": 13589,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 488,
+      "offset": 538,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
       "kind": "StringLiteral",
-      "offset": 730,
-      "length": 14,
-      "value": "\"interstitial\""
+      "offset": 777,
+      "length": 31,
+      "value": "\"com.xilu.ad.interstitial.load\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
       "kind": "StringLiteral",
-      "offset": 784,
-      "length": 14,
-      "value": "\"interstitial\""
+      "offset": 988,
+      "length": 35,
+      "value": "\"com.xilu.ad.interstitial.callback\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
+      "kind": "Dictionary",
+      "offset": 1153,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
+      "kind": "Dictionary",
+      "offset": 1210,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
+      "kind": "Dictionary",
+      "offset": 1332,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
+      "kind": "Dictionary",
+      "offset": 1491,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1662,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1708,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1757,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
       "kind": "StringLiteral",
-      "offset": 817,
-      "length": 4,
-      "value": "\"bz\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
-      "kind": "StringLiteral",
-      "offset": 947,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
-      "kind": "IntegerLiteral",
-      "offset": 961,
-      "length": 4,
-      "value": "5000"
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
-      "kind": "StringLiteral",
-      "offset": 1254,
-      "length": 10,
-      "value": "\"delegate\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
-      "kind": "StringLiteral",
-      "offset": 1313,
-      "length": 13,
-      "value": "\"extDelegate\""
+      "offset": 1913,
+      "length": 22,
+      "value": "\"com.xilu.atomic.bool\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 251,
+      "offset": 301,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 296,
+      "offset": 346,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 1395,
+      "offset": 1445,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 4211,
+      "offset": 4261,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 4651,
+      "length": 25,
+      "value": "\"com.xilu.ad.splash.load\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 4856,
+      "length": 29,
+      "value": "\"com.xilu.ad.splash.callback\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 4395,
+      "offset": 5025,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
-      "kind": "Array",
-      "offset": 4518,
-      "length": 2,
+      "kind": "Dictionary",
+      "offset": 5155,
+      "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
-      "kind": "Array",
-      "offset": 4578,
-      "length": 2,
+      "kind": "Dictionary",
+      "offset": 5223,
+      "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
-      "kind": "Array",
-      "offset": 4660,
-      "length": 2,
+      "kind": "Dictionary",
+      "offset": 5313,
+      "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
-      "kind": "StringLiteral",
-      "offset": 11490,
+      "kind": "Dictionary",
+      "offset": 5376,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "Dictionary",
+      "offset": 5436,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "Dictionary",
+      "offset": 5497,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "Dictionary",
+      "offset": 5614,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "Dictionary",
+      "offset": 5715,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "Dictionary",
+      "offset": 5800,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "Dictionary",
+      "offset": 5910,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6079,
       "length": 5,
-      "value": "\" - \""
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6125,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6174,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6228,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 11567,
-      "length": 15,
-      "value": "\"原生模版:\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
-      "kind": "StringLiteral",
-      "offset": 12034,
-      "length": 14,
-      "value": "\"nativeAdView\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
-      "kind": "StringLiteral",
-      "offset": 12090,
-      "length": 17,
-      "value": "\"ms广告视图:\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
-      "kind": "StringLiteral",
-      "offset": 12175,
-      "length": 17,
-      "value": "\"ms广告物料:\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
-      "kind": "StringLiteral",
-      "offset": 12265,
-      "length": 14,
-      "value": "\"nativeAdData\""
+      "offset": 6384,
+      "length": 22,
+      "value": "\"com.xilu.atomic.bool\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 1344,
+      "offset": 1394,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 1503,
+      "offset": 1553,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 5269,
+      "offset": 3002,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "Dictionary",
+      "offset": 3125,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "Dictionary",
+      "offset": 3198,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "Dictionary",
+      "offset": 3303,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "StringLiteral",
+      "offset": 3561,
+      "length": 32,
+      "value": "\"com.xilu.ad.rewardedVideo.load\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "StringLiteral",
+      "offset": 3773,
+      "length": 36,
+      "value": "\"com.xilu.ad.rewardedVideo.callback\""
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "Dictionary",
+      "offset": 3977,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4142,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4188,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4237,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
       "kind": "StringLiteral",
-      "offset": 5676,
-      "length": 15,
-      "value": "\"rewardedVideo\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
-      "kind": "StringLiteral",
-      "offset": 5731,
-      "length": 15,
-      "value": "\"rewardedVideo\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
-      "kind": "StringLiteral",
-      "offset": 5765,
-      "length": 4,
-      "value": "\"bz\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
-      "kind": "StringLiteral",
-      "offset": 5903,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5917,
-      "length": 4,
-      "value": "5000"
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluRewardVodAd.swift",
-      "kind": "StringLiteral",
-      "offset": 6176,
-      "length": 10,
-      "value": "\"delegate\""
+      "offset": 4403,
+      "length": 22,
+      "value": "\"com.xilu.atomic.bool\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
@@ -28820,92 +30303,92 @@
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
-      "kind": "Dictionary",
-      "offset": 1876,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
-      "kind": "Dictionary",
-      "offset": 1978,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
-      "kind": "Dictionary",
-      "offset": 2029,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 2187,
+      "offset": 2075,
       "length": 25,
       "value": "\"com.xilu.ad.splash.load\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 2392,
+      "offset": 2280,
       "length": 29,
       "value": "\"com.xilu.ad.splash.callback\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "Dictionary",
-      "offset": 2800,
+      "offset": 2433,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
+      "kind": "Dictionary",
+      "offset": 2484,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
+      "kind": "Dictionary",
+      "offset": 2567,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
+      "kind": "Dictionary",
+      "offset": 2757,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 2970,
+      "offset": 2926,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 3140,
+      "offset": 3096,
       "length": 22,
       "value": "\"com.xilu.atomic.bool\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 32494,
+      "offset": 31474,
       "length": 52,
       "value": "\"BeiZiSplash { spaceID: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 32528,
+      "offset": 31508,
       "length": 1,
       "value": "\", ecpm: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 32543,
+      "offset": 31523,
       "length": 1,
       "value": "\" }\""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 32989,
+      "offset": 31969,
       "length": 32,
       "value": "\"GDTSplashAd {ecpm: \""
     },
     {
       "filePath": "\/Users\/zyn\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 33018,
+      "offset": 31998,
       "length": 1,
       "value": "\" }\""
     },

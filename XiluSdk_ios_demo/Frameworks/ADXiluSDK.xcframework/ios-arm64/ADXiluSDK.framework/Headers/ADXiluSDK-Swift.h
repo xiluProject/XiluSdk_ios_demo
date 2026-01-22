@@ -416,6 +416,15 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluBannerAd")
 /// 加载广告
 - (void)loadAd;
 - (void)dismissAd;
+- (void)showAdIn:(id _Nullable)containerView;
+/// 释放资源
+- (void)p_release;
+@end
+
+@class GDTUnifiedBannerView;
+@interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedBannerViewDelegate>
+- (void)unifiedBannerViewDidLoad:(GDTUnifiedBannerView * _Nonnull)bannerView;
+- (void)unifiedBannerViewFailedToLoad:(GDTUnifiedBannerView * _Nonnull)bannerView error:(NSError * _Nonnull)error;
 @end
 
 @class ADXiluError;
@@ -475,6 +484,14 @@ SWIFT_CLASS("_TtC9ADXiluSDK20ADXiluInterstitialAd")
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
 
+@class GDTUnifiedInterstitialAd;
+@interface ADXiluInterstitialAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedInterstitialAdDelegate>
+- (void)unifiedInterstitialSuccessToLoadAd:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
+- (void)unifiedInterstitialFailToLoadAd:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitialAd error:(NSError * _Nonnull)error;
+- (void)unifiedInterstitialDidDismissScreen:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
+- (void)unifiedInterstitialClicked:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
+@end
+
 @class BeiZiInterstitial;
 @class BeiZiRequestError;
 @interface ADXiluInterstitialAd (SWIFT_EXTENSION(ADXiluSDK)) <BeiZiInterstitialDelegate>
@@ -506,7 +523,6 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
 - (void)BeiZi_nativeExpressDidLoad:(BeiZiNativeExpress * _Nonnull)beiziNativeExpress;
 - (void)BeiZi_nativeExpressDidShow:(BeiZiNativeExpress * _Nonnull)beiziNativeExpress;
 - (void)BeiZi_nativeExpressDidClick:(BeiZiNativeExpress * _Nonnull)beiziNativeExpress;
-- (void)BeiZi_nativeExpressDislikeDidClick:(BeiZiNativeExpress * _Nonnull)beiziNativeExpress;
 - (void)BeiZi_nativeExpress:(BeiZiNativeExpress * _Nonnull)beiziNativeExpress didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;
 @end
 
@@ -518,6 +534,39 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
 - (void)BeiZi_unifiedDidPresentScreen:(BeiZiUnifiedCustom * _Nonnull)unifiedCustom;
 - (void)BeiZi_unifiedDidCloseDetailView:(BeiZiUnifiedCustom * _Nonnull)unifiedCustom;
 - (void)BeiZi_unified:(BeiZiUnifiedCustom * _Nonnull)unifiedCustom didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;
+@end
+
+@class GDTUnifiedNativeAdView;
+@class GDTUnifiedNativeAdDataObject;
+@interface ADXiluNativeAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedNativeAdDelegate, GDTUnifiedNativeAdViewDelegate>
+- (void)gdt_unifiedNativeAdViewWillExpose:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
+- (void)gdt_unifiedNativeAdViewDidClick:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
+- (void)gdt_unifiedNativeAdDetailViewClosed:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
+- (void)gdt_unifiedNativeAdViewApplicationWillEnterBackground:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
+- (void)gdt_unifiedNativeAdDetailViewWillPresentScreen:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
+- (void)gdt_unifiedNativeAdLoaded:(NSArray<GDTUnifiedNativeAdDataObject *> * _Nullable)unifiedNativeAdDataObjects error:(NSError * _Nullable)error;
+@end
+
+@class GDTNativeExpressAd;
+@class GDTNativeExpressAdView;
+@interface ADXiluNativeAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTNativeExpressAdDelegete>
+- (void)nativeExpressAdSuccessToLoad:(GDTNativeExpressAd * _Null_unspecified)nativeExpressAd views:(NSArray<GDTNativeExpressAdView *> * _Null_unspecified)views;
+- (void)nativeExpressAdFailToLoad:(GDTNativeExpressAd * _Null_unspecified)nativeExpressAd error:(NSError * _Null_unspecified)error;
+- (void)nativeExpressAdViewClicked:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
+- (void)nativeExpressAdViewClosed:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
+- (void)nativeExpressAdViewRenderSuccess:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
+/// <ul>
+///   <li>
+///     原生模板广告渲染失败
+///   </li>
+/// </ul>
+- (void)nativeExpressAdViewRenderFail:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
+/// <ul>
+///   <li>
+///     原生模板广告曝光回调
+///   </li>
+/// </ul>
+- (void)nativeExpressAdViewExposure:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
 @end
 
 enum ADXiluNativeAdType : NSInteger;
@@ -586,6 +635,18 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)BeiZi_rewardedVideoDidPlayEnd:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo;
 - (void)BeiZi_rewardedVideoDidStartPlay:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo;
 - (void)BeiZi_rewardedVideo:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo didRewardUserWithReward:(NSObject * _Nonnull)reward;
+@end
+
+@class GDTRewardVideoAd;
+@interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTRewardedVideoAdDelegate>
+- (void)gdt_rewardVideoAdDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdVideoDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAd:(GDTRewardVideoAd * _Nonnull)rewardVideoAd didFailWithError:(NSError * _Nonnull)error;
+- (void)gdt_rewardVideoAdDidRewardEffective:(GDTRewardVideoAd * _Nonnull)rewardedVideoAd;
+- (void)gdt_rewardVideoAdDidPlayFinish:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdDidClose:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdDidClicked:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdWillVisible:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 @end
 
 /// 激励视频广告监听器

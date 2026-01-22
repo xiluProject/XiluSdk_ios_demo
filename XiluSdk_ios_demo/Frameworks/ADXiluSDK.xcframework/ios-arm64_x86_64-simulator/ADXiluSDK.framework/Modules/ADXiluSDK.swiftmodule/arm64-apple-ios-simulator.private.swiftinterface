@@ -368,7 +368,27 @@ extension ADXiluSDK.ADAdsConfig {
   @objc override public init(adPosId: Swift.String, adSize: ADXiluSDK.ADXiluAdSize)
   @objc override public func loadAd()
   @objc public func dismissAd()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override public func showAd(in containerView: Any? = nil)
+  #endif
+  @objc public func p_release()
   @objc deinit
+}
+extension ADXiluSDK.ADXiluBannerAd : GDTMobSDK.GDTUnifiedBannerViewDelegate {
+  @objc dynamic public func unifiedBannerViewDidLoad(_ bannerView: GDTMobSDK.GDTUnifiedBannerView)
+  @objc dynamic public func unifiedBannerViewFailed(toLoad bannerView: GDTMobSDK.GDTUnifiedBannerView, error: any Swift.Error)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func bannerViewWillLeaveApplication(_ bannerView: GDTMobSDK.GDTUnifiedBannerView!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func bannerViewWillClose(_ bannerView: GDTMobSDK.GDTUnifiedBannerView!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func bannerViewWillExposure(_ bannerView: GDTMobSDK.GDTUnifiedBannerView!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func bannerViewClicked(_ bannerView: GDTMobSDK.GDTUnifiedBannerView!)
+  #endif
 }
 @objc public protocol ADXiluBaseAdDelegate {
   @objc optional func xilu_AdDidReceive(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
@@ -382,6 +402,10 @@ extension ADXiluSDK.ADAdsConfig {
 }
 @objc public class ADXiluBaseAd : ObjectiveC.NSObject {
   @objc public var count: Swift.Int
+  public var totalAdsCount: Swift.Int {
+    get
+    set
+  }
   @objc public var adPosId: Swift.String
   @objc final public let adSize: ADXiluSDK.ADXiluAdSize
   @objc public var skipButton: UIKit.UIButton?
@@ -425,6 +449,12 @@ extension ADXiluSDK.ADXiluInterstitialAd : BeiZiSDK.BeiZiInterstitialDelegate {
   @objc dynamic public func beiZi_interstitialDidDismissScreen(_ beiziInterstitial: BeiZiSDK.BeiZiInterstitial)
   @objc dynamic public func beiZi_interstitialDidPresentScreen(_ beiziInterstitial: BeiZiSDK.BeiZiInterstitial)
   @objc dynamic public func beiZi_interstitial(_ beiziInterstitial: BeiZiSDK.BeiZiInterstitial, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
+}
+extension ADXiluSDK.ADXiluInterstitialAd : GDTMobSDK.GDTUnifiedInterstitialAdDelegate {
+  @objc dynamic public func unifiedInterstitialSuccess(toLoad unifiedInterstitial: GDTMobSDK.GDTUnifiedInterstitialAd)
+  @objc dynamic public func unifiedInterstitialFail(toLoad unifiedInterstitialAd: GDTMobSDK.GDTUnifiedInterstitialAd, error: any Swift.Error)
+  @objc dynamic public func unifiedInterstitialDidDismissScreen(_ unifiedInterstitial: GDTMobSDK.GDTUnifiedInterstitialAd)
+  @objc dynamic public func unifiedInterstitialClicked(_ unifiedInterstitial: GDTMobSDK.GDTUnifiedInterstitialAd)
 }
 @objc public enum ADXiluNativeAdType : Swift.Int {
   case express = 0
@@ -474,7 +504,7 @@ extension ADXiluSDK.ADXiluNativeAd : BeiZiSDK.BeiZiNativeExpressDelegate {
   @objc dynamic public func beiZi_nativeExpressDidLoad(_ beiziNativeExpress: BeiZiSDK.BeiZiNativeExpress)
   @objc dynamic public func beiZi_nativeExpressDidShow(_ beiziNativeExpress: BeiZiSDK.BeiZiNativeExpress)
   @objc dynamic public func beiZi_nativeExpressDidClick(_ beiziNativeExpress: BeiZiSDK.BeiZiNativeExpress)
-  @objc dynamic public func beiZi_nativeExpressDislikeDidClick(_ beiziNativeExpress: BeiZiSDK.BeiZiNativeExpress)
+  public func beiZi_nativeExpressDidClose(_ beiziNativeExpress: BeiZiSDK.BeiZiNativeExpress)
   @objc dynamic public func beiZi_nativeExpress(_ beiziNativeExpress: BeiZiSDK.BeiZiNativeExpress, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
 }
 extension ADXiluSDK.ADXiluNativeAd : BeiZiSDK.BeiZiUnifiedCustomDelegate {
@@ -484,6 +514,39 @@ extension ADXiluSDK.ADXiluNativeAd : BeiZiSDK.BeiZiUnifiedCustomDelegate {
   @objc dynamic public func beiZi_unifiedDidPresentScreen(_ unifiedCustom: BeiZiSDK.BeiZiUnifiedCustom)
   @objc dynamic public func beiZi_unifiedDidCloseDetailView(_ unifiedCustom: BeiZiSDK.BeiZiUnifiedCustom)
   @objc dynamic public func beiZi_unified(_ unifiedCustom: BeiZiSDK.BeiZiUnifiedCustom, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
+}
+extension ADXiluSDK.ADXiluNativeAd : GDTMobSDK.GDTNativeExpressAdDelegete {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func nativeExpressAdSuccess(toLoad nativeExpressAd: GDTMobSDK.GDTNativeExpressAd!, views: [GDTMobSDK.GDTNativeExpressAdView]!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func nativeExpressAdFail(toLoad nativeExpressAd: GDTMobSDK.GDTNativeExpressAd!, error: (any Swift.Error)!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func nativeExpressAdViewClicked(_ nativeExpressAdView: GDTMobSDK.GDTNativeExpressAdView!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func nativeExpressAdViewClosed(_ nativeExpressAdView: GDTMobSDK.GDTNativeExpressAdView!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func nativeExpressAdViewRenderSuccess(_ nativeExpressAdView: GDTMobSDK.GDTNativeExpressAdView!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func nativeExpressAdViewRenderFail(_ nativeExpressAdView: GDTMobSDK.GDTNativeExpressAdView!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func nativeExpressAdViewExposure(_ nativeExpressAdView: GDTMobSDK.GDTNativeExpressAdView!)
+  #endif
+}
+extension ADXiluSDK.ADXiluNativeAd : GDTMobSDK.GDTUnifiedNativeAdDelegate, GDTMobSDK.GDTUnifiedNativeAdViewDelegate {
+  @objc dynamic public func gdt_unifiedNativeAdViewWillExpose(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
+  @objc dynamic public func gdt_unifiedNativeAdViewDidClick(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
+  @objc dynamic public func gdt_unifiedNativeAdDetailViewClosed(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
+  @objc dynamic public func gdt_unifiedNativeAdViewApplicationWillEnterBackground(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
+  @objc dynamic public func gdt_unifiedNativeAdDetailViewWillPresentScreen(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func gdt_unifiedNativeAdLoaded(_ unifiedNativeAdDataObjects: [GDTMobSDK.GDTUnifiedNativeAdDataObject]?, error: (any Swift.Error)?)
+  #endif
 }
 @objc public protocol ADXiluRewardVodAdDelegate : ADXiluSDK.ADXiluBaseAdDelegate {
   @objc func xilu_AdVideoDidCache(_ rewardVodAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
@@ -506,15 +569,6 @@ extension ADXiluSDK.ADXiluNativeAd : BeiZiSDK.BeiZiUnifiedCustomDelegate {
   @objc public func markAsExpired()
   @objc deinit
 }
-extension ADXiluSDK.ADXiluRewardVodAd : BeiZiSDK.BeiZiRewardedVideoDelegate {
-  @objc dynamic public func beiZi_rewardedVideo(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
-  @objc dynamic public func beiZi_rewardedVideoDidReceiveAd(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
-  @objc dynamic public func beiZi_rewardedVideoDidDismissScreen(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
-  @objc dynamic public func beiZi_rewardedVideoDidClick(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
-  @objc dynamic public func beiZi_rewardedVideoDidPlayEnd(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
-  @objc dynamic public func beiZi_rewardedVideoDidStartPlay(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
-  @objc dynamic public func beiZi_rewardedVideo(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo, didRewardUserWithReward reward: ObjectiveC.NSObject)
-}
 @objc public class ADXiluRewardVodAd : ADXiluSDK.ADXiluBaseAd {
   @objc public var isMuted: Swift.Bool
   @objc public var sceneId: Swift.String?
@@ -526,10 +580,29 @@ extension ADXiluSDK.ADXiluRewardVodAd : BeiZiSDK.BeiZiRewardedVideoDelegate {
   @objc public func p_release()
   @objc deinit
 }
+extension ADXiluSDK.ADXiluRewardVodAd : BeiZiSDK.BeiZiRewardedVideoDelegate {
+  @objc dynamic public func beiZi_rewardedVideo(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo, didFailToLoadAdWithError error: BeiZiSDK.BeiZiRequestError)
+  @objc dynamic public func beiZi_rewardedVideoDidReceiveAd(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
+  @objc dynamic public func beiZi_rewardedVideoDidDismissScreen(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
+  @objc dynamic public func beiZi_rewardedVideoDidClick(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
+  @objc dynamic public func beiZi_rewardedVideoDidPlayEnd(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
+  @objc dynamic public func beiZi_rewardedVideoDidStartPlay(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo)
+  @objc dynamic public func beiZi_rewardedVideo(_ beiziRewardedVideo: BeiZiSDK.BeiZiRewardedVideo, didRewardUserWithReward reward: ObjectiveC.NSObject)
+}
 extension BeiZiSDK.BeiZiRewardedVideo : ADXiluSDK.ADXiluLoadProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
   public func xilu_showAd(view: Any?)
   #endif
+}
+extension ADXiluSDK.ADXiluRewardVodAd : GDTMobSDK.GDTRewardedVideoAdDelegate {
+  @objc dynamic public func gdt_rewardVideoAdDidLoad(_ rewardVideoAd: GDTMobSDK.GDTRewardVideoAd)
+  @objc dynamic public func gdt_rewardVideoAdVideoDidLoad(_ rewardVideoAd: GDTMobSDK.GDTRewardVideoAd)
+  @objc dynamic public func gdt_rewardVideoAd(_ rewardVideoAd: GDTMobSDK.GDTRewardVideoAd, didFailWithError error: any Swift.Error)
+  @objc dynamic public func gdt_rewardVideoAdDidRewardEffective(_ rewardedVideoAd: GDTMobSDK.GDTRewardVideoAd)
+  @objc dynamic public func gdt_rewardVideoAdDidPlayFinish(_ rewardVideoAd: GDTMobSDK.GDTRewardVideoAd)
+  @objc dynamic public func gdt_rewardVideoAdDidClose(_ rewardVideoAd: GDTMobSDK.GDTRewardVideoAd)
+  @objc dynamic public func gdt_rewardVideoAdDidClicked(_ rewardVideoAd: GDTMobSDK.GDTRewardVideoAd)
+  @objc dynamic public func gdt_rewardVideoAdWillVisible(_ rewardVideoAd: GDTMobSDK.GDTRewardVideoAd)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ADXiluSDKManager : ObjectiveC.NSObject {
   @objc public static let shared: ADXiluSDK.ADXiluSDKManager

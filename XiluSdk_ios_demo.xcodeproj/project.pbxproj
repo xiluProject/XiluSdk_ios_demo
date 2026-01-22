@@ -354,7 +354,7 @@
 					"\"AppTrackingTransparency\"",
 					"-ld64",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pansoft.dingdongfm3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qunze.xiju;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
