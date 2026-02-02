@@ -12,6 +12,8 @@
 #import <SDWebImage/SDWebImage.h>
 #import <MSAdSDK/MSNativeFeedAdModel.h>
 #import <MSAdSDK/MSFeedAdMeta.h>
+#import <GDTMobSDK/GDTUnifiedNativeAdDataObject.h>
+#import <GDTMobSDK/GDTUnifiedNativeAdView.h>
 @interface OCNativeRenderAdViewController ()<ADXiluBaseAdDelegate>
 @property (nonatomic, strong) ADXiluNativeAd *nativeAd;
 @property (nonatomic, strong) UIStackView *adContainerView;
@@ -47,7 +49,7 @@
 }
 
 - (void)loadNativeAd {
-    _nativeAd = [[ADXiluNativeAd alloc] initWithAdPosId:@"3jhq3tjt" adSize:[ADXiluAdSize screenSize] count:2];
+    _nativeAd = [[ADXiluNativeAd alloc] initWithAdPosId:@"59jmkybj" adSize:[ADXiluAdSize screenSize] count:1];
     _nativeAd.delegate = self;
     _nativeAd.containerView = nil;
     _nativeAd.isTemplate = false;
@@ -59,12 +61,13 @@
     NSLog(@"广告加载成功：%@", adInfos);
     for (ADXiluAdInfo *adInfo in adInfos) {
         UIView *adTemplateView = adInfo.extraData[@"nativeAdView"];
-        MSNativeFeedAdModel *adModel = adInfo.extraData[@"nativeAdData"];
-
+       
+        id  nativeAdData = adInfo.extraData[@"nativeAdData"];
         //模板广告
         if (adTemplateView) {
             [self.adContainerView addArrangedSubview:adTemplateView];//替换成广告容器视图
-        } else if (adModel) {
+        } else if ([nativeAdData isKindOfClass:[MSNativeFeedAdModel class]]) {
+            MSNativeFeedAdModel *adModel = adInfo.extraData[@"nativeAdData"];
             //自渲染广告，取nativeAdData自行展示，字段说明如下：
 //            MSCreativeTypeImage      = 1, // 图片
 //            MSCreativeTypeVideo      = 2, // 视频 用metaVideoUrl播放视频
@@ -82,6 +85,18 @@
             UIView *adView = [self createAdView:adModel];
             [adView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showAdDetail)]];
             [self.adContainerView addArrangedSubview:adView];
+        }
+        else if ([nativeAdData isKindOfClass:[GDTUnifiedNativeAdDataObject class]]) {
+            GDTUnifiedNativeAdDataObject *adModel = (GDTUnifiedNativeAdDataObject *) adInfo.extraData[@"nativeAdData"];
+            GDTUnifiedNativeAdView *adView = [[GDTUnifiedNativeAdView alloc]init];
+        
+            adView.viewController = self;
+            adView.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 145);
+            adView.mediaView.frame = adView.bounds;
+            if (adModel.isAdValid) {
+                [adView registerDataObject:adModel clickableViews:nil];
+                [self.adContainerView addArrangedSubview:adView];
+            }
         }
     }
 }

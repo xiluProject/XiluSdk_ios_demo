@@ -10,7 +10,9 @@ import ADXiluSDK
 //import ObjectMapper
 import SnapKit
 import MSAdSDK
-
+#if canImport(GDTMobSDK)
+import GDTMobSDK
+#endif
 class NativeRenderAdViewController: UIViewController {
     private lazy var datas: [Any] = []
     private lazy var nativeAds: [UIView] = []
@@ -128,7 +130,7 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
             if let adView = adInfo.extraData["nativeAdView"] as? UIView {
                 nativeAds.append(adView)
             }
-            if let model = adInfo.extraData["nativeAdData"] as? MSNativeFeedAdModel {
+           else if let model = adInfo.extraData["nativeAdData"] as? MSNativeFeedAdModel {
                 //非视频类型自渲染广告
                 if model.adMaterialMeta?.metaCreativeType() != MSCreativeType.video {
                     let adView:NativeSimpleCustomAdView = NativeSimpleCustomAdView()
@@ -143,6 +145,17 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
                     adView.presentVc = self
                     adView.loadFeedAdMeta(feedAdMeta: model.adMaterialMeta!)
                     adView.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: adView.calculateAdHeightWithFeedAdMeta(feedAd: model.adMaterialMeta!))
+                    nativeAds.append(adView)
+                }
+            }
+            else if let dataObject = adInfo.extraData["nativeAdData"] as? GDTUnifiedNativeAdDataObject {
+                let adView:GDTUnifiedNativeAdView  = GDTUnifiedNativeAdView()
+//                adView.delegate = self
+                adView.viewController = self;
+                adView.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 145)
+                adView.mediaView.frame = adView.bounds;
+                if dataObject.isAdValid {
+                    adView.registerDataObject(dataObject, clickableViews:[])
                     nativeAds.append(adView)
                 }
             }
