@@ -6,24 +6,13 @@ platform :ios, '12.2'
 inhibit_all_warnings!
 use_modular_headers!
 
-#install! 'cocoapods', :warn_for_unused_master_specs_repo => false
-
-
 target 'XiluSdk_ios_demo' do
-  # Comment the next line if you don't want to use dynamic frameworks
-#  use_frameworks!
+
   use_frameworks! :linkage => :static
   
-  # Pods for XiluSdk_ios_demo
-  # 集成ADXiluSDK
-#  pod 'xiluAdSdk', :path =>'/Users/zyn/Documents/UnAmicoxiluAdSdk_ios_pod'
 #pod 'xiluAdSdk', :git => 'git@github.com:UnAmico0/xiluAdSdk_ios_pod.git', :tag => '1.0.8'
 pod 'xiluAdSdk', :git => 'git@github.com:xiluProject/xiluAdSdk_ios_pod.git', :tag => '1.0.8'
-#  pod 'GDTMobSDK'
   pod 'SnapKit', '~> 5.6.0'
-#  pod 'CryptoSwift'
   pod 'Masonry'
   pod 'SDWebImage'
-#  pod 'MSMobAdSDK/MS', '2.7.7.3'
-#  pod 'BeiZiSDK-iOS', '4.90.7.0'
 end
