@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-#source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
 platform :ios, '12.2'
 
@@ -16,12 +16,14 @@ target 'XiluSdk_ios_demo' do
   
   # Pods for XiluSdk_ios_demo
   # 集成ADXiluSDK
-
-  pod 'GDTMobSDK'
+#  pod 'xiluAdSdk', :path =>'/Users/zyn/Documents/UnAmicoxiluAdSdk_ios_pod'
+#pod 'xiluAdSdk', :git => 'git@github.com:UnAmico0/xiluAdSdk_ios_pod.git', :tag => '1.0.8'
+pod 'xiluAdSdk', :git => 'git@github.com:xiluProject/xiluAdSdk_ios_pod.git', :tag => '1.0.8'
+#  pod 'GDTMobSDK'
   pod 'SnapKit', '~> 5.6.0'
-  pod 'CryptoSwift'
+#  pod 'CryptoSwift'
   pod 'Masonry'
   pod 'SDWebImage'
-  pod 'MSMobAdSDK/MS', '2.7.7.3'
-  pod 'BeiZiSDK-iOS', '4.90.7.0'
+#  pod 'MSMobAdSDK/MS', '2.7.7.3'
+#  pod 'BeiZiSDK-iOS', '4.90.7.0'
 end

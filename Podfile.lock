@@ -3,7 +3,7 @@ PODS:
     - BeiZiSDK-iOS/BeiZiSDK-iOS (= 4.90.7.0)
   - BeiZiSDK-iOS/BeiZiSDK-iOS (4.90.7.0)
   - CryptoSwift (1.8.4)
-  - GDTMobSDK (4.15.70)
+  - GDTMobSDK (4.15.65)
   - Masonry (1.1.0)
   - MSMobAdSDK/MotionLess (2.7.7.3)
   - MSMobAdSDK/MS (2.7.7.3):
@@ -12,36 +12,48 @@ PODS:
     - SDWebImage/Core (= 5.21.5)
   - SDWebImage/Core (5.21.5)
   - SnapKit (5.6.0)
+  - xiluAdSdk (1.0.8):
+    - BeiZiSDK-iOS (= 4.90.7.0)
+    - CryptoSwift
+    - GDTMobSDK (= 4.15.65)
+    - MSMobAdSDK/MS (= 2.7.7.3)
 
 DEPENDENCIES:
-  - BeiZiSDK-iOS (= 4.90.7.0)
-  - CryptoSwift
-  - GDTMobSDK
   - Masonry
-  - MSMobAdSDK/MS (= 2.7.7.3)
   - SDWebImage
   - SnapKit (~> 5.6.0)
+  - "xiluAdSdk (from `git@github.com:xiluProject/xiluAdSdk_ios_pod.git`, tag `1.0.8`)"
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - BeiZiSDK-iOS
     - CryptoSwift
-    - MSMobAdSDK
-    - SnapKit
-  trunk:
     - GDTMobSDK
     - Masonry
+    - MSMobAdSDK
     - SDWebImage
+    - SnapKit
+
+EXTERNAL SOURCES:
+  xiluAdSdk:
+    :git: "git@github.com:xiluProject/xiluAdSdk_ios_pod.git"
+    :tag: 1.0.8
+
+CHECKOUT OPTIONS:
+  xiluAdSdk:
+    :git: "git@github.com:xiluProject/xiluAdSdk_ios_pod.git"
+    :tag: 1.0.8
 
 SPEC CHECKSUMS:
   BeiZiSDK-iOS: 2390c31d6e68f3d065fb21179530985f29d7b436
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
-  GDTMobSDK: f362b5177c024d759451894ecdf6d1a59e52f27f
+  GDTMobSDK: f3aefaaca7a7393300a7b4f667d361250ac764b4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
   SDWebImage: e9c98383c7572d713c1a0d7dd2783b10599b9838
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  xiluAdSdk: 9c9851519d065b46b361eb872db562bde33159af
 
-PODFILE CHECKSUM: 8a524e5fb9865c9cb2e00c9d1358e832018fa714
+PODFILE CHECKSUM: 4338716b2ae6c520408830e61e2be89bcff60f61
 
 COCOAPODS: 1.16.2
