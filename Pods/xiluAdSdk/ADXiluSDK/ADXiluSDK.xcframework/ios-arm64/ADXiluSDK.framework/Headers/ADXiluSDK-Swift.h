@@ -431,6 +431,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluBannerAd")
 @interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedBannerViewDelegate>
 - (void)unifiedBannerViewDidLoad:(GDTUnifiedBannerView * _Nonnull)bannerView;
 - (void)unifiedBannerViewFailedToLoad:(GDTUnifiedBannerView * _Nonnull)bannerView error:(NSError * _Nonnull)error;
+- (void)unifiedBannerViewWillClose:(GDTUnifiedBannerView * _Nonnull)bannerView;
 @end
 
 
@@ -446,6 +447,8 @@ SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 - (void)xilu_AdDidExpose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告点击
 - (void)xilu_AdDidClick:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
+/// 广告将要关闭
+- (void)xilu_AdWillClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告关闭
 - (void)xilu_AdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告跳过
@@ -461,6 +464,7 @@ SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 - (void)xilu_AdDidClick:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_AdDidReceive:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_AdDidExpose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
+- (void)xilu_AdWillClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_AdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_AdDidFail:(ADXiluBaseAd * _Nonnull)xiluAd error:(ADXiluError * _Nonnull)error;
 - (void)xilu_AdDidSkip:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
@@ -759,8 +763,8 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 - (void)BeiZi_splashAdLifeTime:(int32_t)lifeTime;
 - (void)BeiZi_splashDidLoadSuccess:(BeiZiSplash * _Nonnull)beiziSplash;
 - (void)BeiZi_splashDidPresentScreen:(BeiZiSplash * _Nonnull)beiziSplash;
-- (void)BeiZi_splashDidDismissScreen:(BeiZiSplash * _Nonnull)beiziSplash;
 - (void)BeiZi_splashWillDismissScreen:(BeiZiSplash * _Nonnull)beiziSplash;
+- (void)BeiZi_splashDidDismissScreen:(BeiZiSplash * _Nonnull)beiziSplash;
 - (void)BeiZi_splashZoomOutDidClick:(BeiZiSplash * _Nonnull)beiziSplash;
 - (void)BeiZi_splashZoomOutDidClose:(BeiZiSplash * _Nonnull)beiziSplash;
 - (void)BeiZi_splash:(BeiZiSplash * _Nonnull)beiziSplash didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;

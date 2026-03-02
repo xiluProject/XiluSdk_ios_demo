@@ -50,9 +50,7 @@
     "SKIP_INSTALL": "NO"
   },
   "dependencies": {
-    "CryptoSwift": [
-
-    ],
+    "CryptoSwift": [],
     "GDTMobSDK": [
       "4.15.65"
     ],
