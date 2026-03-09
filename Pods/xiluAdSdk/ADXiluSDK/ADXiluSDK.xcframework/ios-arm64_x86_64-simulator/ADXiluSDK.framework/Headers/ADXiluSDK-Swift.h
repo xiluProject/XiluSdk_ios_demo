@@ -280,6 +280,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import BUAdSDK;
 @import BeiZiSDK;
 @import CoreFoundation;
 @import CoreLocation;
@@ -355,6 +356,7 @@ typedef SWIFT_ENUM(NSInteger, ADXiluAdPlatform, open) {
   ADXiluAdPlatformBeizi = 1,
   ADXiluAdPlatformMs = 2,
   ADXiluAdPlatformGdt = 3,
+  ADXiluAdPlatformCsj = 4,
 };
 
 
@@ -426,12 +428,26 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluBannerAd")
 - (void)p_release;
 @end
 
+
 @class GDTUnifiedBannerView;
 
 @interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedBannerViewDelegate>
 - (void)unifiedBannerViewDidLoad:(GDTUnifiedBannerView * _Nonnull)bannerView;
 - (void)unifiedBannerViewFailedToLoad:(GDTUnifiedBannerView * _Nonnull)bannerView error:(NSError * _Nonnull)error;
 - (void)unifiedBannerViewWillClose:(GDTUnifiedBannerView * _Nonnull)bannerView;
+@end
+
+@class BUNativeExpressBannerView;
+
+@interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressBannerViewDelegate>
+- (void)nativeExpressBannerAdViewDidLoad:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdView:(BUNativeExpressBannerView * _Nonnull)bannerAdView didLoadFailWithError:(NSError * _Nullable)error;
+- (void)nativeExpressBannerAdViewRenderSuccess:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdViewRenderFail:(BUNativeExpressBannerView * _Nonnull)bannerAdView error:(NSError * _Nullable)error;
+- (void)nativeExpressBannerAdViewWillBecomVisible:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdViewDidClick:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdViewDidRemoved:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdViewDidCloseOtherController:(BUNativeExpressBannerView * _Nonnull)bannerAdView interactionType:(BUInteractionType)interactionType;
 @end
 
 
@@ -520,6 +536,19 @@ SWIFT_CLASS("_TtC9ADXiluSDK20ADXiluInterstitialAd")
 - (void)BeiZi_interstitial:(BeiZiInterstitial * _Nonnull)beiziInterstitial didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;
 @end
 
+@class BUNativeExpressFullscreenVideoAd;
+
+@interface ADXiluInterstitialAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressFullscreenVideoAdDelegate>
+- (void)nativeExpressFullscreenVideoAdDidLoad:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAd:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd didFailWithError:(NSError * _Nullable)error;
+- (void)nativeExpressFullscreenVideoAdViewRenderSuccess:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAdViewRenderFail:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd error:(NSError * _Nullable)error;
+- (void)nativeExpressFullscreenVideoAdDidVisible:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAdDidClick:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAdDidClose:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAdDidPlayFinish:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd didFailWithError:(NSError * _Nullable)error;
+@end
+
 
 /// 信息流广告类
 SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
@@ -536,6 +565,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
 - (void)p_release;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
+
 
 @class BeiZiNativeExpress;
 
@@ -651,6 +681,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
 
+
 @class BeiZiRewardedVideo;
 
 @interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <BeiZiRewardedVideoDelegate>
@@ -674,6 +705,19 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)gdt_rewardVideoAdDidClose:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 - (void)gdt_rewardVideoAdDidClicked:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 - (void)gdt_rewardVideoAdWillVisible:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+@end
+
+@class BUNativeExpressRewardedVideoAd;
+
+@interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressRewardedVideoAdDelegate>
+- (void)nativeExpressRewardedVideoAdDidLoad:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAd:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd didFailWithError:(NSError * _Nullable)error;
+- (void)nativeExpressRewardedVideoAdDidDownLoadVideo:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAdDidVisible:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAdDidClick:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAdDidClose:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAdDidPlayFinish:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd didFailWithError:(NSError * _Nullable)error;
+- (void)nativeExpressRewardedVideoAdServerRewardDidSucceed:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd verify:(BOOL)verify;
 @end
 
 
@@ -770,6 +814,23 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 - (void)BeiZi_splash:(BeiZiSplash * _Nonnull)beiziSplash didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;
 @end
 
+@class BUSplashAd;
+@class BUAdError;
+
+@interface ADXiluSplashAd (SWIFT_EXTENSION(ADXiluSDK)) <BUSplashAdDelegate>
+- (void)splashAdLoadSuccess:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdLoadFail:(BUSplashAd * _Nonnull)splashAd error:(BUAdError * _Nullable)error;
+- (void)splashAdRenderSuccess:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdRenderFail:(BUSplashAd * _Nonnull)splashAd error:(BUAdError * _Nullable)error;
+- (void)splashAdWillShow:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdDidShow:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdDidClick:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdDidClose:(BUSplashAd * _Nonnull)splashAd closeType:(BUSplashAdCloseType)closeType;
+- (void)splashAdViewControllerDidClose:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashDidCloseOtherController:(BUSplashAd * _Nonnull)splashAd interactionType:(BUInteractionType)interactionType;
+- (void)splashVideoAdDidPlayFinish:(BUSplashAd * _Nonnull)splashAd didFailWithError:(NSError * _Nullable)error;
+@end
+
 @class GDTSplashAd;
 
 @interface ADXiluSplashAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTSplashAdDelegate>
@@ -813,6 +874,18 @@ typedef SWIFT_ENUM(NSInteger, ADXiluSplashAdStyle, open) {
   ADXiluSplashAdStyleHalfScreen = 1,
   ADXiluSplashAdStyleImmersive = 2,
 };
+
+
+@interface BUNativeExpressBannerView (SWIFT_EXTENSION(ADXiluSDK))
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+
+@interface BUNativeExpressFullscreenVideoAd (SWIFT_EXTENSION(ADXiluSDK))
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+
 
 
 
@@ -1143,6 +1216,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import BUAdSDK;
 @import BeiZiSDK;
 @import CoreFoundation;
 @import CoreLocation;
@@ -1218,6 +1292,7 @@ typedef SWIFT_ENUM(NSInteger, ADXiluAdPlatform, open) {
   ADXiluAdPlatformBeizi = 1,
   ADXiluAdPlatformMs = 2,
   ADXiluAdPlatformGdt = 3,
+  ADXiluAdPlatformCsj = 4,
 };
 
 
@@ -1289,12 +1364,26 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluBannerAd")
 - (void)p_release;
 @end
 
+
 @class GDTUnifiedBannerView;
 
 @interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedBannerViewDelegate>
 - (void)unifiedBannerViewDidLoad:(GDTUnifiedBannerView * _Nonnull)bannerView;
 - (void)unifiedBannerViewFailedToLoad:(GDTUnifiedBannerView * _Nonnull)bannerView error:(NSError * _Nonnull)error;
 - (void)unifiedBannerViewWillClose:(GDTUnifiedBannerView * _Nonnull)bannerView;
+@end
+
+@class BUNativeExpressBannerView;
+
+@interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressBannerViewDelegate>
+- (void)nativeExpressBannerAdViewDidLoad:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdView:(BUNativeExpressBannerView * _Nonnull)bannerAdView didLoadFailWithError:(NSError * _Nullable)error;
+- (void)nativeExpressBannerAdViewRenderSuccess:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdViewRenderFail:(BUNativeExpressBannerView * _Nonnull)bannerAdView error:(NSError * _Nullable)error;
+- (void)nativeExpressBannerAdViewWillBecomVisible:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdViewDidClick:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdViewDidRemoved:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
+- (void)nativeExpressBannerAdViewDidCloseOtherController:(BUNativeExpressBannerView * _Nonnull)bannerAdView interactionType:(BUInteractionType)interactionType;
 @end
 
 
@@ -1383,6 +1472,19 @@ SWIFT_CLASS("_TtC9ADXiluSDK20ADXiluInterstitialAd")
 - (void)BeiZi_interstitial:(BeiZiInterstitial * _Nonnull)beiziInterstitial didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;
 @end
 
+@class BUNativeExpressFullscreenVideoAd;
+
+@interface ADXiluInterstitialAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressFullscreenVideoAdDelegate>
+- (void)nativeExpressFullscreenVideoAdDidLoad:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAd:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd didFailWithError:(NSError * _Nullable)error;
+- (void)nativeExpressFullscreenVideoAdViewRenderSuccess:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAdViewRenderFail:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd error:(NSError * _Nullable)error;
+- (void)nativeExpressFullscreenVideoAdDidVisible:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAdDidClick:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAdDidClose:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd;
+- (void)nativeExpressFullscreenVideoAdDidPlayFinish:(BUNativeExpressFullscreenVideoAd * _Nonnull)fullscreenVideoAd didFailWithError:(NSError * _Nullable)error;
+@end
+
 
 /// 信息流广告类
 SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
@@ -1399,6 +1501,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
 - (void)p_release;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
+
 
 @class BeiZiNativeExpress;
 
@@ -1514,6 +1617,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
 
+
 @class BeiZiRewardedVideo;
 
 @interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <BeiZiRewardedVideoDelegate>
@@ -1537,6 +1641,19 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)gdt_rewardVideoAdDidClose:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 - (void)gdt_rewardVideoAdDidClicked:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 - (void)gdt_rewardVideoAdWillVisible:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+@end
+
+@class BUNativeExpressRewardedVideoAd;
+
+@interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressRewardedVideoAdDelegate>
+- (void)nativeExpressRewardedVideoAdDidLoad:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAd:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd didFailWithError:(NSError * _Nullable)error;
+- (void)nativeExpressRewardedVideoAdDidDownLoadVideo:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAdDidVisible:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAdDidClick:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAdDidClose:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)nativeExpressRewardedVideoAdDidPlayFinish:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd didFailWithError:(NSError * _Nullable)error;
+- (void)nativeExpressRewardedVideoAdServerRewardDidSucceed:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd verify:(BOOL)verify;
 @end
 
 
@@ -1633,6 +1750,23 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 - (void)BeiZi_splash:(BeiZiSplash * _Nonnull)beiziSplash didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;
 @end
 
+@class BUSplashAd;
+@class BUAdError;
+
+@interface ADXiluSplashAd (SWIFT_EXTENSION(ADXiluSDK)) <BUSplashAdDelegate>
+- (void)splashAdLoadSuccess:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdLoadFail:(BUSplashAd * _Nonnull)splashAd error:(BUAdError * _Nullable)error;
+- (void)splashAdRenderSuccess:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdRenderFail:(BUSplashAd * _Nonnull)splashAd error:(BUAdError * _Nullable)error;
+- (void)splashAdWillShow:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdDidShow:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdDidClick:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashAdDidClose:(BUSplashAd * _Nonnull)splashAd closeType:(BUSplashAdCloseType)closeType;
+- (void)splashAdViewControllerDidClose:(BUSplashAd * _Nonnull)splashAd;
+- (void)splashDidCloseOtherController:(BUSplashAd * _Nonnull)splashAd interactionType:(BUInteractionType)interactionType;
+- (void)splashVideoAdDidPlayFinish:(BUSplashAd * _Nonnull)splashAd didFailWithError:(NSError * _Nullable)error;
+@end
+
 @class GDTSplashAd;
 
 @interface ADXiluSplashAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTSplashAdDelegate>
@@ -1676,6 +1810,18 @@ typedef SWIFT_ENUM(NSInteger, ADXiluSplashAdStyle, open) {
   ADXiluSplashAdStyleHalfScreen = 1,
   ADXiluSplashAdStyleImmersive = 2,
 };
+
+
+@interface BUNativeExpressBannerView (SWIFT_EXTENSION(ADXiluSDK))
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+
+@interface BUNativeExpressFullscreenVideoAd (SWIFT_EXTENSION(ADXiluSDK))
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+
 
 
 

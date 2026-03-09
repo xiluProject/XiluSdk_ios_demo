@@ -1,7 +1,48 @@
 PODS:
+  - Ads-CN/BUAdLive (7.4.0.4)
+  - Ads-CN/BUAdLive-Framework (7.4.0.4):
+    - Ads-CN/BUAdLive
+    - BUTTSDKFramework/LivePull-Lite (= 1.48.2.3-premium)
+  - Ads-CN/BUAdSDK (7.4.0.4)
+  - Ads-CN/CSJMediation (7.4.0.4):
+    - Ads-CN/BUAdLive-Framework
+    - Ads-CN/CSJMediation-Only
+  - Ads-CN/CSJMediation-Only (7.4.0.4):
+    - Ads-CN/BUAdSDK
   - BeiZiSDK-iOS (4.90.7.0):
     - BeiZiSDK-iOS/BeiZiSDK-iOS (= 4.90.7.0)
   - BeiZiSDK-iOS/BeiZiSDK-iOS (4.90.7.0)
+  - BUTTSDKFramework/Core (1.48.2.3-premium)
+  - BUTTSDKFramework/LiveBase (1.48.2.3-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/LivePlayer/Base (1.48.2.3-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/LiveBase
+    - BUTTSDKFramework/LivePull-VolcLog
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/LivePlayer/Lite (1.48.2.3-premium):
+    - BUTTSDKFramework/LivePlayer/Base
+    - BUTTSDKFramework/PlayerCore/LiveLite
+  - BUTTSDKFramework/LivePull-Lite (1.48.2.3-premium):
+    - BUTTSDKFramework/LivePlayer/Lite
+    - BUTTSDKFramework/Strategy/Lite
+  - BUTTSDKFramework/LivePull-VolcLog (1.48.2.3-premium):
+    - BUTTSDKFramework/VolcLog
+  - BUTTSDKFramework/PlayerCore/Base (1.48.2.3-premium):
+    - BUTTSDKFramework/Core
+  - BUTTSDKFramework/PlayerCore/LiveLite (1.48.2.3-premium):
+    - BUTTSDKFramework/PlayerCore/Base
+    - BUTTSDKFramework/TTFFmpeg/LiveLite
+  - BUTTSDKFramework/Reachability (1.48.2.3-premium)
+  - BUTTSDKFramework/Strategy/Core (1.48.2.3-premium):
+    - BUTTSDKFramework/LiveBase
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/Strategy/Lite (1.48.2.3-premium):
+    - BUTTSDKFramework/LivePlayer/Lite
+    - BUTTSDKFramework/Strategy/Core
+  - BUTTSDKFramework/TTFFmpeg/LiveLite (1.48.2.3-premium)
+  - BUTTSDKFramework/VolcLog (1.48.2.3-premium)
   - CryptoSwift (1.8.4)
   - GDTMobSDK (4.15.65)
   - Masonry (1.1.0)
@@ -12,21 +53,25 @@ PODS:
     - SDWebImage/Core (= 5.21.5)
   - SDWebImage/Core (5.21.5)
   - SnapKit (5.6.0)
-  - xiluAdSdk (1.0.8):
+  - xiluAdSdk (1.0.9):
+    - Ads-CN/CSJMediation (= 7.4.0.4)
     - BeiZiSDK-iOS (= 4.90.7.0)
     - CryptoSwift
     - GDTMobSDK (= 4.15.65)
     - MSMobAdSDK/MS (= 2.7.7.3)
+    - SnapKit
 
 DEPENDENCIES:
   - Masonry
   - SDWebImage
   - SnapKit (~> 5.6.0)
-  - "xiluAdSdk (from `git@github.com:xiluProject/xiluAdSdk_ios_pod.git`, tag `1.0.8`)"
+  - "xiluAdSdk (from `git@github.com:UnAmico0/xiluAdSdk_ios_pod.git`, tag `1.0.9`)"
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - Ads-CN
     - BeiZiSDK-iOS
+    - BUTTSDKFramework
     - CryptoSwift
     - GDTMobSDK
     - Masonry
@@ -36,24 +81,26 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   xiluAdSdk:
-    :git: "git@github.com:xiluProject/xiluAdSdk_ios_pod.git"
-    :tag: 1.0.8
+    :git: "git@github.com:UnAmico0/xiluAdSdk_ios_pod.git"
+    :tag: 1.0.9
 
 CHECKOUT OPTIONS:
   xiluAdSdk:
-    :git: "git@github.com:xiluProject/xiluAdSdk_ios_pod.git"
-    :tag: 1.0.8
+    :git: "git@github.com:UnAmico0/xiluAdSdk_ios_pod.git"
+    :tag: 1.0.9
 
 SPEC CHECKSUMS:
+  Ads-CN: 1e14aa075f1bd09b110472f39aa7d31f916313aa
   BeiZiSDK-iOS: 2390c31d6e68f3d065fb21179530985f29d7b436
+  BUTTSDKFramework: 34f8f8d541da07e79e9c479eb71336d1e4d90fdd
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
   GDTMobSDK: f3aefaaca7a7393300a7b4f667d361250ac764b4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
   SDWebImage: e9c98383c7572d713c1a0d7dd2783b10599b9838
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  xiluAdSdk: 8fb259dfa26cd8d7917b24356dabd2bb8ee0aea3
+  xiluAdSdk: 21d8e080e01cb1c7e9061d79ae833b1b7dd247c5
 
-PODFILE CHECKSUM: a566569804c44e73634981277329eb0ec9bfaaf0
+PODFILE CHECKSUM: d28dc4847185ca763316d9ad6e2e83aae247754f
 
 COCOAPODS: 1.16.2

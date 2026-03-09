@@ -1,0 +1,3 @@
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Ads-CN/BUAdLive/BUAdLive.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Ads-CN/BUAdSDK/BUAdSDK.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Ads-CN/CSJMediation-Only/CSJMediation.framework

@@ -1,4 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-XiluSdk_ios_demo/Pods-XiluSdk_ios_demo-resources.sh
+${PODS_ROOT}/Ads-CN/SDK/CSJAdSDK.bundle
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKLiveBase/Resources/VeLive.bundle
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKPlayerCoreLiveLite/Resources/ttplayer.metallib
 ${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.bundle
 ${PODS_ROOT}/MSMobAdSDK/MSMobAdSDK/MSAdSDK.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle

@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Ads-CN/Ads-CN-xcframeworks.sh
+${PODS_ROOT}/Ads-CN/SDK/BUAdLive.xcframework
+${PODS_ROOT}/Ads-CN/SDK/BUAdSDK.xcframework
+${PODS_ROOT}/Ads-CN/SDK/CSJMediation.xcframework
