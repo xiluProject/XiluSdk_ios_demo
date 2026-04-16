@@ -93,7 +93,7 @@ class BannerAdViewController: UIViewController {
         
         // 释放之前的广告
         // 创建Banner广告
-        let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width, height: 60)
+        let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width-40, height: 160)
         bannerAd = ADXiluBannerAd(adPosId: "ajebtp3k", adSize: adSize)
         bannerAd?.showCloseBtn = true
         bannerAd?.containerView = containerView
@@ -130,6 +130,7 @@ extension BannerAdViewController: ADXiluBaseAdDelegate {
         DispatchQueue.main.async {
             self.statusLabel.text = "状态：加载成功 - \(String(describing: adInfo.platform.name))"
             self.statusLabel.textColor = .systemGreen
+            self.bannerAd?.showAd(in: self.containerView)
         }
     }
     
