@@ -25,6 +25,7 @@ xiluAdSdk是一个支持多平台广告聚合的iOS SDK，提供统一的API接�
 - **MSMobAdSDK**: 美数广告平台
 - **BeiZiSDK**: 倍孜广告平台
 - **GDTMobSDK**: 优量汇广告平台
+- **BUAdSDK**: 穿山甲广告平台
 - **自动选择**: 根据配置自动选择最优平台
 
 ## 系统要求
@@ -47,7 +48,7 @@ target 'YourApp' do
   use_frameworks!
   
   # 使用远程版本
-  pod 'xiluAdSdk', :git => 'https://github.com/xiluProject/xiluAdSdk_ios_pod.git', :tag => '1.0.7'
+  pod 'xiluAdSdk', :git => 'git@github.com:UnAmico0/xiluAdSdk_ios_pod.git', :tag => '1.0.9'
 end
 ```
 
@@ -792,3 +793,6 @@ MIT License
 - 支持Objective-C和Swift
 - 最低支持iOS 12.2
 - 包含完整的示例项目
+### v1.0.9 (2026-03-10)
+
+- 支持穿山甲集成

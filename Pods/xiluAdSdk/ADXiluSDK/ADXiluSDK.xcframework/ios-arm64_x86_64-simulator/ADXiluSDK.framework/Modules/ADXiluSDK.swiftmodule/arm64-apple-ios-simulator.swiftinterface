@@ -6,6 +6,7 @@
 import AdSupport
 import AppTrackingTransparency
 import BUAdSDK
+import BaiduMobAdSDK
 import BeiZiSDK
 import SystemConfiguration.CaptiveNetwork
 import CoreLocation
@@ -13,6 +14,7 @@ import CoreTelephony
 import CryptoSwift
 import Foundation
 import GDTMobSDK
+import KSAdSDK
 import MSAdSDK
 import Network
 import Swift
@@ -47,6 +49,77 @@ extension ADXiluSDK.ADDeviceInfoTool : CoreLocation.CLLocationManagerDelegate {
   @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
 }
 public struct ADEnvironmentInfo : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct InitReportRequest : Swift.Codable {
+  public let appId: Swift.String
+  public let osType: Swift.Int
+  public let idfv: Swift.String
+  public let androidid: Swift.String
+  public let sdkVersion: Swift.String
+  public let appName: Swift.String
+  public let appVersionCode: Swift.String
+  public let appVersion: Swift.String
+  public let vendor: Swift.String
+  public let networkType: Swift.Int
+  public let systemVersion: Swift.String
+  public let modeCode: Swift.String
+  public let platform: Swift.String
+  public let sdkinstallTime: Swift.Int64?
+  public let screenResolution: Swift.String?
+  public let userAgent: Swift.String
+  public let timestamp: Swift.Int64
+  public init(platform: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ErrorLogReportRequest : Swift.Codable {
+  public let appId: Swift.String
+  public let appName: Swift.String
+  public let appVersionCode: Swift.String
+  public let appVersion: Swift.String
+  public let osType: Swift.Int
+  public let systemVersion: Swift.String
+  public let modeCode: Swift.String
+  public let vendor: Swift.String
+  public let idfv: Swift.String
+  public let platform: Swift.String
+  public let message: Swift.String
+  public let errorType: Swift.String
+  public let errorCode: Swift.String
+  public let posid: Swift.String?
+  public let materialld: Swift.String?
+  public let sdkVersion: Swift.String
+  public let networkType: Swift.Int
+  public let userAgent: Swift.String
+  public let deviceMemory: Swift.String?
+  public let stackTrace: Swift.String?
+  public let timestamp: Swift.Int64
+  public init(platform: Swift.String, message: Swift.String, errorType: Swift.String, errorCode: Swift.String, sdkVersion: Swift.String, posid: Swift.String? = nil, materialld: Swift.String? = nil, deviceMemory: Swift.String? = nil, stackTrace: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AdRequestReportRequest : Swift.Codable {
+  public let requestId: Swift.String
+  public let appId: Swift.String
+  public let posid: Swift.String
+  public let materialld: Swift.String?
+  public let osType: Swift.Int
+  public let platform: Swift.String
+  public let eventType: Swift.String
+  public let idfv: Swift.String
+  public let androidid: Swift.String
+  public let ecpm: Swift.Int64
+  public let appName: Swift.String
+  public let systemVersion: Swift.String
+  public let modeCode: Swift.String
+  public let vendor: Swift.String
+  public let appVersion: Swift.String
+  public let userAgent: Swift.String
+  public let adFormat: Swift.String
+  public let timestamp: Swift.Int64
+  public init(posid: Swift.String, platform: Swift.String, eventType: Swift.String, ecpm: Swift.Int64, adFormat: Swift.String, materialld: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -157,6 +230,11 @@ public protocol ADNetworkCallback : AnyObject {
   public func cancelAllRequests()
   public func checkNetworkStatus() -> ADXiluSDK.ADNetworkStatus
   @objc deinit
+}
+extension ADXiluSDK.ADNetworkTool {
+  public func xiluSDkInitReport(_ request: ADXiluSDK.InitReportRequest, callback: (any ADXiluSDK.ADNetworkCallback)? = nil)
+  public func errorLogReport(_ request: ADXiluSDK.ErrorLogReportRequest, callback: (any ADXiluSDK.ADNetworkCallback)? = nil)
+  public func adRequestReport(_ request: ADXiluSDK.AdRequestReportRequest, callback: (any ADXiluSDK.ADNetworkCallback)? = nil)
 }
 public class ADSDKInitCallback : ADXiluSDK.ADNetworkCallback {
   public init(completion: @escaping (Swift.Result<ADXiluSDK.ADSDKResponse, any Swift.Error>) -> Swift.Void, debugMode: Swift.Bool = false)
@@ -587,11 +665,14 @@ extension ADXiluSDK.ADXiluRewardVodAd : GDTMobSDK.GDTRewardedVideoAdDelegate {
   @objc public var isDebugMode: Swift.Bool {
     get
   }
+  @objc public var isUseSDKAudioSessionSetting: Swift.Bool {
+    get
+  }
   final public let networkTool: ADXiluSDK.ADNetworkTool
   public var sdkResponse: ADXiluSDK.ADSDKResponse? {
     get
   }
-  @objc public func initialize(appId: Swift.String, debug: Swift.Bool = false, completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
+  @objc public func initialize(appId: Swift.String, debug: Swift.Bool = false, useSDKAudioSessionSetting: Swift.Bool = false, completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
   @objc public func getVersion() -> Swift.String
   public func getAdPositions(for adType: Swift.String) -> [ADXiluSDK.ADAdPosition]
   public func getNetworkConfig(for platform: Swift.String) -> ADXiluSDK.ADNetworkItem?
@@ -604,6 +685,8 @@ extension ADXiluSDK.ADXiluRewardVodAd : GDTMobSDK.GDTRewardedVideoAdDelegate {
   case ms = 2
   case gdt = 3
   case csj = 4
+  case bqt = 5
+  case ks = 6
   public var name: Swift.String {
     get
   }
@@ -717,6 +800,15 @@ extension GDTMobSDK.GDTSplashAd : ADXiluSDK.ADXiluLoadProtocol {
     @objc get
   }
 }
+extension BUAdSDK.BUSplashAd : ADXiluSDK.ADXiluLoadProtocol {
+  public func xilu_showAd(view: Any? = nil)
+}
+extension BaiduMobAdSDK.BaiduMobAdSplash : ADXiluSDK.ADXiluLoadProtocol {
+  public func xilu_showAd(view: Any? = nil)
+}
+extension KSAdSDK.KSSplashAdView : ADXiluSDK.ADXiluLoadProtocol {
+  @_Concurrency.MainActor @preconcurrency public func xilu_showAd(view: Any? = nil)
+}
 extension ADXiluSDK.ADXiluSplashAd : BUAdSDK.BUSplashAdDelegate {
   @objc dynamic public func splashAdLoadSuccess(_ splashAd: BUAdSDK.BUSplashAd)
   @objc dynamic public func splashAdLoadFail(_ splashAd: BUAdSDK.BUSplashAd, error: BUAdSDK.BUAdError?)
@@ -730,8 +822,13 @@ extension ADXiluSDK.ADXiluSplashAd : BUAdSDK.BUSplashAdDelegate {
   @objc dynamic public func splashDidCloseOtherController(_ splashAd: BUAdSDK.BUSplashAd, interactionType: BUAdSDK.BUInteractionType)
   @objc dynamic public func splashVideoAdDidPlayFinish(_ splashAd: BUAdSDK.BUSplashAd, didFailWithError error: (any Swift.Error)?)
 }
-extension BUAdSDK.BUSplashAd : ADXiluSDK.ADXiluLoadProtocol {
-  public func xilu_showAd(view: Any? = nil)
+extension ADXiluSDK.ADXiluSplashAd : KSAdSDK.KSSplashAdViewDelegate {
+  @objc dynamic public func ksad_splashAdDidLoad(_ splashAdView: KSAdSDK.KSSplashAdView)
+  @objc dynamic public func ksad_splashAd(_ splashAdView: KSAdSDK.KSSplashAdView, didFailWithError error: any Swift.Error)
+  @objc dynamic public func ksad_splashAdContentDidLoad(_ splashAdView: KSAdSDK.KSSplashAdView)
+  @objc dynamic public func ksad_splashAdDidClick(_ splashAdView: KSAdSDK.KSSplashAdView)
+  @objc dynamic public func ksad_splashAdDidClose(_ splashAdView: KSAdSDK.KSSplashAdView)
+  @objc dynamic public func ksad_splashAd(_ splashAdView: KSAdSDK.KSSplashAdView, didSkip showDuration: Foundation.TimeInterval)
 }
 extension Foundation.NSError {
   public func fullInfo() -> Swift.String

@@ -9,6 +9,7 @@ PODS:
     - Ads-CN/CSJMediation-Only
   - Ads-CN/CSJMediation-Only (7.4.0.4):
     - Ads-CN/BUAdSDK
+  - BaiduMobAdSDK (10.050)
   - BeiZiSDK-iOS (4.90.7.0):
     - BeiZiSDK-iOS/BeiZiSDK-iOS (= 4.90.7.0)
   - BeiZiSDK-iOS/BeiZiSDK-iOS (4.90.7.0)
@@ -45,6 +46,7 @@ PODS:
   - BUTTSDKFramework/VolcLog (1.48.2.3-premium)
   - CryptoSwift (1.8.4)
   - GDTMobSDK (4.15.65)
+  - KSAdSDK (5.3.20.1)
   - Masonry (1.1.0)
   - MSMobAdSDK/MotionLess (2.7.7.3)
   - MSMobAdSDK/MS (2.7.7.3):
@@ -55,9 +57,11 @@ PODS:
   - SnapKit (5.6.0)
   - xiluAdSdk (1.0.9):
     - Ads-CN/CSJMediation (= 7.4.0.4)
+    - BaiduMobAdSDK (= 10.050)
     - BeiZiSDK-iOS (= 4.90.7.0)
     - CryptoSwift
     - GDTMobSDK (= 4.15.65)
+    - KSAdSDK
     - MSMobAdSDK/MS (= 2.7.7.3)
     - SnapKit
 
@@ -70,10 +74,12 @@ DEPENDENCIES:
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - Ads-CN
+    - BaiduMobAdSDK
     - BeiZiSDK-iOS
     - BUTTSDKFramework
     - CryptoSwift
     - GDTMobSDK
+    - KSAdSDK
     - Masonry
     - MSMobAdSDK
     - SDWebImage
@@ -91,15 +97,17 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Ads-CN: 1e14aa075f1bd09b110472f39aa7d31f916313aa
+  BaiduMobAdSDK: cc8a2e7deeec4d0365532bcf326f4e77641ed446
   BeiZiSDK-iOS: 2390c31d6e68f3d065fb21179530985f29d7b436
   BUTTSDKFramework: 34f8f8d541da07e79e9c479eb71336d1e4d90fdd
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
   GDTMobSDK: f3aefaaca7a7393300a7b4f667d361250ac764b4
+  KSAdSDK: 256030abfebad92e438f2e93376d8c10a00771ba
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
   SDWebImage: e9c98383c7572d713c1a0d7dd2783b10599b9838
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  xiluAdSdk: 21d8e080e01cb1c7e9061d79ae833b1b7dd247c5
+  xiluAdSdk: fbb17c67c0b0bb7a7fde9584d806336f79ebbaac
 
 PODFILE CHECKSUM: d28dc4847185ca763316d9ad6e2e83aae247754f
 

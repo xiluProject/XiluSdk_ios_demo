@@ -87,7 +87,7 @@ class InterstitialAdViewController: UIViewController {
         // 创建插屏广告
         // 创建开屏广告
         let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width, height: 300)
-        interstitialAd = ADXiluInterstitialAd(adPosId: "eb9m5gu5", adSize: adSize, rootVC: self)
+        interstitialAd = ADXiluInterstitialAd(adPosId: AppConst.interstitialPosId, adSize: adSize, rootVC: self)
         interstitialAd?.delegate = self
 //        interstitialAd?.countdownDuration = 5.0
         

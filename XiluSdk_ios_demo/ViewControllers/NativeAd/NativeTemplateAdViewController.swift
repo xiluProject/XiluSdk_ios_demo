@@ -51,7 +51,7 @@ class NativeTemplateAdViewController: UIViewController {
         
         // 创建信息流广告
         let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width, height: 300)
-        nativeAd = ADXiluNativeAd(adPosId:"vvp3pdpv", adSize: adSize, count: 3)
+        nativeAd = ADXiluNativeAd(adPosId:AppConst.templateFeedPosId, adSize: adSize, count: 3)
         nativeAd?.nativeViewController = self
         nativeAd?.delegate = self
         

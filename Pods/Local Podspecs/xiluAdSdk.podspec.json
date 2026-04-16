@@ -54,6 +54,10 @@
   "dependencies": {
     "SnapKit": [],
     "CryptoSwift": [],
+    "KSAdSDK": [],
+    "BaiduMobAdSDK": [
+      "10.050"
+    ],
     "Ads-CN/CSJMediation": [
       "7.4.0.4"
     ],

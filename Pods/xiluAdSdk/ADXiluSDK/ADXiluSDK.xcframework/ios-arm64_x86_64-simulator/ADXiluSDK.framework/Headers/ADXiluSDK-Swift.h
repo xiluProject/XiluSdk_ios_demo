@@ -286,6 +286,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreLocation;
 @import Foundation;
 @import GDTMobSDK;
+@import KSAdSDK;
 @import ObjectiveC;
 #endif
 
@@ -357,6 +358,8 @@ typedef SWIFT_ENUM(NSInteger, ADXiluAdPlatform, open) {
   ADXiluAdPlatformMs = 2,
   ADXiluAdPlatformGdt = 3,
   ADXiluAdPlatformCsj = 4,
+  ADXiluAdPlatformBqt = 5,
+  ADXiluAdPlatformKs = 6,
 };
 
 
@@ -694,19 +697,6 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)BeiZi_rewardedVideo:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo didRewardUserWithReward:(NSObject * _Nonnull)reward;
 @end
 
-@class GDTRewardVideoAd;
-
-@interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTRewardedVideoAdDelegate>
-- (void)gdt_rewardVideoAdDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAdVideoDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAd:(GDTRewardVideoAd * _Nonnull)rewardVideoAd didFailWithError:(NSError * _Nonnull)error;
-- (void)gdt_rewardVideoAdDidRewardEffective:(GDTRewardVideoAd * _Nonnull)rewardedVideoAd;
-- (void)gdt_rewardVideoAdDidPlayFinish:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAdDidClose:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAdDidClicked:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAdWillVisible:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-@end
-
 @class BUNativeExpressRewardedVideoAd;
 
 @interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressRewardedVideoAdDelegate>
@@ -718,6 +708,19 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)nativeExpressRewardedVideoAdDidClose:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
 - (void)nativeExpressRewardedVideoAdDidPlayFinish:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd didFailWithError:(NSError * _Nullable)error;
 - (void)nativeExpressRewardedVideoAdServerRewardDidSucceed:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd verify:(BOOL)verify;
+@end
+
+@class GDTRewardVideoAd;
+
+@interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTRewardedVideoAdDelegate>
+- (void)gdt_rewardVideoAdDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdVideoDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAd:(GDTRewardVideoAd * _Nonnull)rewardVideoAd didFailWithError:(NSError * _Nonnull)error;
+- (void)gdt_rewardVideoAdDidRewardEffective:(GDTRewardVideoAd * _Nonnull)rewardedVideoAd;
+- (void)gdt_rewardVideoAdDidPlayFinish:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdDidClose:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdDidClicked:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdWillVisible:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 @end
 
 
@@ -765,6 +768,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ADXiluSDKMan
 @property (nonatomic, readonly, copy) NSString * _Nullable appId;
 /// 调试模式
 @property (nonatomic, readonly) BOOL isDebugMode;
+@property (nonatomic, readonly) BOOL isUseSDKAudioSessionSetting;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// 初始化SDK
@@ -774,7 +778,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ADXiluSDKMan
 ///
 /// \param completion 初始化完成回调
 ///
-- (void)initializeWithAppId:(NSString * _Nonnull)appId debug:(BOOL)debug completion:(void (^ _Nonnull)(BOOL, NSString * _Nullable))completion;
+- (void)initializeWithAppId:(NSString * _Nonnull)appId debug:(BOOL)debug useSDKAudioSessionSetting:(BOOL)useSDKAudioSessionSetting completion:(void (^ _Nonnull)(BOOL, NSString * _Nullable))completion;
 /// 获取SDK版本
 - (NSString * _Nonnull)getVersion SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -797,6 +801,17 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 /// 释放资源
 - (void)p_release;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
+@end
+
+@class KSSplashAdView;
+
+@interface ADXiluSplashAd (SWIFT_EXTENSION(ADXiluSDK)) <KSSplashAdViewDelegate>
+- (void)ksad_splashAdDidLoad:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAd:(KSSplashAdView * _Nonnull)splashAdView didFailWithError:(NSError * _Nonnull)error;
+- (void)ksad_splashAdContentDidLoad:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAdDidClick:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAdDidClose:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAd:(KSSplashAdView * _Nonnull)splashAdView didSkip:(NSTimeInterval)showDuration;
 @end
 
 @class BeiZiSplash;
@@ -848,6 +863,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 @end
 
 
+
 /// 开屏广告监听器
 SWIFT_PROTOCOL("_TtP9ADXiluSDK22ADXiluSplashAdDelegate_")
 @protocol ADXiluSplashAdDelegate <ADXiluBaseAdDelegate>
@@ -890,6 +906,7 @@ typedef SWIFT_ENUM(NSInteger, ADXiluSplashAdStyle, open) {
 
 
 
+
 @interface BeiZiSplash (SWIFT_EXTENSION(ADXiluSDK))
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @end
@@ -898,6 +915,7 @@ typedef SWIFT_ENUM(NSInteger, ADXiluSplashAdStyle, open) {
 @interface GDTSplashAd (SWIFT_EXTENSION(ADXiluSDK))
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @end
+
 
 
 @interface NSDictionary<KeyType, ObjectType> (SWIFT_EXTENSION(ADXiluSDK))
@@ -1222,6 +1240,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreLocation;
 @import Foundation;
 @import GDTMobSDK;
+@import KSAdSDK;
 @import ObjectiveC;
 #endif
 
@@ -1293,6 +1312,8 @@ typedef SWIFT_ENUM(NSInteger, ADXiluAdPlatform, open) {
   ADXiluAdPlatformMs = 2,
   ADXiluAdPlatformGdt = 3,
   ADXiluAdPlatformCsj = 4,
+  ADXiluAdPlatformBqt = 5,
+  ADXiluAdPlatformKs = 6,
 };
 
 
@@ -1630,19 +1651,6 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)BeiZi_rewardedVideo:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo didRewardUserWithReward:(NSObject * _Nonnull)reward;
 @end
 
-@class GDTRewardVideoAd;
-
-@interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTRewardedVideoAdDelegate>
-- (void)gdt_rewardVideoAdDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAdVideoDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAd:(GDTRewardVideoAd * _Nonnull)rewardVideoAd didFailWithError:(NSError * _Nonnull)error;
-- (void)gdt_rewardVideoAdDidRewardEffective:(GDTRewardVideoAd * _Nonnull)rewardedVideoAd;
-- (void)gdt_rewardVideoAdDidPlayFinish:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAdDidClose:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAdDidClicked:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)gdt_rewardVideoAdWillVisible:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
-@end
-
 @class BUNativeExpressRewardedVideoAd;
 
 @interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressRewardedVideoAdDelegate>
@@ -1654,6 +1662,19 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)nativeExpressRewardedVideoAdDidClose:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd;
 - (void)nativeExpressRewardedVideoAdDidPlayFinish:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd didFailWithError:(NSError * _Nullable)error;
 - (void)nativeExpressRewardedVideoAdServerRewardDidSucceed:(BUNativeExpressRewardedVideoAd * _Nonnull)rewardedVideoAd verify:(BOOL)verify;
+@end
+
+@class GDTRewardVideoAd;
+
+@interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTRewardedVideoAdDelegate>
+- (void)gdt_rewardVideoAdDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdVideoDidLoad:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAd:(GDTRewardVideoAd * _Nonnull)rewardVideoAd didFailWithError:(NSError * _Nonnull)error;
+- (void)gdt_rewardVideoAdDidRewardEffective:(GDTRewardVideoAd * _Nonnull)rewardedVideoAd;
+- (void)gdt_rewardVideoAdDidPlayFinish:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdDidClose:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdDidClicked:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)gdt_rewardVideoAdWillVisible:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 @end
 
 
@@ -1701,6 +1722,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ADXiluSDKMan
 @property (nonatomic, readonly, copy) NSString * _Nullable appId;
 /// 调试模式
 @property (nonatomic, readonly) BOOL isDebugMode;
+@property (nonatomic, readonly) BOOL isUseSDKAudioSessionSetting;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// 初始化SDK
@@ -1710,7 +1732,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ADXiluSDKMan
 ///
 /// \param completion 初始化完成回调
 ///
-- (void)initializeWithAppId:(NSString * _Nonnull)appId debug:(BOOL)debug completion:(void (^ _Nonnull)(BOOL, NSString * _Nullable))completion;
+- (void)initializeWithAppId:(NSString * _Nonnull)appId debug:(BOOL)debug useSDKAudioSessionSetting:(BOOL)useSDKAudioSessionSetting completion:(void (^ _Nonnull)(BOOL, NSString * _Nullable))completion;
 /// 获取SDK版本
 - (NSString * _Nonnull)getVersion SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -1733,6 +1755,17 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 /// 释放资源
 - (void)p_release;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
+@end
+
+@class KSSplashAdView;
+
+@interface ADXiluSplashAd (SWIFT_EXTENSION(ADXiluSDK)) <KSSplashAdViewDelegate>
+- (void)ksad_splashAdDidLoad:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAd:(KSSplashAdView * _Nonnull)splashAdView didFailWithError:(NSError * _Nonnull)error;
+- (void)ksad_splashAdContentDidLoad:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAdDidClick:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAdDidClose:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAd:(KSSplashAdView * _Nonnull)splashAdView didSkip:(NSTimeInterval)showDuration;
 @end
 
 @class BeiZiSplash;
@@ -1784,6 +1817,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 @end
 
 
+
 /// 开屏广告监听器
 SWIFT_PROTOCOL("_TtP9ADXiluSDK22ADXiluSplashAdDelegate_")
 @protocol ADXiluSplashAdDelegate <ADXiluBaseAdDelegate>
@@ -1826,6 +1860,7 @@ typedef SWIFT_ENUM(NSInteger, ADXiluSplashAdStyle, open) {
 
 
 
+
 @interface BeiZiSplash (SWIFT_EXTENSION(ADXiluSDK))
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @end
@@ -1834,6 +1869,7 @@ typedef SWIFT_ENUM(NSInteger, ADXiluSplashAdStyle, open) {
 @interface GDTSplashAd (SWIFT_EXTENSION(ADXiluSDK))
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @end
+
 
 
 @interface NSDictionary<KeyType, ObjectType> (SWIFT_EXTENSION(ADXiluSDK))

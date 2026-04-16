@@ -54,7 +54,7 @@ class NativeRenderAdViewController: UIViewController {
         
         // 创建信息流广告
         let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width, height: 300)
-        nativeAd = ADXiluNativeAd(adPosId:"59jmkybj", adSize: adSize, count: 3)
+        nativeAd = ADXiluNativeAd(adPosId:AppConst.renderFeedPosId, adSize: adSize, count: 3)
         nativeAd?.isTemplate = false
         nativeAd?.nativeViewController = self
         nativeAd?.delegate = self
