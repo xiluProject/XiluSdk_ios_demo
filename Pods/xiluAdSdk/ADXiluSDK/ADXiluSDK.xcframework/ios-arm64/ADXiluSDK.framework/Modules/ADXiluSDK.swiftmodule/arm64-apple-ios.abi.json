@@ -37,6 +37,13 @@
       },
       {
         "kind": "Import",
+        "name": "BUAdSDK",
+        "printedName": "BUAdSDK",
+        "declKind": "Import",
+        "moduleName": "ADXiluSDK"
+      },
+      {
+        "kind": "Import",
         "name": "BaiduMobAdSDK",
         "printedName": "BaiduMobAdSDK",
         "declKind": "Import",
@@ -27635,6 +27642,36 @@
           },
           {
             "kind": "Function",
+            "name": "ksad_splashAdDidVisible",
+            "printedName": "ksad_splashAdDidVisible(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KSSplashAdView",
+                "printedName": "KSAdSDK.KSSplashAdView",
+                "usr": "c:objc(cs)KSSplashAdView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluSplashAd(im)ksad_splashAdDidVisible:",
+            "mangledName": "$s9ADXiluSDK0A8SplashAdC011ksad_splashD10DidVisibleyySo08KSSplashD4ViewCF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "ksad_splashAdDidVisible:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "ksad_splashAdDidClick",
             "printedName": "ksad_splashAdDidClick(_:)",
             "children": [
@@ -27658,8 +27695,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -35387,7 +35423,7 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADNetworkTool.swift",
       "kind": "StringLiteral",
-      "offset": 11926,
+      "offset": 11896,
       "length": 2,
       "value": "\"\""
     },
@@ -35800,7 +35836,7 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
       "kind": "StringLiteral",
-      "offset": 39756,
+      "offset": 39812,
       "length": 2,
       "value": "\"\""
     },
@@ -36458,35 +36494,35 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 45877,
+      "offset": 45570,
       "length": 52,
       "value": "\"BeiZiSplash { spaceID: \""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 45911,
+      "offset": 45604,
       "length": 1,
       "value": "\", ecpm: \""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 45926,
+      "offset": 45619,
       "length": 1,
       "value": "\" }\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 46372,
+      "offset": 46065,
       "length": 32,
       "value": "\"GDTSplashAd {ecpm: \""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 46401,
+      "offset": 46094,
       "length": 1,
       "value": "\" }\""
     },

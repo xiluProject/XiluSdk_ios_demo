@@ -809,6 +809,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 - (void)ksad_splashAdDidLoad:(KSSplashAdView * _Nonnull)splashAdView;
 - (void)ksad_splashAd:(KSSplashAdView * _Nonnull)splashAdView didFailWithError:(NSError * _Nonnull)error;
 - (void)ksad_splashAdContentDidLoad:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAdDidVisible:(KSSplashAdView * _Nonnull)splashAdView;
 - (void)ksad_splashAdDidClick:(KSSplashAdView * _Nonnull)splashAdView;
 - (void)ksad_splashAdDidClose:(KSSplashAdView * _Nonnull)splashAdView;
 - (void)ksad_splashAd:(KSSplashAdView * _Nonnull)splashAdView didSkip:(NSTimeInterval)showDuration;
@@ -1763,6 +1764,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 - (void)ksad_splashAdDidLoad:(KSSplashAdView * _Nonnull)splashAdView;
 - (void)ksad_splashAd:(KSSplashAdView * _Nonnull)splashAdView didFailWithError:(NSError * _Nonnull)error;
 - (void)ksad_splashAdContentDidLoad:(KSSplashAdView * _Nonnull)splashAdView;
+- (void)ksad_splashAdDidVisible:(KSSplashAdView * _Nonnull)splashAdView;
 - (void)ksad_splashAdDidClick:(KSSplashAdView * _Nonnull)splashAdView;
 - (void)ksad_splashAdDidClose:(KSSplashAdView * _Nonnull)splashAdView;
 - (void)ksad_splashAd:(KSSplashAdView * _Nonnull)splashAdView didSkip:(NSTimeInterval)showDuration;

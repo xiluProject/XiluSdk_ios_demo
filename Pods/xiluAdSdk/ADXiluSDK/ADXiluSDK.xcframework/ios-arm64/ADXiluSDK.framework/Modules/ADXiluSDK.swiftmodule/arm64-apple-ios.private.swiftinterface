@@ -826,6 +826,7 @@ extension ADXiluSDK.ADXiluSplashAd : KSAdSDK.KSSplashAdViewDelegate {
   @objc dynamic public func ksad_splashAdDidLoad(_ splashAdView: KSAdSDK.KSSplashAdView)
   @objc dynamic public func ksad_splashAd(_ splashAdView: KSAdSDK.KSSplashAdView, didFailWithError error: any Swift.Error)
   @objc dynamic public func ksad_splashAdContentDidLoad(_ splashAdView: KSAdSDK.KSSplashAdView)
+  @objc dynamic public func ksad_splashAdDidVisible(_ splashAdView: KSAdSDK.KSSplashAdView)
   @objc dynamic public func ksad_splashAdDidClick(_ splashAdView: KSAdSDK.KSSplashAdView)
   @objc dynamic public func ksad_splashAdDidClose(_ splashAdView: KSAdSDK.KSSplashAdView)
   @objc dynamic public func ksad_splashAd(_ splashAdView: KSAdSDK.KSSplashAdView, didSkip showDuration: Foundation.TimeInterval)
