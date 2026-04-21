@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         ("开屏广告", { SplashAdViewController() }),//对应oc的开屏广告：OCSplashAdViewController
         ("插屏广告", { InterstitialAdViewController() }),//对应oc的插屏广告：OCInterstitialAdViewController
         ("激励视频广告", { RewardVodAdViewController() }),//对应oc的激励视频广告：OCRewardVodAdViewController
-        ("信息流模板广告", { NativeTemplateAdViewController() }),//对应oc的信息流模板广告：OCNativeTemplateAdViewController
+        ("信息流模板广告", { OCNativeTemplateAdViewController() }),//对应oc的信息流模板广告：OCNativeTemplateAdViewController
         ("信息流自渲染广告", { NativeRenderAdViewController() }),//对应oc的信息流自渲染广告：OCNativeRenderAdViewController
         ("Banner广告", { BannerAdViewController() }),//对应object-c的Banner广告：OCBannerAdViewController
         ("重新初始化(仅在初始化失败时重试使用)", {
