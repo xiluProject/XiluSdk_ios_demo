@@ -7,8 +7,8 @@
 //
 
 #import "OCNativeTemplateAdViewController.h"
-#import "ADXiluSDK/ADXiluSDK-Swift.h"
-#import <Masonry/Masonry.h>
+#import "ADXiluSdk/ADXiluSDK-Swift.h"
+//#import <Masonry/Masonry.h>
 
 @interface OCNativeTemplateAdViewController () <UITableViewDelegate, UITableViewDataSource, ADXiluBaseAdDelegate>
 // 标记广告插入位置（每5条内容插1条广告）
@@ -64,7 +64,7 @@
 
 - (ADXiluNativeAd *)nativeAd {
     if (!_nativeAd) {
-        _nativeAd = [[ADXiluNativeAd alloc] initWithAdPosId:self.adSlotID adSize:[[ADXiluAdSize alloc] initWithWidth:[UIScreen mainScreen].bounds.size.width height:200] count:3];
+        _nativeAd = [[ADXiluNativeAd alloc] initWithAdPosId:@"vvp3pdpv" adSize:[[ADXiluAdSize alloc] initWithWidth:[UIScreen mainScreen].bounds.size.width height:110] count:3];
         _nativeAd.delegate = self;
         _nativeAd.nativeViewController = self;
     }
