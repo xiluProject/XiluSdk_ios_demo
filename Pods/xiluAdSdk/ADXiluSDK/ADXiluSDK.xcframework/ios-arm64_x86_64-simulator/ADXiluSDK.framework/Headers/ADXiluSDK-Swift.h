@@ -470,7 +470,7 @@ SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 - (void)xilu_AdWillClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告关闭
 - (void)xilu_AdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告关闭
+/// 信息流广告关闭
 - (void)xilu_FeedAdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告跳过
 - (void)xilu_AdDidSkip:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
@@ -1428,7 +1428,7 @@ SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 - (void)xilu_AdWillClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告关闭
 - (void)xilu_AdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告关闭
+/// 信息流广告关闭
 - (void)xilu_FeedAdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告跳过
 - (void)xilu_AdDidSkip:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
