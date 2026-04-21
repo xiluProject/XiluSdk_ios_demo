@@ -89,14 +89,14 @@ public struct ErrorLogReportRequest : Swift.Codable {
   public let errorType: Swift.String
   public let errorCode: Swift.String
   public let posid: Swift.String?
-  public let materialld: Swift.String?
+  public let materialId: Swift.String?
   public let sdkVersion: Swift.String
   public let networkType: Swift.Int
   public let userAgent: Swift.String
   public let deviceMemory: Swift.String?
   public let stackTrace: Swift.String?
   public let timestamp: Swift.Int64
-  public init(platform: Swift.String, message: Swift.String, errorType: Swift.String, errorCode: Swift.String, sdkVersion: Swift.String, posid: Swift.String? = nil, materialld: Swift.String? = nil, deviceMemory: Swift.String? = nil, stackTrace: Swift.String? = nil)
+  public init(platform: Swift.String, message: Swift.String, errorType: Swift.String, errorCode: Swift.String, sdkVersion: Swift.String, posid: Swift.String? = nil, materialId: Swift.String? = nil, deviceMemory: Swift.String? = nil, stackTrace: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -104,7 +104,7 @@ public struct AdRequestReportRequest : Swift.Codable {
   public let requestId: Swift.String
   public let appId: Swift.String
   public let posid: Swift.String
-  public let materialld: Swift.String?
+  public let materialId: Swift.String?
   public let osType: Swift.Int
   public let platform: Swift.String
   public let eventType: Swift.String
@@ -119,7 +119,7 @@ public struct AdRequestReportRequest : Swift.Codable {
   public let userAgent: Swift.String
   public let adFormat: Swift.String
   public let timestamp: Swift.Int64
-  public init(posid: Swift.String, platform: Swift.String, eventType: Swift.String, ecpm: Swift.Int64, adFormat: Swift.String, materialld: Swift.String? = nil)
+  public init(posid: Swift.String, platform: Swift.String, eventType: Swift.String, ecpm: Swift.Int64, adFormat: Swift.String, materialId: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -445,6 +445,7 @@ extension ADXiluSDK.ADXiluBannerAd : GDTMobSDK.GDTUnifiedBannerViewDelegate {
   @objc optional func xilu_AdDidClick(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc optional func xilu_AdWillClose(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc optional func xilu_AdDidClose(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
+  @objc optional func xilu_FeedAdDidClose(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc optional func xilu_AdDidSkip(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc optional func xilu_AdDidFail(_ xiluAd: ADXiluSDK.ADXiluBaseAd, error: ADXiluSDK.ADXiluError)
   @objc optional func xilu_AdTick(_ xiluAd: ADXiluSDK.ADXiluBaseAd, remainingTime: Foundation.TimeInterval)
@@ -474,6 +475,7 @@ extension ADXiluSDK.ADXiluBaseAd : ADXiluSDK.ADXiluBaseAdDelegate {
   @objc dynamic public func xilu_AdDidExpose(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc dynamic public func xilu_AdWillClose(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc dynamic public func xilu_AdDidClose(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
+  @objc dynamic public func xilu_FeedAdDidClose(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc dynamic public func xilu_AdDidFail(_ xiluAd: ADXiluSDK.ADXiluBaseAd, error: ADXiluSDK.ADXiluError)
   @objc dynamic public func xilu_AdDidSkip(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc dynamic public func xilu_AdTick(_ xiluAd: ADXiluSDK.ADXiluBaseAd, remainingTime: Foundation.TimeInterval)
