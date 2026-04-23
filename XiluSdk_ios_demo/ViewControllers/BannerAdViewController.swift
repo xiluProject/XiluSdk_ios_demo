@@ -8,7 +8,7 @@
 import UIKit
 import ADXiluSDK
 
-class BannerAdViewController: UIViewController {
+class BannerAdViewController: BaseAdViewController {
     
     private var containerView: UIView!
     private var loadButton: UIButton!
@@ -93,8 +93,8 @@ class BannerAdViewController: UIViewController {
         
         // 释放之前的广告
         // 创建Banner广告
-        let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width-40, height: 160)
-        bannerAd = ADXiluBannerAd(adPosId: "ajebtp3k", adSize: adSize)
+        let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width-40, height: 60)
+        bannerAd = ADXiluBannerAd(adPosId: AppConst.bannerPosId, adSize: adSize)
         bannerAd?.showCloseBtn = true
         bannerAd?.containerView = containerView
         bannerAd?.nativeViewController = self
@@ -111,16 +111,6 @@ class BannerAdViewController: UIViewController {
         bannerAd?.dismissAd()
         statusLabel.text = "状态：已关闭"
         statusLabel.textColor = .systemRed
-    }
-    
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "确定", style: .default))
-        present(alert, animated: true)
-    }
-    
-    deinit {
-
     }
 }
 
@@ -150,9 +140,13 @@ extension BannerAdViewController: ADXiluBaseAdDelegate {
     }
     
     func xilu_AdDidClick(_ xiluAd: ADXiluBaseAd, adInfo: ADXiluAdInfo) {
-        appLog("广告点击: \(adInfo)")
+        DispatchQueue.main.async {
+            self.showAlert(title: "广告点击", message: "Banner广告被点击 - \(String(describing: adInfo.platform.name))")
+        }
     }
-    
+    func xilu_AdWillClose(_ xiluAd: ADXiluBaseAd, adInfo: ADXiluAdInfo) {
+        appLog("广告将要关闭: \(adInfo)")
+    }
     func xilu_AdDidClose(_ xiluAd: ADXiluBaseAd, adInfo: ADXiluAdInfo) {
         DispatchQueue.main.async {
             self.statusLabel.text = "状态：已关闭"
