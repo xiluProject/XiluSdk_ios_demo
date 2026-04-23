@@ -6,7 +6,7 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
@@ -58,7 +58,7 @@ struct EMSAPKCS1v15Padding: PaddingProtocol {
 
 /// EME PKCS1 v1.5 Padding Scheme
 ///
-/// The EME Version of the PKCS1 v1.5 padding scheme is **non deterministic** (it pads the messages contents with pseudo-random bytes)
+/// The EME Version of the PKCS1 v1.5 padding scheme is **non deterministic** (it pads the messages contents with psuedo-random bytes)
 /// ```
 /// // The returned structure
 /// // - PS is the applied padding

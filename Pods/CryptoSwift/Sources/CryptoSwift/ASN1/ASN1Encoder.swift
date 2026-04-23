@@ -6,7 +6,7 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
@@ -14,11 +14,7 @@
 //
 //  ASN1 Code inspired by Asn1Parser.swift from SwiftyRSA
 
-#if canImport(FoundationEssentials)
-import FoundationEssentials
-#else
 import Foundation
-#endif
 
 extension ASN1 {
   enum Encoder {
@@ -32,15 +28,15 @@ extension ASN1 {
     public static func encode(_ node: ASN1.Node) -> [UInt8] {
       switch node {
         case .integer(let integer):
-          return IDENTIFIERS.INTERGER.bytes + self.asn1LengthPrefixed(integer.byteArray)
+          return IDENTIFIERS.INTERGER.bytes + self.asn1LengthPrefixed(integer.bytes)
         case .bitString(let bits):
-          return IDENTIFIERS.BITSTRING.bytes + self.asn1LengthPrefixed([0x00] + bits.byteArray)
+          return IDENTIFIERS.BITSTRING.bytes + self.asn1LengthPrefixed([0x00] + bits.bytes)
         case .octetString(let octet):
-          return IDENTIFIERS.OCTETSTRING.bytes + self.asn1LengthPrefixed(octet.byteArray)
+          return IDENTIFIERS.OCTETSTRING.bytes + self.asn1LengthPrefixed(octet.bytes)
         case .null:
           return IDENTIFIERS.NULL.bytes
         case .objectIdentifier(let oid):
-          return IDENTIFIERS.OBJECTID.bytes + self.asn1LengthPrefixed(oid.byteArray)
+          return IDENTIFIERS.OBJECTID.bytes + self.asn1LengthPrefixed(oid.bytes)
         case .sequence(let nodes):
           return IDENTIFIERS.SEQUENCE.bytes + self.asn1LengthPrefixed( nodes.reduce(into: Array<UInt8>(), { partialResult, node in
             partialResult += encode(node)

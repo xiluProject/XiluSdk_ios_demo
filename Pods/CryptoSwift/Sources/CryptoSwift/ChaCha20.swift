@@ -6,7 +6,7 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
@@ -30,25 +30,6 @@ public final class ChaCha20: BlockCipher {
 
   public convenience init(key: Array<UInt8>, iv nonce: Array<UInt8>) throws {
     try self.init(key: key, iv: nonce, blockCounter: 0)
-  }
-
-  /// Initializes a ChaCha20 cipher with an explicit 4-byte counter prefix.
-  ///
-  /// The `counter` bytes are used verbatim for ChaCha state word 12.
-  /// For the legacy 8-byte nonce variant, these bytes populate the low 32 bits
-  /// of the 64-bit counter and the upper 32 bits remain zero.
-  public convenience init(key: Array<UInt8>, counter: Array<UInt8>, iv nonce: Array<UInt8>) throws {
-    guard counter.count == 4 else {
-      throw Error.invalidKeyOrInitializationVector
-    }
-
-    try self.init(key: key, iv: nonce, blockCounter: 0)
-
-    if nonce.count == 8 {
-      self.counter = counter + [0, 0, 0, 0] + nonce
-    } else {
-      self.counter = counter + nonce
-    }
   }
 
   init(key: Array<UInt8>, iv nonce: Array<UInt8>, blockCounter: UInt32 = 0) throws {

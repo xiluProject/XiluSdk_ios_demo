@@ -6,18 +6,14 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
 //  - This notice may not be removed or altered from any source or binary distribution.
 //
 
-#if canImport(FoundationEssentials)
-import FoundationEssentials
-#else
 import Foundation
-#endif
 
 extension Data {
   /// Two octet checksum as defined in RFC-4880. Sum of all octets, mod 65536
@@ -29,55 +25,55 @@ extension Data {
   }
 
   public func md5() -> Data {
-    Data( Digest.md5(byteArray))
+    Data( Digest.md5(bytes))
   }
 
   public func sha1() -> Data {
-    Data( Digest.sha1(byteArray))
+    Data( Digest.sha1(bytes))
   }
 
   public func sha224() -> Data {
-    Data( Digest.sha224(byteArray))
+    Data( Digest.sha224(bytes))
   }
 
   public func sha256() -> Data {
-    Data( Digest.sha256(byteArray))
+    Data( Digest.sha256(bytes))
   }
 
   public func sha384() -> Data {
-    Data( Digest.sha384(byteArray))
+    Data( Digest.sha384(bytes))
   }
 
   public func sha512() -> Data {
-    Data( Digest.sha512(byteArray))
+    Data( Digest.sha512(bytes))
   }
 
   public func sha3(_ variant: SHA3.Variant) -> Data {
-    Data( Digest.sha3(byteArray, variant: variant))
+    Data( Digest.sha3(bytes, variant: variant))
   }
 
   public func crc32(seed: UInt32? = nil, reflect: Bool = true) -> Data {
-    Data( Checksum.crc32(byteArray, seed: seed, reflect: reflect).bytes())
+    Data( Checksum.crc32(bytes, seed: seed, reflect: reflect).bytes())
   }
 
   public func crc32c(seed: UInt32? = nil, reflect: Bool = true) -> Data {
-    Data( Checksum.crc32c(byteArray, seed: seed, reflect: reflect).bytes())
+    Data( Checksum.crc32c(bytes, seed: seed, reflect: reflect).bytes())
   }
 
   public func crc16(seed: UInt16? = nil) -> Data {
-    Data( Checksum.crc16(byteArray, seed: seed).bytes())
+    Data( Checksum.crc16(bytes, seed: seed).bytes())
   }
 
   public func encrypt(cipher: Cipher) throws -> Data {
-    Data( try cipher.encrypt(byteArray.slice))
+    Data( try cipher.encrypt(bytes.slice))
   }
 
   public func decrypt(cipher: Cipher) throws -> Data {
-    Data( try cipher.decrypt(byteArray.slice))
+    Data( try cipher.decrypt(bytes.slice))
   }
 
   public func authenticate(with authenticator: Authenticator) throws -> Data {
-    Data( try authenticator.authenticate(byteArray))
+    Data( try authenticator.authenticate(bytes))
   }
 }
 
@@ -86,11 +82,11 @@ extension Data {
     self.init(Array<UInt8>(hex: hex))
   }
 
-  public var byteArray: Array<UInt8> {
+  public var bytes: Array<UInt8> {
     Array(self)
   }
 
   public func toHexString() -> String {
-    self.byteArray.toHexString()
+    self.bytes.toHexString()
   }
 }

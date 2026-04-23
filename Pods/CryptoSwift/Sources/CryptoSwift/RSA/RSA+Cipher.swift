@@ -6,18 +6,14 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
 //  - This notice may not be removed or altered from any source or binary distribution.
 //
 
-#if canImport(FoundationEssentials)
-import FoundationEssentials
-#else
 import Foundation
-#endif
 
 // MARK: Cipher
 
@@ -40,7 +36,7 @@ extension RSA: Cipher {
   @inlinable
   internal func encryptPreparedBytes(_ bytes: Array<UInt8>) throws -> Array<UInt8> {
     // Calculate encrypted data
-    return BigUInteger(Data(bytes)).power(self.e, modulus: self.n).serialize().byteArray
+    return BigUInteger(Data(bytes)).power(self.e, modulus: self.n).serialize().bytes
   }
 
   @inlinable
@@ -63,7 +59,7 @@ extension RSA: Cipher {
     guard let d = d else { throw RSA.Error.noPrivateKey }
 
     // Calculate decrypted data
-    return BigUInteger(Data(bytes)).power(d, modulus: self.n).serialize().byteArray
+    return BigUInteger(Data(bytes)).power(d, modulus: self.n).serialize().bytes
   }
 }
 
