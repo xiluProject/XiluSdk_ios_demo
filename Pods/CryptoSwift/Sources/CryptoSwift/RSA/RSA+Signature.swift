@@ -6,14 +6,18 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
 //  - This notice may not be removed or altered from any source or binary distribution.
 //
 
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
 import Foundation
+#endif
 
 // MARK: Signatures & Verification
 
@@ -35,7 +39,7 @@ extension RSA: Signature {
     let hashedAndEncoded = try RSA.hashedAndEncoded(bytes, variant: variant, keySizeInBytes: self.keySizeBytes)
 
     /// Calculate the Signature
-    let signedData = BigUInteger(Data(hashedAndEncoded)).power(d, modulus: self.n).serialize().bytes
+    let signedData = BigUInteger(Data(hashedAndEncoded)).power(d, modulus: self.n).serialize().byteArray
 
     return variant.formatSignedBytes(signedData, blockSize: self.keySizeBytes)
   }
@@ -61,7 +65,7 @@ extension RSA: Signature {
     if expectedData.count == self.keySizeBytes && expectedData.prefix(1) == [0x00] { expectedData = Array(expectedData.dropFirst()) }
 
     /// Step 2: 'Decrypt' the signature
-    let signatureResult = BigUInteger(Data(signature)).power(self.e, modulus: self.n).serialize().bytes
+    let signatureResult = BigUInteger(Data(signature)).power(self.e, modulus: self.n).serialize().byteArray
 
     /// Step 3: Compare the 'decrypted' signature with the prepared / encoded expected message....
     guard signatureResult == expectedData else { return false }

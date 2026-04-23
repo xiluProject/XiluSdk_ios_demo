@@ -312,7 +312,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC9ADXiluSDK9ADAdaptor")
 @interface ADAdaptor : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -432,25 +433,25 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluBannerAd")
 @end
 
 
-@class GDTUnifiedBannerView;
-
-@interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedBannerViewDelegate>
-- (void)unifiedBannerViewDidLoad:(GDTUnifiedBannerView * _Nonnull)bannerView;
-- (void)unifiedBannerViewFailedToLoad:(GDTUnifiedBannerView * _Nonnull)bannerView error:(NSError * _Nonnull)error;
-- (void)unifiedBannerViewWillClose:(GDTUnifiedBannerView * _Nonnull)bannerView;
-@end
-
 @class BUNativeExpressBannerView;
 
 @interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <BUNativeExpressBannerViewDelegate>
 - (void)nativeExpressBannerAdViewDidLoad:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
 - (void)nativeExpressBannerAdView:(BUNativeExpressBannerView * _Nonnull)bannerAdView didLoadFailWithError:(NSError * _Nullable)error;
 - (void)nativeExpressBannerAdViewRenderSuccess:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
-- (void)nativeExpressBannerAdViewRenderFail:(BUNativeExpressBannerView * _Nonnull)bannerAdView error:(NSError * _Nullable)error;
-- (void)nativeExpressBannerAdViewWillBecomVisible:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
 - (void)nativeExpressBannerAdViewDidClick:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
 - (void)nativeExpressBannerAdViewDidRemoved:(BUNativeExpressBannerView * _Nonnull)bannerAdView;
 - (void)nativeExpressBannerAdViewDidCloseOtherController:(BUNativeExpressBannerView * _Nonnull)bannerAdView interactionType:(BUInteractionType)interactionType;
+@end
+
+@class GDTUnifiedBannerView;
+
+@interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedBannerViewDelegate>
+- (void)unifiedBannerViewDidLoad:(GDTUnifiedBannerView * _Nonnull)bannerView;
+- (void)unifiedBannerViewFailedToLoad:(GDTUnifiedBannerView * _Nonnull)bannerView error:(NSError * _Nonnull)error;
+- (void)unifiedBannerViewWillClose:(GDTUnifiedBannerView * _Nonnull)bannerView;
+- (void)unifiedBannerViewWillExpose:(GDTUnifiedBannerView * _Nonnull)bannerView;
+- (void)unifiedBannerViewClicked:(GDTUnifiedBannerView * _Nonnull)bannerView;
 @end
 
 
@@ -522,15 +523,6 @@ SWIFT_CLASS("_TtC9ADXiluSDK20ADXiluInterstitialAd")
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
 
-@class GDTUnifiedInterstitialAd;
-
-@interface ADXiluInterstitialAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedInterstitialAdDelegate>
-- (void)unifiedInterstitialSuccessToLoadAd:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
-- (void)unifiedInterstitialFailToLoadAd:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitialAd error:(NSError * _Nonnull)error;
-- (void)unifiedInterstitialDidDismissScreen:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
-- (void)unifiedInterstitialClicked:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
-@end
-
 @class BeiZiInterstitial;
 @class BeiZiRequestError;
 
@@ -540,6 +532,16 @@ SWIFT_CLASS("_TtC9ADXiluSDK20ADXiluInterstitialAd")
 - (void)BeiZi_interstitialDidDismissScreen:(BeiZiInterstitial * _Nonnull)beiziInterstitial;
 - (void)BeiZi_interstitialDidPresentScreen:(BeiZiInterstitial * _Nonnull)beiziInterstitial;
 - (void)BeiZi_interstitial:(BeiZiInterstitial * _Nonnull)beiziInterstitial didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;
+@end
+
+@class GDTUnifiedInterstitialAd;
+
+@interface ADXiluInterstitialAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedInterstitialAdDelegate>
+- (void)unifiedInterstitialSuccessToLoadAd:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
+- (void)unifiedInterstitialFailToLoadAd:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitialAd error:(NSError * _Nonnull)error;
+- (void)unifiedInterstitialDidPresentScreen:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
+- (void)unifiedInterstitialDidDismissScreen:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
+- (void)unifiedInterstitialClicked:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
 @end
 
 @class BUNativeExpressFullscreenVideoAd;

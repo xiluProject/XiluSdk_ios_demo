@@ -27,11 +27,10 @@ public protocol ADAdaptorProtocol {
   func initialize(completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
   func getVersion() -> Swift.String
 }
-@objc @_inheritsConvenienceInitializers public class ADAdaptor : ObjectiveC.NSObject, ADXiluSDK.ADAdaptorProtocol {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ADAdaptor : ObjectiveC.NSObject, ADXiluSDK.ADAdaptorProtocol {
+  public static let shared: ADXiluSDK.ADAdaptor
   public func initialize(completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
   public func getVersion() -> Swift.String
-  public static let shared: ADXiluSDK.ADAdaptor
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ADDeviceInfoTool : ObjectiveC.NSObject {
@@ -122,6 +121,49 @@ public struct AdRequestReportRequest : Swift.Codable {
   public init(posid: Swift.String, platform: Swift.String, eventType: Swift.String, ecpm: Swift.Int64, adFormat: Swift.String, materialId: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public struct StartupReportRequest : Swift.Codable {
+  public let appId: Swift.String
+  public let idfv: Swift.String
+  public let androidid: Swift.String
+  public let appVersionCode: Swift.String
+  public let appVersion: Swift.String
+  public let appName: Swift.String
+  public let appInstallTime: Swift.String
+  public let appUpdateTime: Swift.String
+  public let systemVersion: Swift.String
+  public let vendor: Swift.String
+  public let osType: Swift.Int
+  public let screenResolution: Swift.String
+  public let screenDensity: Swift.String
+  public let modeCode: Swift.String
+  public let networkType: Swift.String
+  public let networkCarrier: Swift.String
+  public let userAgent: Swift.String
+  public let language: Swift.String
+  public let timestamp: Swift.Int64
+  public let sdkUpdateTime: Swift.String
+  public let sdkinstallTime: Swift.String
+  public let coreBaseVersion: Swift.String
+  public let version: [Swift.String : [Swift.String : Swift.String]]
+  public let packageName: Swift.String
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum NetworkType : Swift.Int {
+  case unknown
+  case wifi
+  case cellular2G
+  case cellular3G
+  case cellular4G
+  case cellular5G
+  case notReachable
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public enum ADHTTPMethod : Swift.String, Swift.CaseIterable {
   case GET
@@ -235,6 +277,7 @@ extension ADXiluSDK.ADNetworkTool {
   public func xiluSDkInitReport(_ request: ADXiluSDK.InitReportRequest, callback: (any ADXiluSDK.ADNetworkCallback)? = nil)
   public func errorLogReport(_ request: ADXiluSDK.ErrorLogReportRequest, callback: (any ADXiluSDK.ADNetworkCallback)? = nil)
   public func adRequestReport(_ request: ADXiluSDK.AdRequestReportRequest, callback: (any ADXiluSDK.ADNetworkCallback)? = nil)
+  public func startUpReport(_ request: ADXiluSDK.StartupReportRequest, callback: (any ADXiluSDK.ADNetworkCallback)? = nil)
 }
 public class ADSDKInitCallback : ADXiluSDK.ADNetworkCallback {
   public init(completion: @escaping (Swift.Result<ADXiluSDK.ADSDKResponse, any Swift.Error>) -> Swift.Void, debugMode: Swift.Bool = false)
@@ -403,8 +446,6 @@ extension ADXiluSDK.ADXiluBannerAd : BUAdSDK.BUNativeExpressBannerViewDelegate {
   @objc dynamic public func nativeExpressBannerAdViewDidLoad(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView)
   @objc dynamic public func nativeExpressBannerAdView(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView, didLoadFailWithError error: (any Swift.Error)?)
   @objc dynamic public func nativeExpressBannerAdViewRenderSuccess(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView)
-  @objc dynamic public func nativeExpressBannerAdViewRenderFail(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView, error: (any Swift.Error)?)
-  @objc dynamic public func nativeExpressBannerAdViewWillBecomVisible(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView)
   @objc dynamic public func nativeExpressBannerAdViewDidClick(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView)
   @objc dynamic public func nativeExpressBannerAdViewDidRemoved(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView)
   @objc dynamic public func nativeExpressBannerAdViewDidCloseOtherController(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView, interactionType: BUAdSDK.BUInteractionType)
@@ -435,8 +476,8 @@ extension ADXiluSDK.ADXiluBannerAd : GDTMobSDK.GDTUnifiedBannerViewDelegate {
   @objc dynamic public func unifiedBannerViewFailed(toLoad bannerView: GDTMobSDK.GDTUnifiedBannerView, error: any Swift.Error)
   public func bannerViewWillLeaveApplication(_ bannerView: GDTMobSDK.GDTUnifiedBannerView!)
   @objc dynamic public func unifiedBannerViewWillClose(_ bannerView: GDTMobSDK.GDTUnifiedBannerView)
-  public func bannerViewWillExposure(_ bannerView: GDTMobSDK.GDTUnifiedBannerView!)
-  public func bannerViewClicked(_ bannerView: GDTMobSDK.GDTUnifiedBannerView!)
+  @objc dynamic public func unifiedBannerViewWillExpose(_ bannerView: GDTMobSDK.GDTUnifiedBannerView)
+  @objc dynamic public func unifiedBannerViewClicked(_ bannerView: GDTMobSDK.GDTUnifiedBannerView)
 }
 @objc public protocol ADXiluBaseAdDelegate {
   @objc optional func xilu_AdDidReceive(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
@@ -501,6 +542,7 @@ extension ADXiluSDK.ADXiluInterstitialAd : BeiZiSDK.BeiZiInterstitialDelegate {
 extension ADXiluSDK.ADXiluInterstitialAd : GDTMobSDK.GDTUnifiedInterstitialAdDelegate {
   @objc dynamic public func unifiedInterstitialSuccess(toLoad unifiedInterstitial: GDTMobSDK.GDTUnifiedInterstitialAd)
   @objc dynamic public func unifiedInterstitialFail(toLoad unifiedInterstitialAd: GDTMobSDK.GDTUnifiedInterstitialAd, error: any Swift.Error)
+  @objc dynamic public func unifiedInterstitialDidPresentScreen(_ unifiedInterstitial: GDTMobSDK.GDTUnifiedInterstitialAd)
   @objc dynamic public func unifiedInterstitialDidDismissScreen(_ unifiedInterstitial: GDTMobSDK.GDTUnifiedInterstitialAd)
   @objc dynamic public func unifiedInterstitialClicked(_ unifiedInterstitial: GDTMobSDK.GDTUnifiedInterstitialAd)
 }
@@ -1008,6 +1050,9 @@ public func sdkDebug(_ items: Any..., file: Swift.String = #file, function: Swif
 public func sdkInfo(_ items: Any..., file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
 public func sdkWarning(_ items: Any..., file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
 public func sdkError(_ items: Any..., file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
+extension ADXiluSDK.NetworkType : Swift.Equatable {}
+extension ADXiluSDK.NetworkType : Swift.Hashable {}
+extension ADXiluSDK.NetworkType : Swift.RawRepresentable {}
 extension ADXiluSDK.ADHTTPMethod : Swift.Equatable {}
 extension ADXiluSDK.ADHTTPMethod : Swift.Hashable {}
 extension ADXiluSDK.ADHTTPMethod : Swift.RawRepresentable {}

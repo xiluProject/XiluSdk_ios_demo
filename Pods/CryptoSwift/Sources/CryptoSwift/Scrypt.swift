@@ -6,7 +6,7 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
@@ -67,6 +67,10 @@ public final class Scrypt {
     self.dkLen = dkLen
   }
 
+  deinit {
+    salsaBlock.deallocate()
+  }
+
   /// Runs the key derivation function with a specific password.
   public func calculate() throws -> [UInt8] {
     // Allocate memory (as bytes for now) for further use in mixing steps
@@ -84,8 +88,9 @@ public final class Scrypt {
     /* 1: (B_0 ... B_{p-1}) <-- PBKDF2(P, S, 1, p * MFLen) */
     // Expand the initial key
     let barray = try PKCS5.PBKDF2(password: Array(self.password), salt: Array(self.salt), iterations: 1, keyLength: self.p * 128 * self.r, variant: .sha2(.sha256)).calculate()
-    barray.withUnsafeBytes { p in
-      B.copyMemory(from: p.baseAddress!, byteCount: barray.count)
+    barray.withUnsafeBytes { bufferPointer in
+      guard let baseAddress = bufferPointer.baseAddress else { return }
+      B.copyMemory(from: baseAddress, byteCount: barray.count)
     }
 
     /* 2: for i = 0 to p - 1 do */

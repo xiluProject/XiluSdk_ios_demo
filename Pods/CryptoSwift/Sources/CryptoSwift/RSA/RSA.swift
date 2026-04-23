@@ -6,7 +6,7 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
@@ -14,7 +14,11 @@
 //
 
 // Foundation is required for `Data` to be found
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
 import Foundation
+#endif
 
 // Note: The `BigUInt` struct was copied from:
 // https://github.com/attaswift/BigInt
@@ -61,7 +65,7 @@ public final class RSA: DERCodable {
   public let keySizeBytes: Int
 
   /// The underlying primes used to generate the Private Exponent
-  private let primes: (p: BigUInteger, q: BigUInteger)?
+  public let primes: (p: BigUInteger, q: BigUInteger)?
 
   /// Initialize with RSA parameters
   /// - Parameters:
@@ -259,8 +263,8 @@ extension RSA {
   /// // rsaKey.verify(...)
   /// ```
   public convenience init(rawRepresentation raw: Data) throws {
-    do { try self.init(privateDER: raw.bytes) } catch {
-      try self.init(publicDER: raw.bytes)
+    do { try self.init(privateDER: raw.byteArray) } catch {
+      try self.init(publicDER: raw.byteArray)
     }
   }
 }
@@ -286,8 +290,8 @@ extension RSA {
     let exp = self.e.serialize()
     let pubKeyAsnNode: ASN1.Node =
       .sequence(nodes: [
-        .integer(data: DER.i2ospData(x: mod.bytes, size: self.keySizeBytes)),
-        .integer(data: DER.i2ospData(x: exp.bytes, size: exp.bytes.count))
+        .integer(data: DER.i2ospData(x: mod.byteArray, size: self.keySizeBytes)),
+        .integer(data: DER.i2ospData(x: exp.byteArray, size: exp.byteArray.count))
       ])
     return ASN1.Encoder.encode(pubKeyAsnNode)
   }
@@ -326,14 +330,14 @@ extension RSA {
     let privateKeyAsnNode: ASN1.Node =
       .sequence(nodes: [
         .integer(data: Data(hex: "0x00")),
-        .integer(data: DER.i2ospData(x: mod.bytes, size: self.keySizeBytes)),
-        .integer(data: DER.i2ospData(x: self.e.serialize().bytes, size: 3)),
-        .integer(data: DER.i2ospData(x: d.serialize().bytes, size: self.keySizeBytes)),
-        .integer(data: DER.i2ospData(x: primes.p.serialize().bytes, size: paramWidth)),
-        .integer(data: DER.i2ospData(x: primes.q.serialize().bytes, size: paramWidth)),
-        .integer(data: DER.i2ospData(x: (d % (primes.p - 1)).serialize().bytes, size: paramWidth)),
-        .integer(data: DER.i2ospData(x: (d % (primes.q - 1)).serialize().bytes, size: paramWidth)),
-        .integer(data: DER.i2ospData(x: coefficient.serialize().bytes, size: paramWidth))
+        .integer(data: DER.i2ospData(x: mod.byteArray, size: self.keySizeBytes)),
+        .integer(data: DER.i2ospData(x: self.e.serialize().byteArray, size: 3)),
+        .integer(data: DER.i2ospData(x: d.serialize().byteArray, size: self.keySizeBytes)),
+        .integer(data: DER.i2ospData(x: primes.p.serialize().byteArray, size: paramWidth)),
+        .integer(data: DER.i2ospData(x: primes.q.serialize().byteArray, size: paramWidth)),
+        .integer(data: DER.i2ospData(x: (d % (primes.p - 1)).serialize().byteArray, size: paramWidth)),
+        .integer(data: DER.i2ospData(x: (d % (primes.q - 1)).serialize().byteArray, size: paramWidth)),
+        .integer(data: DER.i2ospData(x: coefficient.serialize().byteArray, size: paramWidth))
       ])
 
     // Encode and return the data
@@ -388,7 +392,7 @@ extension RSA {
   /// ```
   ///
   public func externalRepresentation() throws -> Data {
-    if self.primes != nil {
+    if self.d != nil {
       return try Data(self.privateKeyDER())
     } else {
       return try Data(self.publicKeyDER())

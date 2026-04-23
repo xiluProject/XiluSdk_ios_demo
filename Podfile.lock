@@ -44,7 +44,7 @@ PODS:
     - BUTTSDKFramework/Strategy/Core
   - BUTTSDKFramework/TTFFmpeg/LiveLite (1.48.2.3-premium)
   - BUTTSDKFramework/VolcLog (1.48.2.3-premium)
-  - CryptoSwift (1.8.4)
+  - CryptoSwift (1.10.0)
   - GDTMobSDK (4.15.65)
   - KSAdSDK (5.3.20.1)
   - Masonry (1.1.0)
@@ -100,7 +100,7 @@ SPEC CHECKSUMS:
   BaiduMobAdSDK: cc8a2e7deeec4d0365532bcf326f4e77641ed446
   BeiZiSDK-iOS: 2390c31d6e68f3d065fb21179530985f29d7b436
   BUTTSDKFramework: 34f8f8d541da07e79e9c479eb71336d1e4d90fdd
-  CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
+  CryptoSwift: e2e7776512f250e66205955da748e7a4e4abffe0
   GDTMobSDK: f3aefaaca7a7393300a7b4f667d361250ac764b4
   KSAdSDK: 256030abfebad92e438f2e93376d8c10a00771ba
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201

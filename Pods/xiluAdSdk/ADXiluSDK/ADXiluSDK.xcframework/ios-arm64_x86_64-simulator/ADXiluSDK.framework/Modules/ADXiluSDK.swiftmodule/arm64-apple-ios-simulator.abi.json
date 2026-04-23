@@ -174,6 +174,58 @@
         "printedName": "ADAdaptor",
         "children": [
           {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ADAdaptor",
+                "printedName": "ADXiluSDK.ADAdaptor",
+                "usr": "c:@M@ADXiluSDK@objc(cs)ADAdaptor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK9ADAdaptorC6sharedACvpZ",
+            "mangledName": "$s9ADXiluSDK9ADAdaptorC6sharedACvpZ",
+            "moduleName": "ADXiluSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ADAdaptor",
+                    "printedName": "ADXiluSDK.ADAdaptor",
+                    "usr": "c:@M@ADXiluSDK@objc(cs)ADAdaptor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK9ADAdaptorC6sharedACvgZ",
+                "mangledName": "$s9ADXiluSDK9ADAdaptorC6sharedACvgZ",
+                "moduleName": "ADXiluSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "initialize",
             "printedName": "initialize(completion:)",
@@ -228,7 +280,8 @@
             "mangledName": "$s9ADXiluSDK9ADAdaptorC10initialize10completionyySb_SSSgtc_tF",
             "moduleName": "ADXiluSDK",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -252,83 +305,6 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ADAdaptor",
-                "printedName": "ADXiluSDK.ADAdaptor",
-                "usr": "c:@M@ADXiluSDK@objc(cs)ADAdaptor"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9ADXiluSDK9ADAdaptorC6sharedACvpZ",
-            "mangledName": "$s9ADXiluSDK9ADAdaptorC6sharedACvpZ",
-            "moduleName": "ADXiluSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ADAdaptor",
-                    "printedName": "ADXiluSDK.ADAdaptor",
-                    "usr": "c:@M@ADXiluSDK@objc(cs)ADAdaptor"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK9ADAdaptorC6sharedACvgZ",
-                "mangledName": "$s9ADXiluSDK9ADAdaptorC6sharedACvgZ",
-                "moduleName": "ADXiluSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ADAdaptor",
-                "printedName": "ADXiluSDK.ADAdaptor",
-                "usr": "c:@M@ADXiluSDK@objc(cs)ADAdaptor"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@ADXiluSDK@objc(cs)ADAdaptor(im)init",
-            "mangledName": "$s9ADXiluSDK9ADAdaptorCACycfc",
-            "moduleName": "ADXiluSDK",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
@@ -340,6 +316,7 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
@@ -858,6 +835,20 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ADXiluSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SystemConfiguration",
+        "printedName": "SystemConfiguration",
+        "declKind": "Import",
+        "moduleName": "ADXiluSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreTelephony",
+        "printedName": "CoreTelephony",
         "declKind": "Import",
         "moduleName": "ADXiluSDK"
       },
@@ -4024,6 +4015,1634 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StartupReportRequest",
+        "printedName": "StartupReportRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "appId",
+            "printedName": "appId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV5appIdSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV5appIdSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV5appIdSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV5appIdSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "idfv",
+            "printedName": "idfv",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV4idfvSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV4idfvSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV4idfvSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV4idfvSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "androidid",
+            "printedName": "androidid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV9androididSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV9androididSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV9androididSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV9androididSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appVersionCode",
+            "printedName": "appVersionCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV14appVersionCodeSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV14appVersionCodeSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV14appVersionCodeSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV14appVersionCodeSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appVersion",
+            "printedName": "appVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV10appVersionSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV10appVersionSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV10appVersionSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV10appVersionSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appName",
+            "printedName": "appName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV7appNameSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV7appNameSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV7appNameSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV7appNameSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appInstallTime",
+            "printedName": "appInstallTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV14appInstallTimeSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV14appInstallTimeSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV14appInstallTimeSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV14appInstallTimeSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appUpdateTime",
+            "printedName": "appUpdateTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV13appUpdateTimeSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV13appUpdateTimeSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV13appUpdateTimeSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV13appUpdateTimeSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "systemVersion",
+            "printedName": "systemVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV13systemVersionSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV13systemVersionSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV13systemVersionSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV13systemVersionSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "vendor",
+            "printedName": "vendor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV6vendorSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV6vendorSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV6vendorSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV6vendorSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "osType",
+            "printedName": "osType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV6osTypeSivp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV6osTypeSivp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV6osTypeSivg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV6osTypeSivg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenResolution",
+            "printedName": "screenResolution",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV16screenResolutionSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV16screenResolutionSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV16screenResolutionSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV16screenResolutionSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenDensity",
+            "printedName": "screenDensity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV13screenDensitySSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV13screenDensitySSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV13screenDensitySSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV13screenDensitySSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "modeCode",
+            "printedName": "modeCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV8modeCodeSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV8modeCodeSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV8modeCodeSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV8modeCodeSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "networkType",
+            "printedName": "networkType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV11networkTypeSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV11networkTypeSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV11networkTypeSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV11networkTypeSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "networkCarrier",
+            "printedName": "networkCarrier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV14networkCarrierSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV14networkCarrierSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV14networkCarrierSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV14networkCarrierSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userAgent",
+            "printedName": "userAgent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV9userAgentSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV9userAgentSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV9userAgentSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV9userAgentSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "language",
+            "printedName": "language",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV8languageSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV8languageSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV8languageSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV8languageSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV9timestamps5Int64Vvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV9timestamps5Int64Vvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV9timestamps5Int64Vvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV9timestamps5Int64Vvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkUpdateTime",
+            "printedName": "sdkUpdateTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV13sdkUpdateTimeSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV13sdkUpdateTimeSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV13sdkUpdateTimeSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV13sdkUpdateTimeSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkinstallTime",
+            "printedName": "sdkinstallTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV14sdkinstallTimeSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV14sdkinstallTimeSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV14sdkinstallTimeSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV14sdkinstallTimeSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "coreBaseVersion",
+            "printedName": "coreBaseVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV15coreBaseVersionSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV15coreBaseVersionSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV15coreBaseVersionSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV15coreBaseVersionSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : [Swift.String : Swift.String]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV7versionSDySSSDyS2SGGvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV7versionSDySSSDyS2SGGvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [Swift.String : Swift.String]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV7versionSDySSSDyS2SGGvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV7versionSDySSSDyS2SGGvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "packageName",
+            "printedName": "packageName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV11packageNameSSvp",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV11packageNameSSvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV11packageNameSSvg",
+                "mangledName": "$s9ADXiluSDK20StartupReportRequestV11packageNameSSvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StartupReportRequest",
+                "printedName": "ADXiluSDK.StartupReportRequest",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ADXiluSDK20StartupReportRequestVACycfc",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestVACycfc",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StartupReportRequest",
+                "printedName": "ADXiluSDK.StartupReportRequest",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ADXiluSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ADXiluSDK20StartupReportRequestV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s9ADXiluSDK20StartupReportRequestV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ADXiluSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9ADXiluSDK20StartupReportRequestV",
+        "mangledName": "$s9ADXiluSDK20StartupReportRequestV",
+        "moduleName": "ADXiluSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkType",
+        "printedName": "NetworkType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ADXiluSDK.NetworkType.Type) -> ADXiluSDK.NetworkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkType",
+                    "printedName": "ADXiluSDK.NetworkType",
+                    "usr": "s:9ADXiluSDK11NetworkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ADXiluSDK.NetworkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkType",
+                        "printedName": "ADXiluSDK.NetworkType",
+                        "usr": "s:9ADXiluSDK11NetworkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ADXiluSDK11NetworkTypeO7unknownyA2CmF",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO7unknownyA2CmF",
+            "moduleName": "ADXiluSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "wifi",
+            "printedName": "wifi",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ADXiluSDK.NetworkType.Type) -> ADXiluSDK.NetworkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkType",
+                    "printedName": "ADXiluSDK.NetworkType",
+                    "usr": "s:9ADXiluSDK11NetworkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ADXiluSDK.NetworkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkType",
+                        "printedName": "ADXiluSDK.NetworkType",
+                        "usr": "s:9ADXiluSDK11NetworkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ADXiluSDK11NetworkTypeO4wifiyA2CmF",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO4wifiyA2CmF",
+            "moduleName": "ADXiluSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "cellular2G",
+            "printedName": "cellular2G",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ADXiluSDK.NetworkType.Type) -> ADXiluSDK.NetworkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkType",
+                    "printedName": "ADXiluSDK.NetworkType",
+                    "usr": "s:9ADXiluSDK11NetworkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ADXiluSDK.NetworkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkType",
+                        "printedName": "ADXiluSDK.NetworkType",
+                        "usr": "s:9ADXiluSDK11NetworkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ADXiluSDK11NetworkTypeO10cellular2GyA2CmF",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO10cellular2GyA2CmF",
+            "moduleName": "ADXiluSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "cellular3G",
+            "printedName": "cellular3G",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ADXiluSDK.NetworkType.Type) -> ADXiluSDK.NetworkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkType",
+                    "printedName": "ADXiluSDK.NetworkType",
+                    "usr": "s:9ADXiluSDK11NetworkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ADXiluSDK.NetworkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkType",
+                        "printedName": "ADXiluSDK.NetworkType",
+                        "usr": "s:9ADXiluSDK11NetworkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ADXiluSDK11NetworkTypeO10cellular3GyA2CmF",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO10cellular3GyA2CmF",
+            "moduleName": "ADXiluSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "cellular4G",
+            "printedName": "cellular4G",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ADXiluSDK.NetworkType.Type) -> ADXiluSDK.NetworkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkType",
+                    "printedName": "ADXiluSDK.NetworkType",
+                    "usr": "s:9ADXiluSDK11NetworkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ADXiluSDK.NetworkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkType",
+                        "printedName": "ADXiluSDK.NetworkType",
+                        "usr": "s:9ADXiluSDK11NetworkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ADXiluSDK11NetworkTypeO10cellular4GyA2CmF",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO10cellular4GyA2CmF",
+            "moduleName": "ADXiluSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "cellular5G",
+            "printedName": "cellular5G",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ADXiluSDK.NetworkType.Type) -> ADXiluSDK.NetworkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkType",
+                    "printedName": "ADXiluSDK.NetworkType",
+                    "usr": "s:9ADXiluSDK11NetworkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ADXiluSDK.NetworkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkType",
+                        "printedName": "ADXiluSDK.NetworkType",
+                        "usr": "s:9ADXiluSDK11NetworkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ADXiluSDK11NetworkTypeO10cellular5GyA2CmF",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO10cellular5GyA2CmF",
+            "moduleName": "ADXiluSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "notReachable",
+            "printedName": "notReachable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ADXiluSDK.NetworkType.Type) -> ADXiluSDK.NetworkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkType",
+                    "printedName": "ADXiluSDK.NetworkType",
+                    "usr": "s:9ADXiluSDK11NetworkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ADXiluSDK.NetworkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkType",
+                        "printedName": "ADXiluSDK.NetworkType",
+                        "usr": "s:9ADXiluSDK11NetworkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ADXiluSDK11NetworkTypeO12notReachableyA2CmF",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO12notReachableyA2CmF",
+            "moduleName": "ADXiluSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ADXiluSDK.NetworkType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkType",
+                    "printedName": "ADXiluSDK.NetworkType",
+                    "usr": "s:9ADXiluSDK11NetworkTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ADXiluSDK11NetworkTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "ADXiluSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK11NetworkTypeO8rawValueSivp",
+            "mangledName": "$s9ADXiluSDK11NetworkTypeO8rawValueSivp",
+            "moduleName": "ADXiluSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK11NetworkTypeO8rawValueSivg",
+                "mangledName": "$s9ADXiluSDK11NetworkTypeO8rawValueSivg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9ADXiluSDK11NetworkTypeO",
+        "mangledName": "$s9ADXiluSDK11NetworkTypeO",
+        "moduleName": "ADXiluSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
           }
         ]
       },
@@ -7508,6 +9127,49 @@
             "declKind": "Func",
             "usr": "s:9ADXiluSDK13ADNetworkToolC15adRequestReport_8callbackyAA02AdfgF0V_AA0C8Callback_pSgtF",
             "mangledName": "$s9ADXiluSDK13ADNetworkToolC15adRequestReport_8callbackyAA02AdfgF0V_AA0C8Callback_pSgtF",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startUpReport",
+            "printedName": "startUpReport(_:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StartupReportRequest",
+                "printedName": "ADXiluSDK.StartupReportRequest",
+                "usr": "s:9ADXiluSDK20StartupReportRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ADXiluSDK.ADNetworkCallback)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ADNetworkCallback",
+                    "printedName": "any ADXiluSDK.ADNetworkCallback",
+                    "usr": "s:9ADXiluSDK17ADNetworkCallbackP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ADXiluSDK13ADNetworkToolC13startUpReport_8callbackyAA07StartupG7RequestV_AA0C8Callback_pSgtF",
+            "mangledName": "$s9ADXiluSDK13ADNetworkToolC13startUpReport_8callbackyAA07StartupG7RequestV_AA0C8Callback_pSgtF",
             "moduleName": "ADXiluSDK",
             "declAttributes": [
               "AccessControl",
@@ -14734,80 +16396,6 @@
           },
           {
             "kind": "Function",
-            "name": "nativeExpressBannerAdViewRenderFail",
-            "printedName": "nativeExpressBannerAdViewRenderFail(_:error:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "BUNativeExpressBannerView",
-                "printedName": "BUAdSDK.BUNativeExpressBannerView",
-                "usr": "c:objc(cs)BUNativeExpressBannerView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any Swift.Error)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Error",
-                    "printedName": "any Swift.Error",
-                    "usr": "s:s5ErrorP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluBannerAd(im)nativeExpressBannerAdViewRenderFail:error:",
-            "mangledName": "$s9ADXiluSDK0A8BannerAdC013nativeExpresscD14ViewRenderFail_5errorySo08BUNativefcG0C_s5Error_pSgtF",
-            "moduleName": "ADXiluSDK",
-            "objc_name": "nativeExpressBannerAdViewRenderFail:error:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "nativeExpressBannerAdViewWillBecomVisible",
-            "printedName": "nativeExpressBannerAdViewWillBecomVisible(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "BUNativeExpressBannerView",
-                "printedName": "BUAdSDK.BUNativeExpressBannerView",
-                "usr": "c:objc(cs)BUNativeExpressBannerView"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluBannerAd(im)nativeExpressBannerAdViewWillBecomVisible:",
-            "mangledName": "$s9ADXiluSDK0A8BannerAdC013nativeExpresscD20ViewWillBecomVisibleyySo08BUNativefcG0CF",
-            "moduleName": "ADXiluSDK",
-            "objc_name": "nativeExpressBannerAdViewWillBecomVisible:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "nativeExpressBannerAdViewDidClick",
             "printedName": "nativeExpressBannerAdViewDidClick(_:)",
             "children": [
@@ -15035,8 +16623,8 @@
           },
           {
             "kind": "Function",
-            "name": "bannerViewWillExposure",
-            "printedName": "bannerViewWillExposure(_:)",
+            "name": "unifiedBannerViewWillExpose",
+            "printedName": "unifiedBannerViewWillExpose(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15045,24 +16633,19 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "GDTMobSDK.GDTUnifiedBannerView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "GDTUnifiedBannerView",
-                    "printedName": "GDTMobSDK.GDTUnifiedBannerView",
-                    "usr": "c:objc(cs)GDTUnifiedBannerView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "GDTUnifiedBannerView",
+                "printedName": "GDTMobSDK.GDTUnifiedBannerView",
+                "usr": "c:objc(cs)GDTUnifiedBannerView"
               }
             ],
             "declKind": "Func",
-            "usr": "s:9ADXiluSDK0A8BannerAdC22bannerViewWillExposureyySo010GDTUnifiedcF0CSgF",
-            "mangledName": "$s9ADXiluSDK0A8BannerAdC22bannerViewWillExposureyySo010GDTUnifiedcF0CSgF",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluBannerAd(im)unifiedBannerViewWillExpose:",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC07unifiedC14ViewWillExposeyySo010GDTUnifiedcF0CF",
             "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedBannerViewWillExpose:",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
               "AccessControl"
             ],
             "isFromExtension": true,
@@ -15070,8 +16653,8 @@
           },
           {
             "kind": "Function",
-            "name": "bannerViewClicked",
-            "printedName": "bannerViewClicked(_:)",
+            "name": "unifiedBannerViewClicked",
+            "printedName": "unifiedBannerViewClicked(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15080,24 +16663,19 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "GDTMobSDK.GDTUnifiedBannerView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "GDTUnifiedBannerView",
-                    "printedName": "GDTMobSDK.GDTUnifiedBannerView",
-                    "usr": "c:objc(cs)GDTUnifiedBannerView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "GDTUnifiedBannerView",
+                "printedName": "GDTMobSDK.GDTUnifiedBannerView",
+                "usr": "c:objc(cs)GDTUnifiedBannerView"
               }
             ],
             "declKind": "Func",
-            "usr": "s:9ADXiluSDK0A8BannerAdC17bannerViewClickedyySo010GDTUnifiedcF0CSgF",
-            "mangledName": "$s9ADXiluSDK0A8BannerAdC17bannerViewClickedyySo010GDTUnifiedcF0CSgF",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluBannerAd(im)unifiedBannerViewClicked:",
+            "mangledName": "$s9ADXiluSDK0A8BannerAdC07unifiedC11ViewClickedyySo010GDTUnifiedcF0CF",
             "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedBannerViewClicked:",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
               "AccessControl"
             ],
             "isFromExtension": true,
@@ -17443,6 +19021,36 @@
             "mangledName": "$s9ADXiluSDK0A14InterstitialAdC07unifiedC4Fail6toLoad5errorySo010GDTUnifiedcD0C_s5Error_ptF",
             "moduleName": "ADXiluSDK",
             "objc_name": "unifiedInterstitialFailToLoadAd:error:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unifiedInterstitialDidPresentScreen",
+            "printedName": "unifiedInterstitialDidPresentScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GDTUnifiedInterstitialAd",
+                "printedName": "GDTMobSDK.GDTUnifiedInterstitialAd",
+                "usr": "c:objc(cs)GDTUnifiedInterstitialAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ADXiluSDK@objc(cs)ADXiluInterstitialAd(im)unifiedInterstitialDidPresentScreen:",
+            "mangledName": "$s9ADXiluSDK0A14InterstitialAdC07unifiedC16DidPresentScreenyySo010GDTUnifiedcD0CF",
+            "moduleName": "ADXiluSDK",
+            "objc_name": "unifiedInterstitialDidPresentScreen:",
             "declAttributes": [
               "Dynamic",
               "ObjC",
@@ -34125,532 +35733,518 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 172,
+      "offset": 219,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 200,
+      "offset": 247,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 225,
+      "offset": 272,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 246,
+      "offset": 293,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 281,
+      "offset": 328,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 329,
+      "offset": 376,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 351,
+      "offset": 398,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 550,
+      "offset": 597,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 574,
+      "offset": 621,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 598,
+      "offset": 645,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "FloatLiteral",
-      "offset": 812,
+      "offset": 859,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "FloatLiteral",
-      "offset": 838,
+      "offset": 885,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "FloatLiteral",
-      "offset": 863,
+      "offset": 910,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1046,
+      "offset": 1093,
       "length": 4,
       "value": "\"cn\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 1071,
+      "offset": 1118,
       "length": 10,
       "value": "1790967808"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1101,
+      "offset": 1148,
       "length": 7,
       "value": "\"zh-CN\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1124,
+      "offset": 1171,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1169,
+      "offset": 1216,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1217,
+      "offset": 1264,
       "length": 6,
       "value": "\"18.5\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1241,
+      "offset": 1288,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1265,
+      "offset": 1312,
       "length": 11,
       "value": "\"iPhone 16\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1297,
+      "offset": 1344,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 1343,
+      "offset": 1390,
       "length": 3,
       "value": "480"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1363,
+      "offset": 1410,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1391,
+      "offset": 1438,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1437,
+      "offset": 1484,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1483,
+      "offset": 1530,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1554,
+      "offset": 1601,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1600,
+      "offset": 1647,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1656,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1679,
-      "length": 1,
-      "value": "1"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
       "offset": 1703,
       "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1726,
+      "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 1718,
+      "offset": 1750,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1765,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 1748,
+      "offset": 1795,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 1771,
+      "offset": 1818,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 1797,
+      "offset": 1844,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 1839,
+      "offset": 1886,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1861,
+      "offset": 1908,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1883,
+      "offset": 1930,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 1902,
+      "offset": 1949,
       "length": 4,
       "value": "1080"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 1985,
+      "offset": 2032,
       "length": 4,
       "value": "\"cn\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2008,
+      "offset": 2055,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2030,
+      "offset": 2077,
       "length": 7,
       "value": "\"zh-CN\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2063,
+      "offset": 2110,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2081,
+      "offset": 2128,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2099,
+      "offset": 2146,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2120,
+      "offset": 2167,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2154,
+      "offset": 2201,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2178,
+      "offset": 2225,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2194,
+      "offset": 2241,
       "length": 3,
       "value": "480"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2215,
+      "offset": 2262,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2253,
+      "offset": 2300,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2272,
+      "offset": 2319,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2290,
+      "offset": 2337,
       "length": 4,
       "value": "2200"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2314,
+      "offset": 2361,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2346,
+      "offset": 2393,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2359,
+      "offset": 2406,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2378,
+      "offset": 2425,
       "length": 10,
       "value": "-751992832"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2408,
+      "offset": 2455,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2442,
+      "offset": 2489,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2456,
+      "offset": 2503,
       "length": 3,
       "value": "480"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2490,
+      "offset": 2537,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 2522,
+      "offset": 2569,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 2539,
+      "offset": 2586,
       "length": 4,
       "value": "1080"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 3335,
+      "offset": 3382,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3407,
+      "offset": 3454,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 3451,
+      "offset": 3498,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 3522,
+      "offset": 3569,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3538,
+      "offset": 3585,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 3562,
+      "offset": 3609,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3720,
+      "offset": 3767,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3740,
+      "offset": 3787,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3758,
+      "offset": 3805,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3777,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 3797,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 3821,
+      "offset": 3824,
       "length": 2,
       "value": "\"\""
     },
@@ -34664,238 +36258,238 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3867,
+      "offset": 3868,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3887,
+      "offset": 3891,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 3914,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 3934,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 3906,
+      "offset": 3953,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 3927,
+      "offset": 3974,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 3945,
+      "offset": 3992,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 3973,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 3997,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
       "offset": 4020,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 4044,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4050,
+      "offset": 4067,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4074,
+      "offset": 4097,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4110,
+      "offset": 4121,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4131,
+      "offset": 4157,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4151,
+      "offset": 4178,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4172,
+      "offset": 4198,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4206,
+      "offset": 4219,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4230,
+      "offset": 4253,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4254,
+      "offset": 4277,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4275,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
       "offset": 4301,
-      "length": 1,
-      "value": "0"
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4323,
+      "offset": 4322,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 4339,
+      "offset": 4348,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 4370,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4386,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 4365,
+      "offset": 4412,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4399,
+      "offset": 4446,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4423,
+      "offset": 4470,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4454,
+      "offset": 4501,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 4479,
+      "offset": 4526,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5123,
+      "offset": 5170,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5143,
+      "offset": 5190,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5162,
+      "offset": 5209,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5180,
+      "offset": 5227,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5200,
+      "offset": 5247,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5222,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 5243,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 5266,
+      "offset": 5269,
       "length": 2,
       "value": "\"\""
     },
@@ -34908,50 +36502,50 @@
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
+      "kind": "StringLiteral",
       "offset": 5313,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5339,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5364,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5387,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 5410,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5432,
+      "offset": 5337,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5360,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5386,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5411,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5434,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5455,
+      "offset": 5457,
       "length": 2,
       "value": "\"\""
     },
@@ -34965,72 +36559,72 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5515,
+      "offset": 5502,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5536,
+      "offset": 5526,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5556,
+      "offset": 5562,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5577,
+      "offset": 5583,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5609,
+      "offset": 5603,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5631,
+      "offset": 5624,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5655,
+      "offset": 5656,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5680,
+      "offset": 5678,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5710,
-      "length": 1,
-      "value": "0"
+      "kind": "StringLiteral",
+      "offset": 5702,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5734,
-      "length": 1,
-      "value": "0"
+      "kind": "StringLiteral",
+      "offset": 5727,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
@@ -35042,23 +36636,23 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 5778,
+      "offset": 5781,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 5811,
-      "length": 2,
-      "value": "\"\""
+      "kind": "IntegerLiteral",
+      "offset": 5804,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 5834,
-      "length": 2,
-      "value": "\"\""
+      "kind": "IntegerLiteral",
+      "offset": 5825,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
@@ -35070,268 +36664,331 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 5883,
+      "offset": 5881,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6540,
+      "offset": 5905,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6560,
+      "offset": 5930,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6579,
+      "offset": 6587,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6601,
+      "offset": 6607,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6625,
+      "offset": 6626,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6651,
+      "offset": 6648,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6677,
+      "offset": 6672,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6707,
+      "offset": 6698,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6733,
+      "offset": 6724,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6751,
+      "offset": 6754,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6777,
+      "offset": 6780,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6799,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6818,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 6845,
+      "offset": 6798,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6881,
+      "offset": 6824,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 6902,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 6922,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 6945,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 6970,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 7006,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 7033,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 7064,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 7091,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 7127,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 7150,
+      "offset": 6846,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 7167,
+      "offset": 6865,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 7195,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7851,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7859,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7866,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
-      "kind": "StringLiteral",
-      "offset": 7885,
+      "offset": 6892,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 7908,
+      "offset": 6928,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 6949,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 6969,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 6992,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7017,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7053,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7080,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7111,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7138,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7174,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7197,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7214,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7242,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7898,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7906,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7913,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7932,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "StringLiteral",
+      "offset": 7955,
       "length": 34,
       "value": "\"dee174b2a75c4bf9965f97e093b8591e\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 8039,
+      "offset": 8086,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 8050,
+      "offset": 8097,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "IntegerLiteral",
-      "offset": 8061,
+      "offset": 8108,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 8203,
+      "offset": 8250,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
       "kind": "StringLiteral",
-      "offset": 8236,
+      "offset": 8283,
       "length": 34,
       "value": "\"dee174b2a75c4bf9965f97e093b8591e\""
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19299,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19320,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19347,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19374,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19401,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19428,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADEnvironmentTool.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19457,
+      "length": 1,
+      "value": "6"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADNetworkTool.swift",
@@ -35497,7 +37154,7 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADNetworkTool.swift",
       "kind": "StringLiteral",
-      "offset": 11896,
+      "offset": 11875,
       "length": 2,
       "value": "\"\""
     },
@@ -35532,84 +37189,84 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "StringLiteral",
-      "offset": 11268,
+      "offset": 10237,
       "length": 43,
       "value": "\"BUNativeExpressBannerView {ecpm: 未知 }\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "Dictionary",
-      "offset": 11790,
+      "offset": 10759,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "Dictionary",
-      "offset": 11868,
+      "offset": 10837,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "Dictionary",
-      "offset": 12012,
+      "offset": 10981,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 12218,
+      "offset": 11187,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 12318,
+      "offset": 11287,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "StringLiteral",
-      "offset": 12593,
+      "offset": 11562,
       "length": 25,
       "value": "\"com.xilu.ad.banner.load\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "StringLiteral",
-      "offset": 12798,
+      "offset": 11767,
       "length": 29,
       "value": "\"com.xilu.ad.banner.callback\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "Dictionary",
-      "offset": 13031,
+      "offset": 12000,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 13202,
+      "offset": 12171,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 13248,
+      "offset": 12217,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluBannerAd.swift",
       "kind": "StringLiteral",
-      "offset": 13412,
+      "offset": 12381,
       "length": 22,
       "value": "\"com.xilu.atomic.bool\""
     },
@@ -35665,70 +37322,70 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 3470,
+      "offset": 3592,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 3878,
+      "offset": 4107,
       "length": 9,
       "value": "\"success\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "Array",
-      "offset": 4182,
+      "offset": 4411,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 4214,
+      "offset": 4443,
       "length": 56,
       "value": "\"------初始 result:\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 4250,
+      "offset": 4479,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 4269,
+      "offset": 4498,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 4379,
+      "offset": 4608,
       "length": 42,
       "value": "\"loadedAds 为空，直接回调空数组\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 5270,
+      "offset": 5499,
       "length": 9,
       "value": "\"success\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 5592,
+      "offset": 5821,
       "length": 43,
       "value": "\"------最终 result.count:\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 5634,
+      "offset": 5863,
       "length": 2,
       "value": "\"\""
     },
@@ -35742,84 +37399,84 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "Array",
-      "offset": 5953,
+      "offset": 6182,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "FloatLiteral",
-      "offset": 7359,
+      "offset": 7588,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 9300,
+      "offset": 9591,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 13313,
+      "offset": 14291,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 13347,
+      "offset": 14325,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 13380,
+      "offset": 14358,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 14347,
+      "offset": 15327,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 14393,
+      "offset": 15373,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 15879,
+      "offset": 16859,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 15904,
+      "offset": 16884,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 17342,
+      "offset": 18362,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluBaseAd.swift",
       "kind": "StringLiteral",
-      "offset": 17367,
+      "offset": 18387,
       "length": 2,
       "value": "\"\""
     },
@@ -35910,196 +37567,196 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluInterstitialAd.swift",
       "kind": "StringLiteral",
-      "offset": 40776,
+      "offset": 41232,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 5309,
+      "offset": 5516,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "IntegerLiteral",
-      "offset": 5354,
+      "offset": 5561,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 6453,
+      "offset": 6660,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 9324,
+      "offset": 9531,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 9714,
+      "offset": 9921,
       "length": 25,
       "value": "\"com.xilu.ad.splash.load\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 9919,
+      "offset": 10126,
       "length": 29,
       "value": "\"com.xilu.ad.splash.callback\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 10088,
+      "offset": 10295,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10154,
+      "offset": 10361,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10218,
+      "offset": 10425,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10337,
+      "offset": 10544,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10405,
+      "offset": 10612,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10495,
+      "offset": 10702,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10558,
+      "offset": 10765,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10618,
+      "offset": 10825,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10679,
+      "offset": 10886,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10740,
+      "offset": 10947,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10857,
+      "offset": 11064,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 10958,
+      "offset": 11165,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 11043,
+      "offset": 11250,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 11205,
+      "offset": 11412,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 11324,
+      "offset": 11531,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 11437,
+      "offset": 11644,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 11600,
+      "offset": 11807,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 11646,
+      "offset": 11853,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 11695,
+      "offset": 11902,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 11749,
+      "offset": 11956,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 11905,
+      "offset": 12112,
       "length": 22,
       "value": "\"com.xilu.atomic.bool\""
     },
@@ -36582,35 +38239,35 @@
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 44968,
+      "offset": 45192,
       "length": 52,
       "value": "\"BeiZiSplash { spaceID: \""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 45002,
+      "offset": 45226,
       "length": 1,
       "value": "\", ecpm: \""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 45017,
+      "offset": 45241,
       "length": 1,
       "value": "\" }\""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 45463,
+      "offset": 45687,
       "length": 32,
       "value": "\"GDTSplashAd {ecpm: \""
     },
     {
       "filePath": "\/Users\/rohoninfosh\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 45492,
+      "offset": 45716,
       "length": 1,
       "value": "\" }\""
     },

@@ -6,14 +6,18 @@
 //
 //  In no event will the authors be held liable for any damages arising from the use of this software.
 //
-//  Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+//  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 //
 //  - The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
 //  - Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
 //  - This notice may not be removed or altered from any source or binary distribution.
 //
 
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
 import Foundation
+#endif
 
 /// This class implements the XChaCha20-Poly1305 Authenticated Encryption with
 /// Associated Data (AEAD_XCHACHA20_POLY1305) construction, providing both encryption and authentication.
@@ -24,8 +28,8 @@ public final class AEADXChaCha20Poly1305: AEAD {
   /// The key length (in bytes) required for the XChaCha20 cipher (32 bytes).
   public static let kLen = 32 // key length
 
-  /// The valid range of initialization vector lengths for the XChaCha20 cipher (12 bytes).
-  public static var ivRange = Range<Int>(12...12)
+  /// The valid range of initialization vector lengths for the XChaCha20 cipher (24 bytes). Extended from ChaCha20's 12 bytes.
+  public static var ivRange = Range<Int>(24...24)
 
   /// Encrypts the given plaintext using the XChaCha20 cipher and generates an authentication
   /// tag using the Poly1305 MAC.
