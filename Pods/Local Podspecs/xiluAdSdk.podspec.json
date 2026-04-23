@@ -53,7 +53,9 @@
   },
   "dependencies": {
     "SnapKit": [],
-    "CryptoSwift": [],
+    "CryptoSwift": [
+      "1.8.4"
+    ],
     "KSAdSDK": [],
     "BaiduMobAdSDK": [
       "10.050"

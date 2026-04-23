@@ -427,7 +427,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluBannerAd")
 /// 加载广告
 - (void)loadAd;
 - (void)dismissAd;
-- (void)showAdIn:(id _Nullable)containerView;
+- (void)showAdIn:(id _Nonnull)containerView;
 /// 释放资源
 - (void)p_release;
 @end
@@ -1390,7 +1390,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluBannerAd")
 /// 加载广告
 - (void)loadAd;
 - (void)dismissAd;
-- (void)showAdIn:(id _Nullable)containerView;
+- (void)showAdIn:(id _Nonnull)containerView;
 /// 释放资源
 - (void)p_release;
 @end

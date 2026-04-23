@@ -59,7 +59,7 @@ PODS:
     - Ads-CN/CSJMediation (= 7.4.0.4)
     - BaiduMobAdSDK (= 10.050)
     - BeiZiSDK-iOS (= 4.90.7.0)
-    - CryptoSwift
+    - CryptoSwift (= 1.8.4)
     - GDTMobSDK (= 4.15.65)
     - KSAdSDK
     - MSMobAdSDK/MS (= 2.7.7.3)
@@ -107,7 +107,7 @@ SPEC CHECKSUMS:
   MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
   SDWebImage: e9c98383c7572d713c1a0d7dd2783b10599b9838
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  xiluAdSdk: fbb17c67c0b0bb7a7fde9584d806336f79ebbaac
+  xiluAdSdk: 0bb53d56ef9db0e392cfb5e35877693c99e3d60e
 
 PODFILE CHECKSUM: d28dc4847185ca763316d9ad6e2e83aae247754f
 

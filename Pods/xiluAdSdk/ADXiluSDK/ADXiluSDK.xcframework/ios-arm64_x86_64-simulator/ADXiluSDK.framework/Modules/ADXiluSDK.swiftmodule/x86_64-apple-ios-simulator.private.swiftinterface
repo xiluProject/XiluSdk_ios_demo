@@ -467,7 +467,7 @@ extension BUAdSDK.BUNativeExpressBannerView : ADXiluSDK.ADXiluLoadProtocol {
   @objc override public init(adPosId: Swift.String, adSize: ADXiluSDK.ADXiluAdSize)
   @objc override public func loadAd()
   @objc public func dismissAd()
-  @objc override public func showAd(in containerView: Any? = nil)
+  @objc override public func showAd(in containerView: Any)
   @objc public func p_release()
   @objc deinit
 }
