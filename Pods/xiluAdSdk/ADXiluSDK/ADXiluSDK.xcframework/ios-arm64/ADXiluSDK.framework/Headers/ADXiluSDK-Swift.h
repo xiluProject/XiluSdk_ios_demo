@@ -471,6 +471,8 @@ SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 - (void)xilu_AdWillClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告关闭
 - (void)xilu_AdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
+/// 激励视频广告激励完成
+- (void)xilu_AdDidReward:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 信息流广告关闭
 - (void)xilu_FeedAdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 /// 广告跳过
@@ -488,6 +490,7 @@ SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 - (void)xilu_AdDidExpose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_AdWillClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_AdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
+- (void)xilu_AdDidReward:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_FeedAdDidClose:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_AdDidFail:(ADXiluBaseAd * _Nonnull)xiluAd error:(ADXiluError * _Nonnull)error;
 - (void)xilu_AdDidSkip:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
