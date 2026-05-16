@@ -26,12 +26,14 @@ xiluAdSdk是一个支持多平台广告聚合的iOS SDK，提供统一的API接�
 - **BeiZiSDK**: 倍孜广告平台
 - **GDTMobSDK**: 优量汇广告平台
 - **BUAdSDK**: 穿山甲广告平台
+- **BaiduMobAdSDK**: 百青藤广告平台
+- **KSAdSDK**: 快手广告平台
 - **自动选择**: 根据配置自动选择最优平台
 
 ## 系统要求
 
 - iOS 12.2+
-- Xcode 26.2
+- Xcode 16.2
 - Swift 5.0+
 - CocoaPods 1.10.0+
 
@@ -48,7 +50,7 @@ target 'YourApp' do
   use_frameworks!
   
   # 使用远程版本
-  pod 'xiluAdSdk', :git => 'git@github.com:UnAmico0/xiluAdSdk_ios_pod.git', :tag => '1.0.9'
+  pod 'xiluAdSdk', :git => 'https://github.com/xiluProject/xiluAdSdk_ios_pod.git', :tag => '1.0.9'
 end
 ```
 
@@ -480,23 +482,46 @@ extension SplashAdViewController: ADXiluBaseAdDelegate {
 // 实现代理方法
 - (void)xilu_AdDidReceiveMuti:(ADXiluBaseAd *)xiluAd adInfos:(NSArray<ADXiluAdInfo *> *)adInfos {
     NSLog(@"信息流广告加载成功：%@", adInfos);
-      for (ADXiluAdInfo *adInfo in adInfos) {
+       for (ADXiluAdInfo *adInfo in adInfos) {
         UIView *adTemplateView = adInfo.extraData[@"nativeAdView"];
-        MSNativeFeedAdModel *adModel = adInfo.extraData[@"nativeAdData"];
-
        
+        id  nativeAdData = adInfo.extraData[@"nativeAdData"];
+        //模板广告
         if (adTemplateView) {
-                //模板广告
             [self.adContainerView addArrangedSubview:adTemplateView];//替换成广告容器视图
-        } else if (adModel) {
-            //自渲染广告，取nativeAdData
+        } else if ([nativeAdData isKindOfClass:[MSNativeFeedAdModel class]]) {
+            MSNativeFeedAdModel *adModel = adInfo.extraData[@"nativeAdData"];
+            //自渲染广告，取nativeAdData自行展示，字段说明如下：
+//            MSCreativeTypeImage      = 1, // 图片
+//            MSCreativeTypeVideo      = 2, // 视频 用metaVideoUrl播放视频
+//            MSCreativeTypeSmallImage = 11, // 小图
+//            MSCreativeTypeLargeImage = 12, // 大图
+//            MSCreativeTypeThreeImage = 13, // 三图
+//            MSCreativeTypePrerender  = 100000, // 预渲染
+            NSLog(@"广告类型：%ld", (long)adModel.adMaterialMeta.metaCreativeType);
+            NSLog(@"标题:%@", adModel.adMaterialMeta.metaTitle);
+            NSLog(@"内容:%@", adModel.adMaterialMeta.metaContent);
+            NSLog(@"图标:%@", adModel.adMaterialMeta.metaIcon);
+            NSLog(@"来源:%@", adModel.adMaterialMeta.metaSource);
+            NSLog(@"视频url:%@", adModel.adMaterialMeta.metaVideoUrl);
+            NSLog(@"图片素材:%@", adModel.adMaterialMeta.metaImageUrls);
             UIView *adView = [self createAdView:adModel];
             [adView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showAdDetail)]];
             [self.adContainerView addArrangedSubview:adView];
         }
+        else if ([nativeAdData isKindOfClass:[GDTUnifiedNativeAdDataObject class]]) {
+            GDTUnifiedNativeAdDataObject *adModel = (GDTUnifiedNativeAdDataObject *) adInfo.extraData[@"nativeAdData"];
+            GDTUnifiedNativeAdView *adView = [[GDTUnifiedNativeAdView alloc]init];
+        
+            adView.viewController = self;
+            adView.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 145);
+            adView.mediaView.frame = adView.bounds;
+            if (adModel.isAdValid) {
+                [adView registerDataObject:adModel clickableViews:nil];
+                [self.adContainerView addArrangedSubview:adView];
+            }
+        }
     }
-
-    
 }
 
 
@@ -539,8 +564,8 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
             //模板广告
                 nativeAds.append(adView)
             }
-            if let model = adInfo.extraData["nativeAdData"] as? MSNativeFeedAdModel {
-                //自渲染广告
+            else if let model = adInfo.extraData["nativeAdData"] as? MSNativeFeedAdModel {
+                //非视频类型自渲染广告
                 if model.adMaterialMeta?.metaCreativeType() != MSCreativeType.video {
                     let adView:MSNativeSimpleCustomAdView = MSNativeSimpleCustomAdView()
                     adView.delegate = self
@@ -554,6 +579,17 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
                     adView.presentVc = self
                     adView.loadFeedAdMeta(feedAdMeta: model.adMaterialMeta!)
                     adView.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: adView.calculateAdHeightWithFeedAdMeta(feedAd: model.adMaterialMeta!))
+                    nativeAds.append(adView)
+                }
+            }
+            else if let dataObject = adInfo.extraData["nativeAdData"] as? GDTUnifiedNativeAdDataObject {
+                let adView:GDTUnifiedNativeAdView  = GDTUnifiedNativeAdView()
+//                adView.delegate = self
+                adView.viewController = self;
+                adView.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 145)
+                adView.mediaView.frame = adView.bounds;
+                if dataObject.isAdValid {
+                    adView.registerDataObject(dataObject, clickableViews:[])
                     nativeAds.append(adView)
                 }
             }
@@ -690,6 +726,7 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
 - `xilu_AdDidReceiveMuti(_:adInfos:)` - 多个广告接收成功
 - `xilu_AdDidExpose(_:adInfo:)` - 广告曝光
 - `xilu_AdDidClick(_:adInfo:)` - 广告点击
+- `xilu_AdWillClose(_:adInfo:)` - 广告将要关闭
 - `xilu_AdDidClose(_:adInfo:)` - 广告关闭
 - `xilu_AdDidSkip(_:adInfo:)` - 广告跳过
 - `xilu_AdDidFail(_:error:)` - 广告加载失败
@@ -711,9 +748,8 @@ extension NativeRenderAdViewController: ADXiluBaseAdDelegate {
 ### 初始化配置
 
 ```swift
-// 初始化时设置调试模式
-ADXiluSDKManager.shared.initialize(appId: "your_app_id", debug: true) { success, error in
-    if success {
+// 初始化时设置调试模式(useSDKAudioSessionSetting:在播放音频时是否使用SDK内部对AVAudioSession设置的category及options,默认是false)
+ADXiluSDKManager.shared.initialize(appId:"your_app_id" , debug: true ,useSDKAudioSessionSetting: false) { success, error inif success {
         print("SDK初始化成功")
     } else {
         print("SDK初始化失败: \(error ?? "")")
@@ -763,8 +799,6 @@ ADXiluSDK/
 │   ├── ADXiluRewardVodAd.swift   # 激励视频广告
 │   ├── ADXiluSplashAd.swift      # 开屏广告
 │   └── ADXiluNativeAd.swift     # 原生广告
-├── BeiZi/                  # BeiZiSDK适配器
-├── MSMob/                  # MSMobAdSDK适配器
 ├── Extensions/              # 扩展模块
 └── Tool/                   # 工具模块
     ├── ADDeviceInfoTool.swift    # 设备信息工具
@@ -793,6 +827,16 @@ MIT License
 - 支持Objective-C和Swift
 - 最低支持iOS 12.2
 - 包含完整的示例项目
-### v1.0.9 (2026-03-10)
 
-- 支持穿山甲集成
+### v1.0.7 (2026-01-15)
+- 新增广告平台支持
+- 支持GDTMobSDK完整的广告类型支持
+
+### v1.0.8 (2026-02-26)
+- 新增功能
+- 新增开屏广告支持广告即将关闭的代理方法
+
+### v1.0.9 (2026-05-11)
+- 新增广告平台支持
+- 支持BUAdSDK完整的广告类型支持
+- 支持BaiduMobAdSDK和KSAdSDK开屏广告集成

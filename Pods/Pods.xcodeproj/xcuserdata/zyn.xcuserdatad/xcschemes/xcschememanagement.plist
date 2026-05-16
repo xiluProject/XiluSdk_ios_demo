@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Ads-CN.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BUTTSDKFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BaiduMobAdSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>BeiZiSDK-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +35,11 @@
 			<false/>
 		</dict>
 		<key>GDTMobSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KSAdSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

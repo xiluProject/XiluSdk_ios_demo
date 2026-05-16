@@ -3,7 +3,7 @@
   "version": "1.0.9",
   "summary": "ADXilu iOS SDK - 广告聚合SDK",
   "description": "ADXilu iOS SDK 是一个广告聚合SDK，支持多个主流广告平台，提供统一的广告接口。",
-  "homepage": "https://github.com/UnAmico0/xiluAdSdk_ios_pod",
+  "homepage": "https://github.com/xiluProject/xiluAdSdk_ios_pod",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "zyn": "zyn@163.com"
   },
   "source": {
-    "git": "https://github.com/UnAmico0/xiluAdSdk_ios_pod.git",
+    "git": "https://github.com/xiluProject/xiluAdSdk_ios_pod.git",
     "tag": "1.0.9"
   },
   "platforms": {
@@ -38,7 +38,10 @@
     "5.7",
     "5.8",
     "5.9",
-    "5.10"
+    "5.10",
+    "6.0",
+    "6.1",
+    "6.2"
   ],
   "vendored_frameworks": "ADXiluSDK/*.xcframework",
   "pod_target_xcconfig": {
@@ -52,11 +55,15 @@
     "OTHER_SWIFT_FLAGS": "$(inherited)"
   },
   "dependencies": {
-    "SnapKit": [],
+    "SnapKit": [
+
+    ],
     "CryptoSwift": [
       "1.8.4"
     ],
-    "KSAdSDK": [],
+    "KSAdSDK": [
+
+    ],
     "BaiduMobAdSDK": [
       "10.050"
     ],
@@ -74,5 +81,5 @@
     ]
   },
   "exclude_files": "ADXiluSDK/Classes/Tool/*.md",
-  "swift_version": "5.10"
+  "swift_version": "6.2"
 }
