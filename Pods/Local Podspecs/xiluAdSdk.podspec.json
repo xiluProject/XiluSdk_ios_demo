@@ -55,14 +55,12 @@
     "OTHER_SWIFT_FLAGS": "$(inherited)"
   },
   "dependencies": {
-    "SnapKit": [
-
-    ],
+    "SnapKit": [],
     "CryptoSwift": [
       "1.8.4"
     ],
     "KSAdSDK": [
-
+      "5.3.20.1"
     ],
     "BaiduMobAdSDK": [
       "10.050"

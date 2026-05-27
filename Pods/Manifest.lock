@@ -46,7 +46,7 @@ PODS:
   - BUTTSDKFramework/VolcLog (1.48.2.3-premium)
   - CryptoSwift (1.8.4)
   - GDTMobSDK (4.15.65)
-  - KSAdSDK (5.4.10.1)
+  - KSAdSDK (5.3.20.1)
   - Masonry (1.1.0)
   - MSMobAdSDK/MotionLess (2.7.7.3)
   - MSMobAdSDK/MS (2.7.7.3):
@@ -61,7 +61,7 @@ PODS:
     - BeiZiSDK-iOS (= 4.90.7.0)
     - CryptoSwift (= 1.8.4)
     - GDTMobSDK (= 4.15.65)
-    - KSAdSDK
+    - KSAdSDK (= 5.3.20.1)
     - MSMobAdSDK/MS (= 2.7.7.3)
     - SnapKit
 
@@ -69,7 +69,7 @@ DEPENDENCIES:
   - Masonry
   - SDWebImage
   - SnapKit (~> 5.6.0)
-  - "xiluAdSdk (from `git@github.com:xiluProject/xiluAdSdk_ios_pod.git`, tag `1.0.9`)"
+  - xiluAdSdk (from `https://github.com/xiluProject/xiluAdSdk_ios_pod.git`, tag `1.0.9`)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
@@ -87,12 +87,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   xiluAdSdk:
-    :git: "git@github.com:xiluProject/xiluAdSdk_ios_pod.git"
+    :git: https://github.com/xiluProject/xiluAdSdk_ios_pod.git
     :tag: 1.0.9
 
 CHECKOUT OPTIONS:
   xiluAdSdk:
-    :git: "git@github.com:xiluProject/xiluAdSdk_ios_pod.git"
+    :git: https://github.com/xiluProject/xiluAdSdk_ios_pod.git
     :tag: 1.0.9
 
 SPEC CHECKSUMS:
@@ -102,13 +102,13 @@ SPEC CHECKSUMS:
   BUTTSDKFramework: 34f8f8d541da07e79e9c479eb71336d1e4d90fdd
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
   GDTMobSDK: f3aefaaca7a7393300a7b4f667d361250ac764b4
-  KSAdSDK: 81517aad7b5f0d668c62e65be59b6fef0bbd9980
+  KSAdSDK: 256030abfebad92e438f2e93376d8c10a00771ba
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
   SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  xiluAdSdk: d88a128574ed525c4e986539d2808996cb8084c4
+  xiluAdSdk: 195a11e51f625354e8879352c89f03edaf55b34e
 
-PODFILE CHECKSUM: 9e24f91487820b432ede2841cc4831f73f10fbc4
+PODFILE CHECKSUM: 5d7f0cb2b4828c68a9de6571b0ac88c0fea059c5
 
 COCOAPODS: 1.16.2
