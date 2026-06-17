@@ -50,7 +50,7 @@ target 'YourApp' do
   use_frameworks!
   
   # 使用远程版本
-  pod 'xiluAdSdk', :git => 'https://github.com/xiluProject/xiluAdSdk_ios_pod.git', :tag => '1.0.9'
+  pod 'xiluAdSdk', :git => 'git@github.com:UnAmico0/xiluAdSdk_ios_pod.git', :tag => '1.0.9'
 end
 ```
 
@@ -72,15 +72,16 @@ pod install
 #import "ADXiluSdk/ADXiluSDK-Swift.h"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[ADXiluSDKManager shared] initializeWithAppId:@"your_app_id" 
-                                     debug:YES 
-                                 completion:^(BOOL success, NSString * _Nullable error) {
-        if (success) {
+    [[ADXiluSDKManager sharedManager] initializeWithAppId:@"你的appid"
+                                              debug:NO
+                     useSDKAudioSessionSetting:NO
+                                      completion:^(BOOL success, NSString * _Nullable message) {
+           if (success) {
             NSLog(@"ADXiluSDK initialized successfully");
         } else {
             NSLog(@"ADXiluSDK initialization failed: %@", error);
         }
-    }];
+}];
     return YES;
 }
 ```

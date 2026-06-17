@@ -60,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             DispatchQueue.main.async {
                 if success {
                     print("ADXiluSDK初始化成功，版本: \(ADXiluSDKManager.shared.getVersion())")
+                    NotificationCenter.default.post(name:Notification.Name("testNotify"), object: nil)
                     
                 } else {
                     print("ADXiluSDK初始化失败: \(error ?? "未知错误")")
