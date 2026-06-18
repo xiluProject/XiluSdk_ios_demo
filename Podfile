@@ -11,7 +11,7 @@ target 'XiluSdk_ios_demo' do
   use_frameworks! :linkage => :static
   
 
-pod 'xiluAdSdk', :git => 'https://github.com/xiluProject/xiluAdSdk_ios_pod.git', :tag => '1.0.9'
+pod 'xiluAdSdk', :git => 'https://github.com/xiluProject/xiluAdSdk_ios_pod.git', :tag => '1.0.10'
   pod 'SnapKit', '~> 5.6.0'
   pod 'Masonry'
   pod 'SDWebImage'

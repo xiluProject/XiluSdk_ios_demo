@@ -55,7 +55,7 @@ PODS:
     - SDWebImage/Core (= 5.21.7)
   - SDWebImage/Core (5.21.7)
   - SnapKit (5.6.0)
-  - xiluAdSdk (1.0.9):
+  - xiluAdSdk (1.0.10):
     - Ads-CN/CSJMediation (= 7.4.0.4)
     - BaiduMobAdSDK (= 10.050)
     - BeiZiSDK-iOS (= 4.90.7.0)
@@ -69,7 +69,7 @@ DEPENDENCIES:
   - Masonry
   - SDWebImage
   - SnapKit (~> 5.6.0)
-  - xiluAdSdk (from `https://github.com/xiluProject/xiluAdSdk_ios_pod.git`, tag `1.0.9`)
+  - xiluAdSdk (from `https://github.com/xiluProject/xiluAdSdk_ios_pod.git`, tag `1.0.10`)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
@@ -88,12 +88,12 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   xiluAdSdk:
     :git: https://github.com/xiluProject/xiluAdSdk_ios_pod.git
-    :tag: 1.0.9
+    :tag: 1.0.10
 
 CHECKOUT OPTIONS:
   xiluAdSdk:
     :git: https://github.com/xiluProject/xiluAdSdk_ios_pod.git
-    :tag: 1.0.9
+    :tag: 1.0.10
 
 SPEC CHECKSUMS:
   Ads-CN: 1e14aa075f1bd09b110472f39aa7d31f916313aa
@@ -107,8 +107,8 @@ SPEC CHECKSUMS:
   MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
   SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  xiluAdSdk: 195a11e51f625354e8879352c89f03edaf55b34e
+  xiluAdSdk: e2c04067be0a49906453477dda31db61e633ae24
 
-PODFILE CHECKSUM: 5d7f0cb2b4828c68a9de6571b0ac88c0fea059c5
+PODFILE CHECKSUM: d1476d86ef34630378aff6c81ed8d0aedc40174c
 
 COCOAPODS: 1.16.2
