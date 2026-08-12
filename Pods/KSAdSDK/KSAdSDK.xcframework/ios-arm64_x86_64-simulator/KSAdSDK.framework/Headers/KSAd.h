@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief 设置竞价价格，单位（分）
  * @param ecpm              竞价价格
  * @param highestLossEcpm   最大竞价失败方出价
+ * @note  建议在主线程调用，在子线程调用可能因广告对象生命周期结束导致上报失效
  */
 - (void)setBidEcpm:(NSInteger)ecpm
    highestLossEcpm:(NSInteger)highestLossEcpm;
