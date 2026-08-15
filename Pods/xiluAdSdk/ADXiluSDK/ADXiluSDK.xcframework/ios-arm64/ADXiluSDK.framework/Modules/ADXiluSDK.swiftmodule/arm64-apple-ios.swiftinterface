@@ -544,6 +544,7 @@ extension ADXiluSDK.ADXiluBaseAd : ADXiluSDK.ADXiluBaseAdDelegate {
   @objc dynamic public func xilu_FeedAdDidClose(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc dynamic public func xilu_AdDidFail(_ xiluAd: ADXiluSDK.ADXiluBaseAd, error: ADXiluSDK.ADXiluError)
   @objc dynamic public func xilu_AdDidSkip(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
+  public func getAdTypeString() -> Swift.String
   public func configNetworkAdPosECPM(adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc dynamic public func xilu_AdTick(_ xiluAd: ADXiluSDK.ADXiluBaseAd, remainingTime: Foundation.TimeInterval)
 }
