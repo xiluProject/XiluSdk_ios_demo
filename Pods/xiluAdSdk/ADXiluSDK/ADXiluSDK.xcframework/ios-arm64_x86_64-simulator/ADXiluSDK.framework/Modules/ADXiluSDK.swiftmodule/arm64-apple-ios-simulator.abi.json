@@ -10730,14 +10730,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ADSplashLaunchConfig",
-                "printedName": "ADXiluSDK.ADSplashLaunchConfig",
-                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV"
+                "name": "Optional",
+                "printedName": "ADXiluSDK.ADSplashLaunchConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ADSplashLaunchConfig",
+                    "printedName": "ADXiluSDK.ADSplashLaunchConfig",
+                    "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9ADXiluSDK11ADAdsConfigV12splashLaunchAA08ADSplashfD0Vvp",
-            "mangledName": "$s9ADXiluSDK11ADAdsConfigV12splashLaunchAA08ADSplashfD0Vvp",
+            "usr": "s:9ADXiluSDK11ADAdsConfigV12splashLaunchAA08ADSplashfD0VSgvp",
+            "mangledName": "$s9ADXiluSDK11ADAdsConfigV12splashLaunchAA08ADSplashfD0VSgvp",
             "moduleName": "ADXiluSDK",
             "declAttributes": [
               "HasStorage",
@@ -10753,14 +10761,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ADSplashLaunchConfig",
-                    "printedName": "ADXiluSDK.ADSplashLaunchConfig",
-                    "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV"
+                    "name": "Optional",
+                    "printedName": "ADXiluSDK.ADSplashLaunchConfig?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ADSplashLaunchConfig",
+                        "printedName": "ADXiluSDK.ADSplashLaunchConfig",
+                        "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK11ADAdsConfigV12splashLaunchAA08ADSplashfD0Vvg",
-                "mangledName": "$s9ADXiluSDK11ADAdsConfigV12splashLaunchAA08ADSplashfD0Vvg",
+                "usr": "s:9ADXiluSDK11ADAdsConfigV12splashLaunchAA08ADSplashfD0VSgvg",
+                "mangledName": "$s9ADXiluSDK11ADAdsConfigV12splashLaunchAA08ADSplashfD0VSgvg",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12570,14 +12586,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV8hotStartSivp",
-            "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV8hotStartSivp",
+            "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV8hotStartSiSgvp",
+            "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV8hotStartSiSgvp",
             "moduleName": "ADXiluSDK",
             "declAttributes": [
               "HasStorage",
@@ -12593,14 +12617,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV8hotStartSivg",
-                "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV8hotStartSivg",
+                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV8hotStartSiSgvg",
+                "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV8hotStartSiSgvg",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12614,14 +12646,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV7hotTimeSivp",
-            "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV7hotTimeSivp",
+            "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV7hotTimeSiSgvp",
+            "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV7hotTimeSiSgvp",
             "moduleName": "ADXiluSDK",
             "declAttributes": [
               "HasStorage",
@@ -12637,14 +12677,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV7hotTimeSivg",
-                "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV7hotTimeSivg",
+                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV7hotTimeSiSgvg",
+                "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV7hotTimeSiSgvg",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12658,14 +12706,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV11hotDiffSlotSivp",
-            "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV11hotDiffSlotSivp",
+            "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV11hotDiffSlotSiSgvp",
+            "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV11hotDiffSlotSiSgvp",
             "moduleName": "ADXiluSDK",
             "declAttributes": [
               "HasStorage",
@@ -12681,14 +12737,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV11hotDiffSlotSivg",
-                "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV11hotDiffSlotSivg",
+                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV11hotDiffSlotSiSgvg",
+                "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV11hotDiffSlotSiSgvg",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12702,14 +12766,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV13hotDailyLimitSivp",
-            "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV13hotDailyLimitSivp",
+            "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV13hotDailyLimitSiSgvp",
+            "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV13hotDailyLimitSiSgvp",
             "moduleName": "ADXiluSDK",
             "declAttributes": [
               "HasStorage",
@@ -12725,14 +12797,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV13hotDailyLimitSivg",
-                "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV13hotDailyLimitSivg",
+                "usr": "s:9ADXiluSDK20ADSplashLaunchConfigV13hotDailyLimitSiSgvg",
+                "mangledName": "$s9ADXiluSDK20ADSplashLaunchConfigV13hotDailyLimitSiSgvg",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -15266,16 +15346,25 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9ADXiluSDK19ADNetworkAdPositionV10launchTypeSivp",
-            "mangledName": "$s9ADXiluSDK19ADNetworkAdPositionV10launchTypeSivp",
+            "usr": "s:9ADXiluSDK19ADNetworkAdPositionV10launchTypeSiSgvp",
+            "mangledName": "$s9ADXiluSDK19ADNetworkAdPositionV10launchTypeSiSgvp",
             "moduleName": "ADXiluSDK",
             "declAttributes": [
+              "HasInitialValue",
               "HasStorage",
               "AccessControl"
             ],
@@ -15288,14 +15377,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK19ADNetworkAdPositionV10launchTypeSivg",
-                "mangledName": "$s9ADXiluSDK19ADNetworkAdPositionV10launchTypeSivg",
+                "usr": "s:9ADXiluSDK19ADNetworkAdPositionV10launchTypeSiSgvg",
+                "mangledName": "$s9ADXiluSDK19ADNetworkAdPositionV10launchTypeSiSgvg",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -15312,14 +15409,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK19ADNetworkAdPositionV10launchTypeSivs",
-                "mangledName": "$s9ADXiluSDK19ADNetworkAdPositionV10launchTypeSivs",
+                "usr": "s:9ADXiluSDK19ADNetworkAdPositionV10launchTypeSiSgvs",
+                "mangledName": "$s9ADXiluSDK19ADNetworkAdPositionV10launchTypeSiSgvs",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -15336,8 +15441,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9ADXiluSDK19ADNetworkAdPositionV10launchTypeSivM",
-                "mangledName": "$s9ADXiluSDK19ADNetworkAdPositionV10launchTypeSivM",
+                "usr": "s:9ADXiluSDK19ADNetworkAdPositionV10launchTypeSiSgvM",
+                "mangledName": "$s9ADXiluSDK19ADNetworkAdPositionV10launchTypeSiSgvM",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -25921,6 +26026,93 @@
                 "declKind": "Accessor",
                 "usr": "s:9ADXiluSDK0A10SDKManagerC19hotSplashAdIntervalSdvM",
                 "mangledName": "$s9ADXiluSDK0A10SDKManagerC19hotSplashAdIntervalSdvM",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hotDiffSlot",
+            "printedName": "hotDiffSlot",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ADXiluSDK0A10SDKManagerC11hotDiffSlotSbvp",
+            "mangledName": "$s9ADXiluSDK0A10SDKManagerC11hotDiffSlotSbvp",
+            "moduleName": "ADXiluSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK0A10SDKManagerC11hotDiffSlotSbvg",
+                "mangledName": "$s9ADXiluSDK0A10SDKManagerC11hotDiffSlotSbvg",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK0A10SDKManagerC11hotDiffSlotSbvs",
+                "mangledName": "$s9ADXiluSDK0A10SDKManagerC11hotDiffSlotSbvs",
+                "moduleName": "ADXiluSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ADXiluSDK0A10SDKManagerC11hotDiffSlotSbvM",
+                "mangledName": "$s9ADXiluSDK0A10SDKManagerC11hotDiffSlotSbvM",
                 "moduleName": "ADXiluSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -38783,7 +38975,7 @@
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADNetworkTool.swift",
       "kind": "StringLiteral",
-      "offset": 11879,
+      "offset": 11911,
       "length": 2,
       "value": "\"\""
     },
@@ -38811,7 +39003,7 @@
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADSDKResponseModels.swift",
       "kind": "StringLiteral",
-      "offset": 8273,
+      "offset": 8279,
       "length": 2,
       "value": "\"\""
     },
@@ -39574,301 +39766,294 @@
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1838,
+      "offset": 1820,
       "length": 1,
-      "value": "5"
+      "value": "0"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1842,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2094,
+      "offset": 2071,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2184,
+      "offset": 2161,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 2284,
+      "offset": 2261,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2384,
+      "offset": 2342,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 7407,
+      "offset": 7365,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 7448,
+      "offset": 7406,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 12040,
+      "offset": 11980,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 12078,
+      "offset": 12018,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 12108,
+      "offset": 12048,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 12141,
+      "offset": 12081,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 12194,
+      "offset": 12134,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 12230,
+      "offset": 12170,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 12264,
+      "offset": 12204,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 13044,
+      "offset": 12984,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 13638,
+      "offset": 13578,
       "length": 49,
       "value": "\"ADXiluError(code: \""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 13664,
+      "offset": 13604,
       "length": 1,
       "value": "\", message: \""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 13685,
+      "offset": 13625,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 13750,
+      "offset": 13690,
       "length": 6,
       "value": "-10001"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 13767,
+      "offset": 13707,
       "length": 31,
       "value": "\"未知错误, 请稍后重试\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 13849,
+      "offset": 13789,
       "length": 6,
       "value": "-10002"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 13866,
+      "offset": 13806,
       "length": 31,
       "value": "\"网络异常, 请稍后重试\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 13949,
+      "offset": 13889,
       "length": 6,
       "value": "-10003"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 13966,
+      "offset": 13906,
       "length": 41,
       "value": "\"广告配置错误，请检查后重试\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14060,
+      "offset": 14000,
       "length": 6,
       "value": "-10004"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 14077,
+      "offset": 14017,
       "length": 50,
       "value": "\"广告已释放，请重新加载后再次展示\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14181,
+      "offset": 14121,
       "length": 6,
       "value": "-10005"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 14198,
+      "offset": 14138,
       "length": 41,
       "value": "\"广告未加载完成，请稍后重试\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14289,
+      "offset": 14229,
       "length": 6,
       "value": "-10006"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 14306,
+      "offset": 14246,
       "length": 37,
       "value": "\"广告加载失败, 请稍后重试\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14392,
+      "offset": 14332,
       "length": 6,
       "value": "-10007"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 14409,
+      "offset": 14349,
       "length": 56,
       "value": "\"没有找到符合价格要求或体验要求的广告\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14519,
+      "offset": 14459,
       "length": 6,
       "value": "-10008"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 14536,
+      "offset": 14476,
       "length": 14,
       "value": "\"广告无效\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 16276,
+      "offset": 16216,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 16312,
+      "offset": 16252,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 16356,
+      "offset": 16296,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 16401,
+      "offset": 16341,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "Dictionary",
-      "offset": 16453,
+      "offset": 16393,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 16494,
+      "offset": 16434,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 16590,
+      "offset": 16530,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Core\/ADXiluSDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 16683,
+      "offset": 16623,
       "length": 4,
       "value": "true"
     },
@@ -39966,35 +40151,35 @@
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 48598,
+      "offset": 47426,
       "length": 52,
       "value": "\"BeiZiSplash { spaceID: \""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 48632,
+      "offset": 47460,
       "length": 1,
       "value": "\", ecpm: \""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 48647,
+      "offset": 47475,
       "length": 1,
       "value": "\" }\""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 49090,
+      "offset": 47918,
       "length": 32,
       "value": "\"GDTSplashAd {ecpm: \""
     },
     {
       "filePath": "\/Volumes\/zyn\/Github\/XiluSdk-ios\/ADXiluSDK\/Classes\/Ads\/ADXiluSplashAd.swift",
       "kind": "StringLiteral",
-      "offset": 49119,
+      "offset": 47947,
       "length": 1,
       "value": "\" }\""
     },

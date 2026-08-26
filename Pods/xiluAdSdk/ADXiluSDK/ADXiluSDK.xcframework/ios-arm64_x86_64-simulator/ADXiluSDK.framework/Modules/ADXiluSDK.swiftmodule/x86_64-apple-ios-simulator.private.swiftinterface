@@ -317,7 +317,7 @@ public struct ADAdsConfig : Swift.Codable {
   public let auditMatch: Swift.Int
   public let log: ADXiluSDK.ADLogConfig
   public let tracking: ADXiluSDK.ADTrackingConfig
-  public let splashLaunch: ADXiluSDK.ADSplashLaunchConfig
+  public let splashLaunch: ADXiluSDK.ADSplashLaunchConfig?
   public let sdk: ADXiluSDK.ADSDKInfo
   public let sdkConfig: ADXiluSDK.ADSDKConfigs
   public let networkList: [ADXiluSDK.ADNetworkItem]
@@ -359,10 +359,10 @@ public struct ADTrackingConfig : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct ADSplashLaunchConfig : Swift.Codable {
-  public let hotStart: Swift.Int
-  public let hotTime: Swift.Int
-  public let hotDiffSlot: Swift.Int
-  public let hotDailyLimit: Swift.Int
+  public let hotStart: Swift.Int?
+  public let hotTime: Swift.Int?
+  public let hotDiffSlot: Swift.Int?
+  public let hotDailyLimit: Swift.Int?
   public init(hotStart: Swift.Int, hotTime: Swift.Int, hotDiffSlot: Swift.Int, hotDailyLimit: Swift.Int)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -427,7 +427,7 @@ public struct ADAdPosition : Swift.Codable {
 public struct ADNetworkAdPosition : Swift.Codable {
   public var platform: Swift.String
   public var adType: Swift.String
-  public var launchType: Swift.Int
+  public var launchType: Swift.Int?
   public var ecpm: Swift.Int
   public var ecpmType: Swift.String
   public var skipShowTime: Swift.Int
@@ -744,6 +744,7 @@ extension ADXiluSDK.ADXiluRewardVodAd : GDTMobSDK.GDTRewardedVideoAdDelegate {
   }
   public var isHotSplashAdEnabled: Swift.Bool
   public var hotSplashAdInterval: Swift.Double
+  public var hotDiffSlot: Swift.Bool
   final public let networkTool: ADXiluSDK.ADNetworkTool
   public var sdkResponse: ADXiluSDK.ADSDKResponse? {
     get
