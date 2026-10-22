@@ -27,10 +27,11 @@ public protocol ADAdaptorProtocol {
   func initialize(completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
   func getVersion() -> Swift.String
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ADAdaptor : ObjectiveC.NSObject, ADXiluSDK.ADAdaptorProtocol {
+@objc @_inheritsConvenienceInitializers public class ADAdaptor : ObjectiveC.NSObject, ADXiluSDK.ADAdaptorProtocol {
   public static let shared: ADXiluSDK.ADAdaptor
   public func initialize(completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
   public func getVersion() -> Swift.String
+  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ADDeviceInfoTool : ObjectiveC.NSObject {
@@ -322,7 +323,8 @@ public struct ADAdsConfig : Swift.Codable {
   public let sdkConfig: ADXiluSDK.ADSDKConfigs
   public let networkList: [ADXiluSDK.ADNetworkItem]
   public let adPosList: [ADXiluSDK.ADAdPosition]
-  public init(accId: Swift.Int, accName: Swift.String, advAccId: Swift.String, appKey: Swift.String, packageName: Swift.String, apiInterval: Swift.Int, downTip: Swift.Int, api: ADXiluSDK.ADApiConfig, regional: ADXiluSDK.ADRegionalConfig, model: Swift.Int, thirdAppId: Swift.String, thirdAdslotId: Swift.String, requestHeaderCtl: Swift.Int, configReloadCount: Swift.Int, auditMatch: Swift.Int, log: ADXiluSDK.ADLogConfig, tracking: ADXiluSDK.ADTrackingConfig, splashLaunch: ADXiluSDK.ADSplashLaunchConfig, sdk: ADXiluSDK.ADSDKInfo, sdkConfig: ADXiluSDK.ADSDKConfigs, networkList: [ADXiluSDK.ADNetworkItem], adPosList: [ADXiluSDK.ADAdPosition])
+  public let ext: ADXiluSDK.ADAdsExt?
+  public init(accId: Swift.Int, accName: Swift.String, advAccId: Swift.String, appKey: Swift.String, packageName: Swift.String, apiInterval: Swift.Int, downTip: Swift.Int, api: ADXiluSDK.ADApiConfig, regional: ADXiluSDK.ADRegionalConfig, model: Swift.Int, thirdAppId: Swift.String, thirdAdslotId: Swift.String, requestHeaderCtl: Swift.Int, configReloadCount: Swift.Int, auditMatch: Swift.Int, log: ADXiluSDK.ADLogConfig, tracking: ADXiluSDK.ADTrackingConfig, splashLaunch: ADXiluSDK.ADSplashLaunchConfig, sdk: ADXiluSDK.ADSDKInfo, sdkConfig: ADXiluSDK.ADSDKConfigs, networkList: [ADXiluSDK.ADNetworkItem], adPosList: [ADXiluSDK.ADAdPosition], ext: ADXiluSDK.ADAdsExt)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -398,6 +400,30 @@ public struct ADSDKConfigItem : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct ADAdsExt : Swift.Codable {
+  public let complaint: ADXiluSDK.ADComplaintConfig?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ADComplaintConfig : Swift.Codable {
+  public let splash: ADXiluSDK.ADComplaintRule?
+  public let interstitial: ADXiluSDK.ADComplaintRule?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ADComplaintRule : Swift.Codable {
+  public let blockTime: Swift.Int?
+  public let feedback: Swift.Int?
+  public let skip: Swift.Int?
+  public var isFeedbackEnabled: Swift.Bool {
+    get
+  }
+  public var isSkipEnabled: Swift.Bool {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct ADNetworkItem : Swift.Codable {
   public let platform: Swift.String
   public let appId: Swift.String
@@ -453,6 +479,12 @@ extension ADXiluSDK.ADAdsConfig {
   public func getAdPositions(for adType: Swift.String) -> [ADXiluSDK.ADAdPosition]
   public func getNetworkConfig(for platform: Swift.String) -> ADXiluSDK.ADNetworkItem?
   public func getSDKConfig(for platform: Swift.String) -> ADXiluSDK.ADSDKConfigItem?
+}
+extension ADXiluSDK.ADXiluSDKManager {
+  public func getComplaintRule(for adType: Swift.String) -> ADXiluSDK.ADComplaintRule?
+  public func getComplaintBlockTime(for adType: Swift.String) -> Swift.Int
+  public func isComplaintFeedbackEnabled(for adType: Swift.String) -> Swift.Bool
+  public func isComplaintSkipEnabled(for adType: Swift.String) -> Swift.Bool
 }
 extension ADXiluSDK.ADXiluBannerAd : BUAdSDK.BUNativeExpressBannerViewDelegate {
   @objc dynamic public func nativeExpressBannerAdViewDidLoad(_ bannerAdView: BUAdSDK.BUNativeExpressBannerView)

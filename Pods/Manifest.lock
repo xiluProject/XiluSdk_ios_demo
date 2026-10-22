@@ -46,7 +46,7 @@ PODS:
   - BUTTSDKFramework/VolcLog (1.48.2.3-premium)
   - CryptoSwift (1.8.4)
   - GDTMobSDK (4.15.65)
-  - KSAdSDK (5.3.20.1)
+  - KSAdSDK (5.9.10.1)
   - Masonry (1.1.0)
   - MSMobAdSDK/MotionLess (2.7.7.3)
   - MSMobAdSDK/MS (2.7.7.3):
@@ -55,13 +55,13 @@ PODS:
     - SDWebImage/Core (= 5.21.7)
   - SDWebImage/Core (5.21.7)
   - SnapKit (5.6.0)
-  - xiluAdSdk (1.0.11):
+  - xiluAdSdk (1.0.12):
     - Ads-CN/CSJMediation (= 7.4.0.4)
     - BaiduMobAdSDK (= 10.050)
     - BeiZiSDK-iOS (= 4.90.7.0)
     - CryptoSwift (= 1.8.4)
     - GDTMobSDK (= 4.15.65)
-    - KSAdSDK (= 5.3.20.1)
+    - KSAdSDK
     - MSMobAdSDK/MS (= 2.7.7.3)
     - SnapKit
 
@@ -69,7 +69,7 @@ DEPENDENCIES:
   - Masonry
   - SDWebImage
   - SnapKit (~> 5.6.0)
-  - "xiluAdSdk (from `git@github.com:xiluProject/xiluAdSdk_ios_pod.git`, tag `1.0.11`)"
+  - "xiluAdSdk (from `git@github.com:UnAmico0/xiluAdSdk_ios_pod.git`, tag `1.0.12`)"
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
@@ -87,13 +87,13 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   xiluAdSdk:
-    :git: "git@github.com:xiluProject/xiluAdSdk_ios_pod.git"
-    :tag: 1.0.11
+    :git: "git@github.com:UnAmico0/xiluAdSdk_ios_pod.git"
+    :tag: 1.0.12
 
 CHECKOUT OPTIONS:
   xiluAdSdk:
-    :git: "git@github.com:xiluProject/xiluAdSdk_ios_pod.git"
-    :tag: 1.0.11
+    :git: "git@github.com:UnAmico0/xiluAdSdk_ios_pod.git"
+    :tag: 1.0.12
 
 SPEC CHECKSUMS:
   Ads-CN: 1e14aa075f1bd09b110472f39aa7d31f916313aa
@@ -102,13 +102,13 @@ SPEC CHECKSUMS:
   BUTTSDKFramework: 34f8f8d541da07e79e9c479eb71336d1e4d90fdd
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
   GDTMobSDK: f3aefaaca7a7393300a7b4f667d361250ac764b4
-  KSAdSDK: 256030abfebad92e438f2e93376d8c10a00771ba
+  KSAdSDK: 9f7889f13a5a44162512a379503dff989e0302e6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
   SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  xiluAdSdk: 7230b02e82021c67dea91b94c6652f02d3e721c9
+  xiluAdSdk: 6530cccb076c33f9f306a7bd11bf8e662f6a55cf
 
-PODFILE CHECKSUM: 3115f77bcd55ace48c444f19eabb61f238ff91aa
+PODFILE CHECKSUM: ce36bb964f4a34a826a612f95e406baa2f33bf08
 
 COCOAPODS: 1.16.2

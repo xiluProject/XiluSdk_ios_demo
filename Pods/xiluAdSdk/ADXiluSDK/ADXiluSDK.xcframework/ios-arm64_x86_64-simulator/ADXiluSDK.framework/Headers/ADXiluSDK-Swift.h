@@ -378,8 +378,7 @@ extern "C" {
 
 SWIFT_CLASS("_TtC9ADXiluSDK9ADAdaptor")
 @interface ADAdaptor : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 SWIFT_CLASS("_TtC9ADXiluSDK16ADDeviceInfoTool")
@@ -824,20 +823,13 @@ SWIFT_ENUM_FWD_DECL(NSInteger, ADXiluSplashAdStyle)
 /// 开屏广告类
 SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 @interface ADXiluSplashAd : ADXiluBaseAd
-/// 广告样式
 @property (nonatomic, readonly) enum ADXiluSplashAdStyle style;
 @property (nonatomic, strong) UIView * _Nullable bottomView;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId style:(enum ADXiluSplashAdStyle)style adSize:(ADXiluAdSize * _Nonnull)adSize OBJC_DESIGNATED_INITIALIZER;
-/// 加载广告
 - (void)loadAd;
-/// 移除并释放指定的开屏广告
-/// \param adInfo 要移除的广告信息
-///
 - (void)removeSplashAdWithAdInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)showAdIn:(id _Nullable)containerView;
-/// 关闭广告
 - (void)closeAd;
-/// 释放资源
 - (void)p_release;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
@@ -902,19 +894,12 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 SWIFT_PROTOCOL("_TtP9ADXiluSDK22ADXiluSplashAdDelegate_")
 @protocol ADXiluSplashAdDelegate <ADXiluBaseAdDelegate>
 @optional
-/// 广告接收成功
 - (void)splashAdDidReceive:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告曝光
 - (void)splashAdDidExpose:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告点击
 - (void)splashAdDidClick:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告关闭
 - (void)splashAdDidClose:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告跳过
 - (void)splashAdDidSkip:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告加载失败
 - (void)splashAdDidFail:(ADXiluSplashAd * _Nonnull)splashAd error:(ADXiluError * _Nonnull)error;
-/// 倒计时回调
 - (void)splashAdTick:(ADXiluSplashAd * _Nonnull)splashAd remainingTime:(NSTimeInterval)remainingTime;
 @end
 
@@ -1343,8 +1328,7 @@ extern "C" {
 
 SWIFT_CLASS("_TtC9ADXiluSDK9ADAdaptor")
 @interface ADAdaptor : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 SWIFT_CLASS("_TtC9ADXiluSDK16ADDeviceInfoTool")
@@ -1789,20 +1773,13 @@ SWIFT_ENUM_FWD_DECL(NSInteger, ADXiluSplashAdStyle)
 /// 开屏广告类
 SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 @interface ADXiluSplashAd : ADXiluBaseAd
-/// 广告样式
 @property (nonatomic, readonly) enum ADXiluSplashAdStyle style;
 @property (nonatomic, strong) UIView * _Nullable bottomView;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId style:(enum ADXiluSplashAdStyle)style adSize:(ADXiluAdSize * _Nonnull)adSize OBJC_DESIGNATED_INITIALIZER;
-/// 加载广告
 - (void)loadAd;
-/// 移除并释放指定的开屏广告
-/// \param adInfo 要移除的广告信息
-///
 - (void)removeSplashAdWithAdInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)showAdIn:(id _Nullable)containerView;
-/// 关闭广告
 - (void)closeAd;
-/// 释放资源
 - (void)p_release;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
@@ -1867,19 +1844,12 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluSplashAd")
 SWIFT_PROTOCOL("_TtP9ADXiluSDK22ADXiluSplashAdDelegate_")
 @protocol ADXiluSplashAdDelegate <ADXiluBaseAdDelegate>
 @optional
-/// 广告接收成功
 - (void)splashAdDidReceive:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告曝光
 - (void)splashAdDidExpose:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告点击
 - (void)splashAdDidClick:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告关闭
 - (void)splashAdDidClose:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告跳过
 - (void)splashAdDidSkip:(ADXiluSplashAd * _Nonnull)splashAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
-/// 广告加载失败
 - (void)splashAdDidFail:(ADXiluSplashAd * _Nonnull)splashAd error:(ADXiluError * _Nonnull)error;
-/// 倒计时回调
 - (void)splashAdTick:(ADXiluSplashAd * _Nonnull)splashAd remainingTime:(NSTimeInterval)remainingTime;
 @end
 
