@@ -107,7 +107,7 @@ class SplashAdViewController: UIViewController {
         
         statusLabel.text = "状态：正在加载..."
         statusLabel.textColor = .systemOrange
-        loadButton.isEnabled = false
+//        loadButton.isEnabled = false
         
         splashAd?.loadAd()
         showButton.isHidden = true

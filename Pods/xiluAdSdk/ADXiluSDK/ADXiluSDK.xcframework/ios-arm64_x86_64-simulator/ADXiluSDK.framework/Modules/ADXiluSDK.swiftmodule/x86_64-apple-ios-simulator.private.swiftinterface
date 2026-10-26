@@ -812,6 +812,7 @@ extension ADXiluSDK.ADXiluRewardVodAd : GDTMobSDK.GDTRewardedVideoAdDelegate {
     get
   }
   public func preloadHotSplash()
+  public func markHotSplashAdDidShow()
   public func destroy()
   @objc public func initialize(appId: Swift.String, debug: Swift.Bool = false, useSDKAudioSessionSetting: Swift.Bool = false, completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
   @objc public func getVersion() -> Swift.String
