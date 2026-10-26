@@ -98,14 +98,19 @@ class SplashAdViewController: UIViewController {
         print("SDK未初始化")
         return
         }
-        // 创建开屏⼴告
+        // 创建开屏广告
         let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width, height: 300)
-        splashAd = ADXiluSplashAd(adPosId: AppConst.splashPosId,
-        style: .halfScreen,
-        adSize: adSize)
+        splashAd = ADXiluSplashAd(adPosId:AppConst.splashPosId, style: .fullScreen, adSize: adSize)
+        splashAd?.bottomView = bottomView
         splashAd?.delegate = self
         splashAd?.countdownDuration = 5.0
+        
+        statusLabel.text = "状态：正在加载..."
+        statusLabel.textColor = .systemOrange
+        loadButton.isEnabled = false
+        
         splashAd?.loadAd()
+        showButton.isHidden = true
     }
     
     @objc private func showAd() {
