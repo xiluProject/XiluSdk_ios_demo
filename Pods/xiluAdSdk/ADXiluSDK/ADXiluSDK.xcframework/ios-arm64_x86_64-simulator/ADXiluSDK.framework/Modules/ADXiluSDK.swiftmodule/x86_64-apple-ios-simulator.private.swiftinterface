@@ -17,6 +17,7 @@ import GDTMobSDK
 import KSAdSDK
 import MSAdSDK
 import Network
+import Photos
 import Swift
 import SystemConfiguration
 import UIKit
@@ -415,14 +416,43 @@ public struct ADComplaintRule : Swift.Codable {
   public let blockTime: Swift.Int?
   public let feedback: Swift.Int?
   public let skip: Swift.Int?
+  public let feedbackName: Swift.String?
+  public let skipName: Swift.String?
+  public let position: Swift.String?
   public var isFeedbackEnabled: Swift.Bool {
     get
   }
   public var isSkipEnabled: Swift.Bool {
     get
   }
+  public var resolvedFeedbackName: Swift.String {
+    get
+  }
+  public var resolvedSkipName: Swift.String {
+    get
+  }
+  public var resolvedPosition: ADXiluSDK.ADComplaintPosition {
+    get
+  }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public enum ADComplaintPosition : Swift.String {
+  case topLeft
+  case topRight
+  case bottomLeft
+  case bottomRight
+  public var isTop: Swift.Bool {
+    get
+  }
+  public var isLeft: Swift.Bool {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct ADNetworkItem : Swift.Codable {
   public let platform: Swift.String
@@ -1134,6 +1164,9 @@ extension ADXiluSDK.ADRequestStatus : Swift.RawRepresentable {}
 extension ADXiluSDK.ADNetworkError : Swift.Equatable {}
 extension ADXiluSDK.ADNetworkError : Swift.Hashable {}
 extension ADXiluSDK.ADNetworkError : Swift.RawRepresentable {}
+extension ADXiluSDK.ADComplaintPosition : Swift.Equatable {}
+extension ADXiluSDK.ADComplaintPosition : Swift.Hashable {}
+extension ADXiluSDK.ADComplaintPosition : Swift.RawRepresentable {}
 extension ADXiluSDK.ADXSplashLaunchScene : Swift.Equatable {}
 extension ADXiluSDK.ADXSplashLaunchScene : Swift.Hashable {}
 extension ADXiluSDK.ADXSplashLaunchScene : Swift.RawRepresentable {}
