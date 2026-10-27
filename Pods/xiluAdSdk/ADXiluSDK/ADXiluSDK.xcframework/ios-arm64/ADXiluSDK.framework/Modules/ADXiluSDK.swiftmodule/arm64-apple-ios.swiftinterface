@@ -574,6 +574,7 @@ public enum ADXSplashLaunchScene : Swift.Int {
   @objc optional func xilu_AdDidSkip(_ xiluAd: ADXiluSDK.ADXiluBaseAd, adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc optional func xilu_AdDidFail(_ xiluAd: ADXiluSDK.ADXiluBaseAd, error: ADXiluSDK.ADXiluError)
   @objc optional func xilu_AdTick(_ xiluAd: ADXiluSDK.ADXiluBaseAd, remainingTime: Foundation.TimeInterval)
+  @objc optional func xilu_AdShowToastMessage(message: Swift.String)
 }
 @objc public class ADXiluBaseAd : ObjectiveC.NSObject {
   public var launchScene: ADXiluSDK.ADXSplashLaunchScene
@@ -609,6 +610,7 @@ extension ADXiluSDK.ADXiluBaseAd : ADXiluSDK.ADXiluBaseAdDelegate {
   public func getAdTypeString() -> Swift.String
   public func configNetworkAdPosECPM(adInfo: ADXiluSDK.ADXiluAdInfo)
   @objc dynamic public func xilu_AdTick(_ xiluAd: ADXiluSDK.ADXiluBaseAd, remainingTime: Foundation.TimeInterval)
+  @objc dynamic public func xilu_AdShowToastMessage(message: Swift.String)
 }
 @objc public class ADXiluInterstitialAd : ADXiluSDK.ADXiluBaseAd {
   @objc public init(adPosId: Swift.String, adSize: ADXiluSDK.ADXiluAdSize, rootVC: UIKit.UIViewController?)

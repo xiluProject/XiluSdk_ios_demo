@@ -537,6 +537,7 @@ SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 - (void)xilu_AdDidFail:(ADXiluBaseAd * _Nonnull)xiluAd error:(ADXiluError * _Nonnull)error;
 /// 倒计时回调
 - (void)xilu_AdTick:(ADXiluBaseAd * _Nonnull)xiluAd remainingTime:(NSTimeInterval)remainingTime;
+- (void)xilu_AdShowToastMessageWithMessage:(NSString * _Nonnull)message;
 @end
 
 @interface ADXiluBaseAd (SWIFT_EXTENSION(ADXiluSDK)) <ADXiluBaseAdDelegate>
@@ -550,6 +551,7 @@ SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 - (void)xilu_AdDidFail:(ADXiluBaseAd * _Nonnull)xiluAd error:(ADXiluError * _Nonnull)error;
 - (void)xilu_AdDidSkip:(ADXiluBaseAd * _Nonnull)xiluAd adInfo:(ADXiluAdInfo * _Nonnull)adInfo;
 - (void)xilu_AdTick:(ADXiluBaseAd * _Nonnull)xiluAd remainingTime:(NSTimeInterval)remainingTime;
+- (void)xilu_AdShowToastMessageWithMessage:(NSString * _Nonnull)message;
 @end
 
 /// 广告错误信息

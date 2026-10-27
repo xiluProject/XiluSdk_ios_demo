@@ -95,9 +95,13 @@ class SplashAdViewController: UIViewController {
     
     @objc private func loadAd() {
         guard ADXiluSDKManager.shared.isInitialized else {
-        print("SDK未初始化")
-        return
+            showAlert(title: "错误", message: "SDK未初始化")
+            return
         }
+        
+        // 释放之前的广告
+        splashAd?.p_release()
+        
         // 创建开屏广告
         let adSize = ADXiluAdSize(width: UIScreen.main.bounds.width, height: 300)
         splashAd = ADXiluSplashAd(adPosId:AppConst.splashPosId, style: .fullScreen, adSize: adSize)
@@ -107,7 +111,7 @@ class SplashAdViewController: UIViewController {
         
         statusLabel.text = "状态：正在加载..."
         statusLabel.textColor = .systemOrange
-//        loadButton.isEnabled = false
+        loadButton.isEnabled = false
         
         splashAd?.loadAd()
         showButton.isHidden = true
@@ -184,5 +188,11 @@ extension SplashAdViewController: ADXiluBaseAdDelegate {
         DispatchQueue.main.async {
             self.countdownLabel.text = "倒计时：\(Int(remainingTime))s"
         }
+    }
+    func xilu_AdShowToastMessage(message: String) {
+        XLToastView.show(message)
+        self.statusLabel.text = "状态：未加载"
+        self.statusLabel.textColor = .systemBlue
+        self.loadButton.isEnabled = true
     }
 }
