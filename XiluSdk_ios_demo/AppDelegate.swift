@@ -9,12 +9,16 @@ import UIKit
 import ADXiluSDK
 import AppTrackingTransparency
 import AdSupport
+import Photos
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
 
         // 初始化ADXiluSDK
         initializeADXiluSDK()
@@ -23,7 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         window?.rootViewController = UINavigationController(rootViewController: MainViewController())
         window?.makeKeyAndVisible()
+
         requestIDFA()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.requestPhotoLibraryAuthorization()
+        }
+
         return true
     }
 
@@ -54,13 +63,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // 申请相册权限
+    private func requestPhotoLibraryAuthorization() {
+        if #available(iOS 14.0, *) {
+            let status = PHPhotoLibrary.authorizationStatus(for: .readWrite)
+
+            if status == .notDetermined {
+                PHPhotoLibrary.requestAuthorization(for: .readWrite) { newStatus in
+                    DispatchQueue.main.async {
+                        self.handlePhotoAuthorization(newStatus)
+                    }
+                }
+            } else {
+                handlePhotoAuthorization(status)
+            }
+        } else {
+            let status = PHPhotoLibrary.authorizationStatus()
+
+            if status == .notDetermined {
+                PHPhotoLibrary.requestAuthorization { newStatus in
+                    DispatchQueue.main.async {
+                        self.handlePhotoAuthorization(newStatus)
+                    }
+                }
+            } else {
+                handlePhotoAuthorization(status)
+            }
+        }
+    }
+
+    // 处理相册权限结果
+    private func handlePhotoAuthorization(_ status: PHAuthorizationStatus) {
+        if #available(iOS 14.0, *), status == .limited {
+            print("相册权限：有限访问")
+            return
+        }
+
+        switch status {
+        case .authorized:
+            print("相册权限：已授权")
+        case .denied:
+            print("相册权限：已拒绝")
+        case .restricted:
+            print("相册权限：受限")
+        case .notDetermined:
+            print("相册权限：未决定")
+        default:
+            break
+        }
+    }
+
     private func initializeADXiluSDK() {
         // 初始化SDK，使用测试AppID
         ADXiluSDKManager.shared.initialize(appId: AppConst.appId, debug: true) { success, error in
             DispatchQueue.main.async {
                 if success {
                     print("ADXiluSDK初始化成功，版本: \(ADXiluSDKManager.shared.getVersion())")
-                    
                 } else {
                     print("ADXiluSDK初始化失败: \(error ?? "未知错误")")
                 }
