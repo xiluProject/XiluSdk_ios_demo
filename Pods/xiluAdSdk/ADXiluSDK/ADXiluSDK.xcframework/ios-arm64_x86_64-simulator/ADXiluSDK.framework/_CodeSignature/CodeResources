@@ -22,15 +22,15 @@
 		</data>
 		<key>Modules/ADXiluSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		s1+aGF0wSkOsNk7fR1Ezm4R4l8Q=
+		fUKbIPahMmONrho/17lEAiNx49A=
 		</data>
 		<key>Modules/ADXiluSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		kIjLTMqnJ0oouY9JnvL+ADqGygE=
+		niRj5zqBsaI5A61siX3FHX/CUTk=
 		</data>
 		<key>Modules/ADXiluSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Wkm3cX2ZPkkVc8+sTsfL4Cra5M4=
+		YEZzcXLINs8aBCHpGT+C8ULjVe8=
 		</data>
 		<key>Modules/ADXiluSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/ADXiluSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6UwRnfrVCc/x/+Uswv9iC7zaLUI=
+		rlXlqqT5cEJCFcZEgFZTohtmcAE=
 		</data>
 		<key>Modules/ADXiluSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Wkm3cX2ZPkkVc8+sTsfL4Cra5M4=
+		YEZzcXLINs8aBCHpGT+C8ULjVe8=
 		</data>
 		<key>Modules/ADXiluSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/ADXiluSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		x3b1kk8qkjDB1jI+BiviTSfcReI=
+		C6xwK4+9+anvCr9bMhxLEXaVs3k=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -100,21 +100,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GaeU3z9ywK2QSd5VMI63Mhct/5vhf2nQke7442q5ikc=
+			QXeOvcSn8w36UzXXMN7X4iAzmT/W3w6e9vigjjhIjnE=
 			</data>
 		</dict>
 		<key>Modules/ADXiluSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2tsoAx+0DrQUGjBJxgmGyGXw9goEdV1vIQlmDUYs26U=
+			yPa9+dc9rgY9Hwlem64PRcok0APFWaqLysPVL0G9t7E=
 			</data>
 		</dict>
 		<key>Modules/ADXiluSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uOalJZzCAwtr9Y0WVBWsULcbbWJ9CI94tQFVklFslDQ=
+			1XMETyR02+YQSHGLaQ4Jck9ivK8ANHx0qg9+gCi6yZ0=
 			</data>
 		</dict>
 		<key>Modules/ADXiluSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -142,14 +142,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p2D8C9g/IA2nMq40kKsryJPxeEIEIyAlWvF7Bt2JGKo=
+			9Z7gssvkojwu1reV5zQWnpqPDPQtsrw1FPEHPZe1wLw=
 			</data>
 		</dict>
 		<key>Modules/ADXiluSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uOalJZzCAwtr9Y0WVBWsULcbbWJ9CI94tQFVklFslDQ=
+			1XMETyR02+YQSHGLaQ4Jck9ivK8ANHx0qg9+gCi6yZ0=
 			</data>
 		</dict>
 		<key>Modules/ADXiluSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -177,7 +177,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BnCGAHdfteDwE7oosKmkXvhS+hqRQ+qm2k72aFEupHA=
+			NQ1Nkxf2Fy+Jf/psJ/e4DlZo8j8Ik2pVj2F/GwdMl18=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
