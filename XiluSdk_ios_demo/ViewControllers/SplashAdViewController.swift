@@ -112,8 +112,15 @@ class SplashAdViewController: UIViewController {
         statusLabel.text = "状态：正在加载..."
         statusLabel.textColor = .systemOrange
         loadButton.isEnabled = false
-        
-        splashAd?.loadAd()
+        if splashAd?.isInComplaintCooldown == true {
+            // 冷却中，不用调用 loadAd，或者做提示
+            XLToastView.show("广告获取失败:投诉冷却中，暂不请求开屏广告")
+            self.statusLabel.text = "状态：广告被屏蔽"
+            self.statusLabel.textColor = .systemBlue
+            self.loadButton.isEnabled = true
+        } else {
+            splashAd?.loadAd()
+        }
         showButton.isHidden = true
     }
     
