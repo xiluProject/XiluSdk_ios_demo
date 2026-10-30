@@ -191,7 +191,7 @@ extension SplashAdViewController: ADXiluBaseAdDelegate {
     }
     func xilu_AdShowToastMessage(message: String) {
         XLToastView.show(message)
-        self.statusLabel.text = "状态：未加载"
+        self.statusLabel.text = "状态：广告被屏蔽"
         self.statusLabel.textColor = .systemBlue
         self.loadButton.isEnabled = true
     }
