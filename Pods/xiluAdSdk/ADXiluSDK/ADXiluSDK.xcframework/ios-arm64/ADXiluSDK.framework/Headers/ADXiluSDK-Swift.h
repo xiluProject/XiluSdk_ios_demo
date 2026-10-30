@@ -512,6 +512,18 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluBannerAd")
 - (void)unifiedBannerViewClicked:(GDTUnifiedBannerView * _Nonnull)bannerView;
 @end
 
+@class KSBannerAd;
+@interface ADXiluBannerAd (SWIFT_EXTENSION(ADXiluSDK)) <KSBannerAdDelegate>
+- (void)ksad_bannerAdViewDidLoad:(KSBannerAd * _Nonnull)bannerAdView;
+- (void)ksad_bannerAdView:(KSBannerAd * _Nonnull)bannerAdView didFailWithError:(NSError * _Nullable)error;
+- (void)ksad_bannerAdViewRenderSuccess:(KSBannerAd * _Nonnull)bannerAd;
+- (void)ksad_bannerAdViewBecomVisible:(KSBannerAd * _Nonnull)bannerAd;
+- (void)ksad_bannerAdViewDidClick:(KSBannerAd * _Nonnull)bannerAd;
+- (void)ksad_bannerAdViewDidClose:(KSBannerAd * _Nonnull)bannerAd;
+- (void)ksad_bannerAdViewDidShowOtherController:(KSBannerAd * _Nonnull)bannerAd interactionType:(KSAdInteractionType)interactionType;
+- (void)ksad_bannerAdViewDidCloseOtherController:(KSBannerAd * _Nonnull)bannerAd interactionType:(KSAdInteractionType)interactionType;
+@end
+
 @class ADXiluError;
 SWIFT_PROTOCOL("_TtP9ADXiluSDK20ADXiluBaseAdDelegate_")
 @protocol ADXiluBaseAdDelegate
@@ -590,6 +602,14 @@ SWIFT_CLASS("_TtC9ADXiluSDK20ADXiluInterstitialAd")
 - (void)BeiZi_interstitial:(BeiZiInterstitial * _Nonnull)beiziInterstitial didFailToLoadAdWithError:(BeiZiRequestError * _Nonnull)error;
 @end
 
+@class KSInterstitialAd;
+@interface ADXiluInterstitialAd (SWIFT_EXTENSION(ADXiluSDK)) <KSInterstitialAdDelegate>
+- (void)ksad_interstitialAdDidLoad:(KSInterstitialAd * _Nonnull)interstitialAd;
+- (void)ksad_interstitialAdDidVisible:(KSInterstitialAd * _Nonnull)interstitialAd;
+- (void)ksad_interstitialAdDidClick:(KSInterstitialAd * _Nonnull)interstitialAd;
+- (void)ksad_interstitialAdDidClose:(KSInterstitialAd * _Nonnull)interstitialAd;
+@end
+
 @class GDTUnifiedInterstitialAd;
 @interface ADXiluInterstitialAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedInterstitialAdDelegate>
 - (void)unifiedInterstitialSuccessToLoadAd:(GDTUnifiedInterstitialAd * _Nonnull)unifiedInterstitial;
@@ -617,12 +637,9 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
 @property (nonatomic) BOOL isTemplate;
 @property (nonatomic, strong) UIView * _Nullable containerView;
 @property (nonatomic, strong) UIViewController * _Nullable nativeViewController;
-/// 是否静音播放
 @property (nonatomic) BOOL isMuted;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize count:(NSInteger)count OBJC_DESIGNATED_INITIALIZER;
-/// 加载广告
 - (void)loadAd;
-/// 释放资源
 - (void)p_release;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
@@ -663,46 +680,26 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
 - (void)nativeExpressAdFailToLoad:(GDTNativeExpressAd * _Null_unspecified)nativeExpressAd error:(NSError * _Null_unspecified)error;
 - (void)nativeExpressAdViewClicked:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
 - (void)nativeExpressAdViewClosed:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
-- (void)nativeExpressAdViewRenderSuccess:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
-/// <ul>
-///   <li>
-///     原生模板广告渲染失败
-///   </li>
-/// </ul>
-- (void)nativeExpressAdViewRenderFail:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
-/// <ul>
-///   <li>
-///     原生模板广告曝光回调
-///   </li>
-/// </ul>
 - (void)nativeExpressAdViewExposure:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
+- (void)nativeExpressAdViewRenderSuccess:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
+- (void)nativeExpressAdViewRenderFail:(GDTNativeExpressAdView * _Null_unspecified)nativeExpressAdView;
 @end
 
 SWIFT_ENUM_FWD_DECL(NSInteger, ADXiluNativeAdType)
 /// 信息流广告信息
 SWIFT_CLASS("_TtC9ADXiluSDK18ADXiluNativeAdInfo")
 @interface ADXiluNativeAdInfo : ADXiluAdInfo
-/// 广告标题
 @property (nonatomic, readonly, copy) NSString * _Nonnull title;
-/// 广告描述
 @property (nonatomic, readonly, copy) NSString * _Nonnull desc;
 @property (nonatomic, readonly, copy) NSString * _Nonnull actionText;
-/// 广告图标URL
 @property (nonatomic, readonly, copy) NSString * _Nullable iconUrl;
-/// 广告图片URL
 @property (nonatomic, readonly, copy) NSString * _Nullable imageUrl;
-/// 广告视频URL
 @property (nonatomic, readonly, copy) NSString * _Nullable videoUrl;
-/// 广告类型
 @property (nonatomic, readonly) enum ADXiluNativeAdType adType;
-/// 是否静音播放
 @property (nonatomic, readonly) BOOL isMuted;
 - (nonnull instancetype)initWithAdId:(NSString * _Nonnull)adId platform:(enum ADXiluAdPlatform)platform title:(NSString * _Nonnull)title desc:(NSString * _Nonnull)desc actionText:(NSString * _Nonnull)actionText iconUrl:(NSString * _Nullable)iconUrl imageUrl:(NSString * _Nullable)imageUrl videoUrl:(NSString * _Nullable)videoUrl adType:(enum ADXiluNativeAdType)adType isMuted:(BOOL)isMuted OBJC_DESIGNATED_INITIALIZER;
-/// 是否为模板广告
 @property (nonatomic, readonly) BOOL isExpress;
-/// 获取模板广告视图
 - (UIView * _Nullable)getExpressAdViewIn:(UIView * _Nonnull)containerView SWIFT_WARN_UNUSED_RESULT;
-/// 渲染模板广告
 - (void)renderIn:(UIView * _Nonnull)containerView;
 - (nonnull instancetype)initWithAdId:(NSString * _Nonnull)adId platform:(enum ADXiluAdPlatform)platform isReady:(BOOL)isReady SWIFT_UNAVAILABLE;
 @end
@@ -728,9 +725,7 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)loadAd;
 /// 展示广告
 - (void)showAdFrom:(UIViewController * _Nonnull)viewController;
-/// 关闭广告
 - (void)closeAd;
-/// 释放资源
 - (void)p_release;
 - (nonnull instancetype)initWithAdPosId:(NSString * _Nonnull)adPosId adSize:(ADXiluAdSize * _Nonnull)adSize SWIFT_UNAVAILABLE;
 @end
@@ -741,7 +736,6 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)BeiZi_rewardedVideoDidReceiveAd:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo;
 - (void)BeiZi_rewardedVideoDidDismissScreen:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo;
 - (void)BeiZi_rewardedVideoDidClick:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo;
-- (void)BeiZi_rewardedVideoDidPlayEnd:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo;
 - (void)BeiZi_rewardedVideoDidStartPlay:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo;
 - (void)BeiZi_rewardedVideo:(BeiZiRewardedVideo * _Nonnull)beiziRewardedVideo didRewardUserWithReward:(NSObject * _Nonnull)reward;
 @end
@@ -768,6 +762,19 @@ SWIFT_CLASS("_TtC9ADXiluSDK17ADXiluRewardVodAd")
 - (void)gdt_rewardVideoAdDidClose:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 - (void)gdt_rewardVideoAdDidClicked:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
 - (void)gdt_rewardVideoAdWillVisible:(GDTRewardVideoAd * _Nonnull)rewardVideoAd;
+@end
+
+@class KSRewardedVideoAd;
+@interface ADXiluRewardVodAd (SWIFT_EXTENSION(ADXiluSDK)) <KSRewardedVideoAdDelegate>
+- (void)rewardedVideoAdDidLoad:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)rewardedVideoAd:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd didFailWithError:(NSError * _Nullable)error;
+- (void)rewardedVideoAdVideoDidLoad:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)rewardedVideoAdWillVisible:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)rewardedVideoAdDidVisible:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)rewardedVideoAdDidClose:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)rewardedVideoAdDidClick:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd;
+- (void)rewardedVideoAdDidPlayFinish:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd didFailWithError:(NSError * _Nullable)error;
+- (void)rewardedVideoAd:(KSRewardedVideoAd * _Nonnull)rewardedVideoAd hasReward:(BOOL)hasReward;
 @end
 
 /// 激励视频广告监听器
