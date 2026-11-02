@@ -50,7 +50,7 @@ target 'YourApp' do
   use_frameworks!
   
   # 使用远程版本
-  pod 'xiluAdSdk', :git => 'git@github.com:UnAmico0/xiluAdSdk_ios_pod.git', :tag => '1.0.9'
+  pod 'xiluAdSdk', :git => 'https://github.com/xiluProject/xiluAdSdk_ios_pod.git', :tag => '1.0.11'
 end
 ```
 
@@ -63,8 +63,17 @@ pod install
 3. 打开生成的`.xcworkspace`文件
 
 ## 快速开始
+### 1.Info.plist 配置(请开发时注意需要有相册的权限,如果已经配置了相关权限此步骤可忽略)
+<!-- 用于选择相册照片、上传图片、预览相册内容 -->
+<key>NSPhotoLibraryUsageDescription</key>
+<string>用于选择相册照片、上传图片、预览相册内容</string>
 
-### 1. 初始化SDK
+<!-- 用于保存图片到您的相册 -->
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>用于保存图片到您的相册</string>
+
+
+### 2. 初始化SDK
 
 #### Objective-C
 
@@ -839,5 +848,12 @@ MIT License
 
 ### v1.0.9 (2026-05-11)
 - 新增广告平台支持
-- 支持BUAdSDK完整的广告类型支持
+- 支持BUAdSDK完整的广告类型
 - 支持BaiduMobAdSDK和KSAdSDK开屏广告集成
+
+### v1.0.10 (2026-06-18)
+- 广告竞价功能优化
+
+### v1.0.11 (2026-08-26)
+- 新增热启动
+- 优化广告填充
