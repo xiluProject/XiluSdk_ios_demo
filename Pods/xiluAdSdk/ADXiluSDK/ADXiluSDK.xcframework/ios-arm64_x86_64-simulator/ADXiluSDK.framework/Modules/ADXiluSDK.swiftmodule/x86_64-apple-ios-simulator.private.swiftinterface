@@ -740,13 +740,12 @@ extension ADXiluSDK.ADXiluNativeAd : GDTMobSDK.GDTNativeExpressAdDelegete {
   @objc dynamic public func nativeExpressAdViewRenderSuccess(_ nativeExpressAdView: GDTMobSDK.GDTNativeExpressAdView!)
   @objc dynamic public func nativeExpressAdViewRenderFail(_ nativeExpressAdView: GDTMobSDK.GDTNativeExpressAdView!)
 }
-extension ADXiluSDK.ADXiluNativeAd : GDTMobSDK.GDTUnifiedNativeAdDelegate, GDTMobSDK.GDTUnifiedNativeAdViewDelegate {
+extension ADXiluSDK.ADXiluNativeAd : GDTMobSDK.GDTUnifiedNativeAdViewDelegate {
   @objc dynamic public func gdt_unifiedNativeAdViewWillExpose(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
   @objc dynamic public func gdt_unifiedNativeAdViewDidClick(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
   @objc dynamic public func gdt_unifiedNativeAdDetailViewClosed(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
   @objc dynamic public func gdt_unifiedNativeAdViewApplicationWillEnterBackground(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
   @objc dynamic public func gdt_unifiedNativeAdDetailViewWillPresentScreen(_ unifiedNativeAdView: GDTMobSDK.GDTUnifiedNativeAdView)
-  @objc dynamic public func gdt_unifiedNativeAdLoaded(_ unifiedNativeAdDataObjects: [GDTMobSDK.GDTUnifiedNativeAdDataObject]?, error: (any Swift.Error)?)
 }
 extension ADXiluSDK.ADXiluRewardVodAd : BUAdSDK.BUNativeExpressRewardedVideoAdDelegate {
   @objc dynamic public func nativeExpressRewardedVideoAdDidLoad(_ rewardedVideoAd: BUAdSDK.BUNativeExpressRewardedVideoAd)
