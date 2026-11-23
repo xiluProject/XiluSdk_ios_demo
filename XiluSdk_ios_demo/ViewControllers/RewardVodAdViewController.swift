@@ -137,7 +137,7 @@ extension RewardVodAdViewController: ADXiluBaseAdDelegate {
     func xilu_AdDidReceive(_ xiluAd: ADXiluBaseAd, adInfo: ADXiluAdInfo) {
         //appLog("广告加载成功:", adInfo.toJSON())
         DispatchQueue.main.async {
-            self.statusLabel.text = "状态：加载成功 \n点击'观看视频'按钮查看效果"
+            self.statusLabel.text = "状态：加载成功 - \(String(describing: adInfo.platform.name))\n奖励：\(adInfo.rewardAmount) \(adInfo.rewardName)\n点击'观看视频获得奖励'按钮"
             self.statusLabel.textColor = .systemGreen
             self.loadButton.isEnabled = true
             self.showButton.isHidden = false
@@ -189,17 +189,7 @@ extension RewardVodAdViewController: ADXiluBaseAdDelegate {
 // MARK: - ADXiluRewardVodAdDelegate
 extension RewardVodAdViewController: ADXiluRewardVodAdDelegate {
     func xilu_AdVideoDidCache(_ rewardVodAd: ADXiluBaseAd, adInfo: ADXiluAdInfo) {
-        DispatchQueue.main.async {
-            self.statusLabel.text = "状态：加载成功 - \(String(describing: adInfo.platform.name))\nid：\(rewardVodAd.adPosId) \(adInfo.isReady)\n点击'观看视频获得奖励'按钮"
-            self.statusLabel.textColor = .systemGreen
-//            self.loadButton.isEnabled = true
-//            self.showButton.isEnabled = true
-        }
-        
-//        DispatchQueue.main.async {
-//            self.statusLabel.text = "状态：视频缓存完成 - \(String(describing: adInfo.platform.name))"
-//            self.statusLabel.textColor = .systemGreen
-//        }
+   
     }
     
     func xilu_AdVideoDidComplete(_ rewardVodAd: ADXiluBaseAd, adInfo: ADXiluAdInfo) {
@@ -227,19 +217,9 @@ extension RewardVodAdViewController: ADXiluRewardVodAdDelegate {
     
     func rewardVodAdDidReceive(_ rewardVodAd: ADXiluRewardVodAd, adInfo: ADXiluRewardVodAdInfo) {
         DispatchQueue.main.async {
-            self.statusLabel.text = "状态：加载成功 - \(String(describing: adInfo.platform.name))\n奖励：\(adInfo.rewardAmount) \(adInfo.rewardName)\n点击'观看视频获得奖励'按钮"
-            self.statusLabel.textColor = .systemGreen
-//            self.loadButton.isEnabled = true
-//            self.showButton.isEnabled = true
+
         }
     }
-    
-//    func rewardVodAdVideoDidCache(_ rewardVodAd: ADXiluRewardVodAd, adInfo: ADXiluRewardVodAdInfo) {
-//        DispatchQueue.main.async {
-//            self.statusLabel.text = "状态：视频缓存完成 - \(String(describing: adInfo.platform.name))"
-//            self.statusLabel.textColor = .systemGreen
-//        }
-//    }
     
     func rewardVodAdVideoDidComplete(_ rewardVodAd: ADXiluRewardVodAd, adInfo: ADXiluRewardVodAdInfo) {
         DispatchQueue.main.async {

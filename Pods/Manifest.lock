@@ -46,7 +46,7 @@ PODS:
   - BUTTSDKFramework/VolcLog (1.48.2.3-premium)
   - CryptoSwift (1.8.4)
   - GDTMobSDK (4.15.65)
-  - KSAdSDK (5.9.10.1)
+  - KSAdSDK (5.10.20.1)
   - Masonry (1.1.0)
   - MSMobAdSDK/MotionLess (2.7.7.3)
   - MSMobAdSDK/MS (2.7.7.3):
@@ -102,7 +102,7 @@ SPEC CHECKSUMS:
   BUTTSDKFramework: 34f8f8d541da07e79e9c479eb71336d1e4d90fdd
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
   GDTMobSDK: f3aefaaca7a7393300a7b4f667d361250ac764b4
-  KSAdSDK: 9f7889f13a5a44162512a379503dff989e0302e6
+  KSAdSDK: 6f0755fb9507ae0c5f294376ac2315eed999cadf
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MSMobAdSDK: 0b116d5d37a6ebba3d30b0066b8a56918547a94f
   SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf

@@ -139,6 +139,17 @@ typedef NS_ENUM(NSInteger, KSAdFeedVideoAutoPlayType) {
 /// 获取服务端竞价V2的请求报文token
 /// @param model 不需要传posId 但是在向服务端请求的时候posId必传
 + (NSString *)getBidRequestTokenV2:(KSAdBiddingAdV2Model *)model;
+
+/// 用户注销/删除个人数据时的身份核验接口
+/// @param sessionKey  H5会话令牌（用户扫码二维码中携带，有效期180秒）
+/// @param idfa        iOS设备广告标识符IDFA
+/// @param completion  确权结果回调（主线程回调）
+///                    success=YES: 核验通过；result含verified/expire_at；失败时error含错误码
++ (void)verifyPrivacyIdentity:(NSString *)sessionKey
+                         idfa:(NSString *)idfa
+                   completion:(void(^)(BOOL success,
+                                       NSDictionary * _Nullable result,
+                                       NSError * _Nullable error))completion;
 @end
 
 NS_ASSUME_NONNULL_END
