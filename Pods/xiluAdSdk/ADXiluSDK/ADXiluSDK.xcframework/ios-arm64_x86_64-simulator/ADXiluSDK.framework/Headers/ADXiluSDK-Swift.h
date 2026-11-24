@@ -661,12 +661,14 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
 @end
 
 @class GDTUnifiedNativeAdView;
-@interface ADXiluNativeAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedNativeAdViewDelegate>
+@class GDTUnifiedNativeAdDataObject;
+@interface ADXiluNativeAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedNativeAdDelegate, GDTUnifiedNativeAdViewDelegate>
 - (void)gdt_unifiedNativeAdViewWillExpose:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
 - (void)gdt_unifiedNativeAdViewDidClick:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
 - (void)gdt_unifiedNativeAdDetailViewClosed:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
 - (void)gdt_unifiedNativeAdViewApplicationWillEnterBackground:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
 - (void)gdt_unifiedNativeAdDetailViewWillPresentScreen:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
+- (void)gdt_unifiedNativeAdLoaded:(NSArray<GDTUnifiedNativeAdDataObject *> * _Nullable)unifiedNativeAdDataObjects error:(NSError * _Nullable)error;
 @end
 
 @class GDTNativeExpressAd;
@@ -1616,12 +1618,14 @@ SWIFT_CLASS("_TtC9ADXiluSDK14ADXiluNativeAd")
 @end
 
 @class GDTUnifiedNativeAdView;
-@interface ADXiluNativeAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedNativeAdViewDelegate>
+@class GDTUnifiedNativeAdDataObject;
+@interface ADXiluNativeAd (SWIFT_EXTENSION(ADXiluSDK)) <GDTUnifiedNativeAdDelegate, GDTUnifiedNativeAdViewDelegate>
 - (void)gdt_unifiedNativeAdViewWillExpose:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
 - (void)gdt_unifiedNativeAdViewDidClick:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
 - (void)gdt_unifiedNativeAdDetailViewClosed:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
 - (void)gdt_unifiedNativeAdViewApplicationWillEnterBackground:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
 - (void)gdt_unifiedNativeAdDetailViewWillPresentScreen:(GDTUnifiedNativeAdView * _Nonnull)unifiedNativeAdView;
+- (void)gdt_unifiedNativeAdLoaded:(NSArray<GDTUnifiedNativeAdDataObject *> * _Nullable)unifiedNativeAdDataObjects error:(NSError * _Nullable)error;
 @end
 
 @class GDTNativeExpressAd;
